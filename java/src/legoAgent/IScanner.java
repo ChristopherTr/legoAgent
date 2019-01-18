@@ -2,6 +2,8 @@ package legoAgent;
 
 public interface IScanner {
 	
-	public int[][] bildLesen();
+	public int[][] readImage();
+	public int[] computeTrait(int image[][]);
+	int resolution = 16;
 	
 }
