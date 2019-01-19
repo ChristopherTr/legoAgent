@@ -7,36 +7,58 @@ public class SVM implements ISVM {
 	//@Override
 	private static int classifierRectangle = 1;
 	private static int classifierCircle = -1;
-	public IDataPoint[] findSupportVectors() {
+	/**
+	 * orientation, whether negative values means circles or rectangles
+	 * 0: circles get negative values, 
+	 * 1: rectangles get negative values
+	 */
+	private int orientation = 0;
+	private Dataset dataSet;
 	ArrayList <IDataPoint> listCircle = new ArrayList<IDataPoint>();
 	ArrayList <IDataPoint> listRectangle = new ArrayList<IDataPoint>();
-	Dataset dataSet = new Dataset();
 	
-	ArrayList <IDataPoint>listDataSet= dataSet.getAllData();
-	
-	/*
-	 * Fill each figure list
-	 */
-	for(IDataPoint laufDatum: listDataSet) {
-		switch(laufDatum.getFigure()) {
-		//case triangle:
-		//	break;
-		case rectangle:
-			listRectangle.add(laufDatum);
-			break;
-		case circle:
-			listCircle.add(laufDatum);
-			break;
-		default:
-			break;		
+	public SVM() {
+		this.dataSet = new Dataset();
+		ArrayList<IDataPoint> listDataSet = this.dataSet.getAllData();
+		/*
+		 * Fill each figure list
+		 */
+		for(IDataPoint laufDatum: listDataSet) {
+			switch(laufDatum.getFigure()) {
+			//case triangle:
+			//	break;
+			case rectangle:
+				listRectangle.add(laufDatum);
+				break;
+			case circle:
+				listCircle.add(laufDatum);
+				break;
+			default:
+				break;		
+			}
 		}
 	}
-	
 	/*
-	 * Ermitteln der besten Hyperebene �ber alle Kombinationen von Knoten
+	 * compute best hyperplane with the given points
 	 */
-	examineSupportVectors(listRectangle, listCircle, classifierRectangle, classifierCircle);
-	examineSupportVectors(listCircle, listRectangle, classifierCircle, classifierRectangle);
+	public IDataPoint[] findSupportVectors() {
+		// Size of trainigsdata
+		int size = this.dataSet.getAllData().size();
+		if (size < 3) {
+			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
+		} else if(size == 3) { // Easy case: onyl three points are avail. 
+			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
+				this.orientation = 0;
+				
+			} else { // one circle and two rectangles are avail. 
+				this.orientation = 1;
+			}
+			
+		} else { // Difficult case: more than three points are avail. 
+			examineSupportVectors(listRectangle, listCircle, classifierRectangle, classifierCircle);
+			examineSupportVectors(listCircle, listRectangle, classifierCircle, classifierRectangle);
+		}
+		
 		return null;
 	}
 
