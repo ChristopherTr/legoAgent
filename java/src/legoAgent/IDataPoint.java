@@ -6,4 +6,5 @@ public interface IDataPoint {
 	public int getArea();
 	public Figure getFigure();
 	public void setFigure(Figure f);
+	public Vector toVector();
 }

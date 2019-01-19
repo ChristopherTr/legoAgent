@@ -16,7 +16,29 @@ public class Dataset implements IDataset {
 	static private String fileLocation = "location.data";
 	private ArrayList<IDataPoint> dataset;
 	private IDataPoint[] sVMPoints;
+	/**
+	 * orientation, whether negative values means circles or rectangles
+	 * 0: circles get negative values, 
+	 * 1: rectangles get negative values
+	 */
+	private int svmOrientation = 0;
 	
+	/**
+	 * TODO: Sort the received array by figure Type ()
+	 * @param sVMPoints
+	 */
+	public void setsVMPoints(IDataPoint[] sVMPoints) {
+		this.sVMPoints = sVMPoints;
+	}
+
+	public int getSvmOrientation() {
+		return svmOrientation;
+	}
+
+	public void setSvmOrientation(int svmOrientation) {
+		this.svmOrientation = svmOrientation;
+	}
+
 	public Dataset() {
 		this.load();
 	}

@@ -10,7 +10,8 @@ public class Recognition implements IRecognition {
 		IDataPoint newDataPoint = scanner.computeTrait(image);
 		
 		//add new DataPoint to SVM
-		SVM svm = new SVM();
+		Dataset dataset = new Dataset();
+		SVM svm = new SVM(dataset);
 		Figure figure = svm.classify(newDataPoint);
 		return figure;
 	}

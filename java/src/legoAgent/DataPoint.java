@@ -64,4 +64,9 @@ public class DataPoint implements IDataPoint, Serializable {
 			this.figure = f;
 		}
 	}
+
+	@Override
+	public Vector toVector() {
+		return new Vector(this.perimeter, this.area);
+	}
 }
