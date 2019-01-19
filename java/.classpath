@@ -6,13 +6,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-cdense-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-core-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-ddense-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-dsparse-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-experimental-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-fdense-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-simple-0.37.1.jar"/>
-	<classpathentry kind="lib" path="E:/Mindstorms/Projekt/legoAgent/java/libs/ejml-zdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-cdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-core-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-ddense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-dsparse-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-experimental-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-fdense-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-simple-0.37.1.jar"/>
+	<classpathentry kind="lib" path="libs/ejml-zdense-0.37.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
