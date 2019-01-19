@@ -47,7 +47,7 @@ public class SVM implements ISVM {
 	}
 
 	@Override
-	public Figure classify(int perimeter, int area) {
+	public Figure classify(IDataPoint dataPoint) {
 		// TODO Auto-generated method stub
 		return null;
 	}
