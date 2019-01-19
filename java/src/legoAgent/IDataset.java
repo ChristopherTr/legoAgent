@@ -7,9 +7,9 @@ public interface IDataset {
 	void store();
 	void load();
 	void clearAll();
-	void addNewData(IDatum data);
-	ArrayList<IDatum> getAllData();
-	IDatum[] getSVMPoints();
+	void addNewData(IDataPoint data);
+	ArrayList<IDataPoint> getAllData();
+	IDataPoint[] getSVMPoints();
 	void removeStoredSVMPoints();
 	
 }

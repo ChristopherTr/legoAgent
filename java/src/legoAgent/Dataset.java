@@ -14,8 +14,8 @@ public class Dataset implements IDataset {
 	 * the path and filename in the filesystem of the serialized data.
 	 */
 	static private String fileLocation = "location.data";
-	private ArrayList<IDatum> dataset;
-	private IDatum[] sVMPoints;
+	private ArrayList<IDataPoint> dataset;
+	private IDataPoint[] sVMPoints;
 	
 	public Dataset() {
 		this.load();
@@ -52,12 +52,12 @@ public class Dataset implements IDataset {
 		try {
 			FileInputStream fis = new FileInputStream(fileLocation);
 		    ObjectInputStream ois = new ObjectInputStream(fis);
-		    this.dataset = (ArrayList<IDatum>) ois.readObject();
+		    this.dataset = (ArrayList<IDataPoint>) ois.readObject();
 		    ois.close();
 		    fis.close();
 		} catch (IOException | ClassNotFoundException e) {
 			Logger.log(e.getMessage());
-			this.dataset = new ArrayList<IDatum>();
+			this.dataset = new ArrayList<IDataPoint>();
 		} finally {
 			Logger.log("Objekte geladen");
 		}
@@ -68,7 +68,7 @@ public class Dataset implements IDataset {
 	 */
 	@Override
 	public void clearAll() {
-		this.dataset = new ArrayList<IDatum>();
+		this.dataset = new ArrayList<IDataPoint>();
 		this.removeStoredSVMPoints();
 	}
 
@@ -76,7 +76,7 @@ public class Dataset implements IDataset {
 	 * Adds a new data to the dataset in RAM, does not store this changes to disk. 
 	 */
 	@Override
-	public void addNewData(IDatum data) {
+	public void addNewData(IDataPoint data) {
 		this.dataset.add(data);
 	}
 
@@ -84,7 +84,7 @@ public class Dataset implements IDataset {
 	 * returns the current dataset from RAM. 
 	 */
 	@Override
-	public ArrayList<IDatum> getAllData() {
+	public ArrayList<IDataPoint> getAllData() {
 		return this.dataset;
 	}
 
@@ -93,7 +93,7 @@ public class Dataset implements IDataset {
 	 * or null, if no data is stored
 	 */
 	@Override
-	public IDatum[] getSVMPoints() {
+	public IDataPoint[] getSVMPoints() {
 		// TODO Auto-generated method stub
 		return this.sVMPoints;
 	}

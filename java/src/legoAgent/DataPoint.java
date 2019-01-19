@@ -2,7 +2,7 @@ package legoAgent;
 
 import java.io.Serializable;
 
-public class Datum implements IDatum, Serializable {
+public class DataPoint implements IDataPoint, Serializable {
 
 	
 	/**
@@ -18,13 +18,13 @@ public class Datum implements IDatum, Serializable {
 	 */
 	private Figure figure;
 	
-	public Datum(int perimeter, int area) {
+	public DataPoint(int perimeter, int area) {
 		this.area = area;
 		this.perimeter = perimeter;
 		this.figure = Figure.UNKNOWN;
 	}
 	
-	public Datum(int perimeter, int area, Figure figure) {
+	public DataPoint(int perimeter, int area, Figure figure) {
 		this.area = area;
 		this.perimeter = perimeter;
 		this.figure = figure;

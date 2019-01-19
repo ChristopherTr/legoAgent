@@ -1,6 +1,6 @@
 package legoAgent;
 
-public interface IDatum {
+public interface IDataPoint {
 	
 	public int getPerimeter();
 	public int getArea();

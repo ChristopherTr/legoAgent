@@ -9,7 +9,7 @@ public class Training implements ITraining {
 	}
 
 	@Override
-	public void addNewData(IDatum data) {
+	public void addNewData(IDataPoint data) {
 		// TODO Auto-generated method stub
 
 	}

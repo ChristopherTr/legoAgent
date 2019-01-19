@@ -7,17 +7,17 @@ public class SVM implements ISVM {
 	//@Override
 	private static int classifierRectangle = 1;
 	private static int classifierCircle = -1;
-	public IDatum[] findSupportVectors() {
-	ArrayList <IDatum> listCircle = new ArrayList<IDatum>();
-	ArrayList <IDatum> listRectangle = new ArrayList<IDatum>();
+	public IDataPoint[] findSupportVectors() {
+	ArrayList <IDataPoint> listCircle = new ArrayList<IDataPoint>();
+	ArrayList <IDataPoint> listRectangle = new ArrayList<IDataPoint>();
 	Dataset dataSet = new Dataset();
 	
-	ArrayList <IDatum>listDataSet= dataSet.getAllData();
+	ArrayList <IDataPoint>listDataSet= dataSet.getAllData();
 	
 	/*
 	 * Fill each figure list
 	 */
-	for(IDatum laufDatum: listDataSet) {
+	for(IDataPoint laufDatum: listDataSet) {
 		switch(laufDatum.getFigure()) {
 		//case triangle:
 		//	break;
@@ -33,7 +33,7 @@ public class SVM implements ISVM {
 	}
 	
 	/*
-	 * Ermitteln der besten Hyperebene über alle Kombinationen von Knoten
+	 * Ermitteln der besten Hyperebene ï¿½ber alle Kombinationen von Knoten
 	 */
 	examineSupportVectors(listRectangle, listCircle, classifierRectangle, classifierCircle);
 	examineSupportVectors(listCircle, listRectangle, classifierCircle, classifierRectangle);
@@ -58,7 +58,7 @@ public class SVM implements ISVM {
 	//Perimeter	a00     a01		a02		1/-1
 	//Area		a10		a11		a12		1/-1
 	//Default	1		1		1		1/-1
-	private void examineSupportVectors(ArrayList<IDatum> hostList, ArrayList<IDatum> slaveList, int firstClassifier, int secondClassifier) {
+	private void examineSupportVectors(ArrayList<IDataPoint> hostList, ArrayList<IDataPoint> slaveList, int firstClassifier, int secondClassifier) {
 		SimpleMatrix nodeMatrix = new SimpleMatrix(3, 3);
 		
 		//Klassifikationsvektor: Aufbau statisch, da innerhalb der Methode immer beispielsweise 1* Kreis und 2*Rechteck genutzt wird
@@ -67,9 +67,9 @@ public class SVM implements ISVM {
 		classificationVector.setRow(1, 0,secondClassifier);
 		classificationVector.setRow(2, 0,secondClassifier);
 		
-		for(IDatum hostDatum: hostList) {
-			for(IDatum firstSlaveDatum: slaveList) {
-				for(IDatum secondSlaveDatum: slaveList) {
+		for(IDataPoint hostDatum: hostList) {
+			for(IDataPoint firstSlaveDatum: slaveList) {
+				for(IDataPoint secondSlaveDatum: slaveList) {
 					nodeMatrix.set(0, 0, (hostDatum.getPerimeter()*2+hostDatum.getArea()*2+1));    //a00
 					nodeMatrix.set(0, 1, (hostDatum.getPerimeter()*firstSlaveDatum.getPerimeter()+hostDatum.getArea()*firstSlaveDatum.getArea()+1));    //a01
 					nodeMatrix.set(0, 2, (hostDatum.getPerimeter()*secondSlaveDatum.getPerimeter()+hostDatum.getArea()*secondSlaveDatum.getArea()+1));    //a02
