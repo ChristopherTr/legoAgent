@@ -54,4 +54,14 @@ public class DataPoint implements IDataPoint, Serializable {
 	public Figure getFigure() {
 		return this.figure;
 	}
+
+	/**
+	 * set Figure of DataPoint. Only possible if figure = UNKNOWN
+	 */
+	@Override
+	public void setFigure(Figure f) {
+		if(this.figure == Figure.UNKNOWN) {
+			this.figure = f;
+		}
+	}
 }

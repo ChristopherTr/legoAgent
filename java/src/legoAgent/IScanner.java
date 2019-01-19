@@ -3,7 +3,8 @@ package legoAgent;
 public interface IScanner {
 	
 	public int[][] readImage();
-	public int[] computeTrait(int image[][]);
+	public IDataPoint computeTrait(int image[][]);
+	public IDataPoint scanNewDataPoint();
 	int resolution = 16;
 	
 }

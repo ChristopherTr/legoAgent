@@ -10,9 +10,13 @@ public class Scanner implements IScanner {
 	}
 
 	@Override
-	public int[] computeTrait(int[][] image) {
+	public IDataPoint computeTrait(int[][] image) {
 		// TODO Auto-generated method stub
-		return null; // BITTE UMFANG AN STELLE 0, FLÄCHE AN STELLE 1
+		return null;
 	}
 
+	@Override
+	public IDataPoint scanNewDataPoint() {
+		return this.computeTrait(this.readImage());
+	}
 }
