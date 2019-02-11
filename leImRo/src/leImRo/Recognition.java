@@ -14,6 +14,11 @@ public class Recognition implements IRecognition {
 
 	/**
 	 * Erkennung einer Figur - Hauptfunktion
+	 * Beinhaltet
+	 *  - Scannen des Bildes
+	 *  - Vorbereiten der SVM, wenn erforderlich
+	 *  - Bestimmen des Bildes mit der SVM
+	 * Gibt die berechnete Figur zurück
 	 */
 	@Override
 	public Figure recognize() {
@@ -22,14 +27,20 @@ public class Recognition implements IRecognition {
 		
 		//let the SVM compute the 
 		Figure figure = svm.classify(newDataPoint);
+		Logger.log("Detected figure (corious if this works...): " + figure);
 		return figure;
 	}
 	
+	/**
+	 * Löscht alle bisherigen Daten inklusive Trainingsdaten, gescannte Bilder, etc. 
+	 */
 	@Override
 	public void removeAll() {
+		Logger.log("Full Reset started");
 		Dataset dataset = new Dataset();
 		dataset.clearAll();
 		Dataset.store(dataset);
+		Logger.log("Full Reset completed");
 	}
 
 	/**
@@ -40,17 +51,15 @@ public class Recognition implements IRecognition {
 		IDataPoint newDataPoint = this.scanner.scanNewDataPoint();
 		newDataPoint.setFigure(figure);
 		
-		Dataset dataset = new Dataset();
 		dataset.addNewData(newDataPoint);
 		
-		SVM svm = new SVM(dataset);
+		this.svm = new SVM(dataset);
 		//calculate new SupportVectors
 		try {
 			svm.findSupportVectors();
 		} catch (IllegalArgumentException e) {
-			//ignore in case of to little points stored in dataset
+			Logger.log("Falsche Verwendung von findSupportVectors: Falsche Anzahl an verfügbaren Datenpunkten");
 		}
-
-		dataset.store();
+		Dataset.store(dataset);
 	}
 }

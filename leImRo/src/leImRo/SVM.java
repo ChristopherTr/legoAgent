@@ -27,7 +27,11 @@ public class SVM implements ISVM {
 	 * TODO: Support more Points
 	 */
 	@Override
-	public IDataPoint[] findSupportVectors() {
+	public void findSupportVectors() {
+		// New point --> delete current state
+		this.PointOnSeparator = null;
+		this.vectorParallelToSeparator = null;
+		this.vectorToSeparatorSide = null;
 		/*
 		 * Fill each figure list
 		 */
@@ -53,6 +57,7 @@ public class SVM implements ISVM {
 		if (size < 3) {
 			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
 		} else if(size == 3) { // Easy case: onyl three points are avail. 
+			Logger.log("Compute Support Vectors with 3 Datapoints");
 			IDataPoint[] circleArray = (IDataPoint[]) listCircle.toArray();
 			IDataPoint[] rectangleArray = (IDataPoint[]) listRectangle.toArray();
 			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
@@ -72,13 +77,13 @@ public class SVM implements ISVM {
 			}
 		} else { 
 			throw new IllegalArgumentException("Too much trainingsdata to compute support-vectors: " + size + ", requered: 3");
-		}		
-		return null;
+		}
+		// New computation of separator
+		this.computeSeparator();
 	}
 
 	/**
 	 * Berchnet die Trennlinie zwischen den beiden Punktewolken
-	 * TODO: nochmal ansehen und checken, ob die fertig ist
 	 */
 	@Override
 	public void computeSeparator() {
@@ -103,13 +108,21 @@ public class SVM implements ISVM {
 		/**
 		 * Damit ergibt sich im 2D-Raum die Gerade des Separators (Hyperebene) als 
 		 * g(x, y) = this.PointOnSeparator + n * this.vectorParallelToSeparator (die Straße entlang)
-		 * mit dem orthogonalen Vektor this.vectorToSeparatorSide (von der Straßenmitte zum Rand der Straße in einem Schritt)
+		 * mit dem orthogonalen Vektor this.vectorToSeparatorSide (von der Straßenmitte zum Rand der Straße in genau einem Schritt)
 		 */
 		
 	}
 
+	/**
+	 * Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. 
+	 * Berechnet sich im Zweifelsfall 
+	 */
 	@Override
 	public Figure classify(IDataPoint dataPoint) {
+		// if current SVM is resetted or corrupted
+		if(this.vectorParallelToSeparator == null || this.PointOnSeparator == null || this.vectorToSeparatorSide == null ) {
+			this.computeSeparator();
+		}
 		Vector PointToClassify = dataPoint.toVector();
 		
 		double[] vectorCombination = Vector.linearcombination(this.vectorParallelToSeparator, this.vectorToSeparatorSide, Vector.subtract(PointToClassify, this.PointOnSeparator));
