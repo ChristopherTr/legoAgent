@@ -10,26 +10,29 @@ import lejos.utility.Delay;
 
 public class Scanner implements IScanner {
 
-	// public variables
-	public final static int resolution = 8;
-	public final static int yMax = 946; // maximum Degree for the Y-Axis, X is unlimited
-	public final static int speed = 500; // Speed for the motors [degrees/s]
-	public final static int acceleration = 300; // maximum acceleration for the Motors [degrees/s²]
-	public final static int minYAngle = 22;
-	public final static int minXAngle = 25;
-	public final static int filterSize = 5;
-	public final static double rgbThreshold = 0.12;
+	public final static int resolution = 8;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
+	// constants to define the mechanical constraining
+	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
+	public final static int speed = 500; 			// Speed for the motors [degrees/s]
+	public final static int acceleration = 300; 	// maximum acceleration for the Motors [degrees/s²]
+	public final static int minYAngle = 22;			//TODO: validate this
+	public final static int minXAngle = 25;			//TODO: validate this
+	public final static int sensorSamples = 5;		//specify samples for median filter
+	public final static double rgbThreshold = 0.12;	//Threshold for the average of the rgb sensor result to seperate between black and white
 	
-	private int pixel;
-	private static RegulatedMotor XMotor;
-	private static RegulatedMotor YMotor;
-	private static EV3ColorSensor Sensor;
+	// member variables
+	private int pixel;	// variable holding the current pixel size
+	private int dir; 	// variable to determine the direction of the y axis
+	private RegulatedMotor XMotor;
+	private RegulatedMotor YMotor;
+	private EV3ColorSensor Sensor;
 	
-	private static SampleProvider RgbSample;
-	private static SampleProvider RgbFilter;
+	private SampleProvider RgbSample;
+	private SampleProvider RgbFilter;
 
 	public Scanner() {
 		pixel = 0;
+		dir = -1; //due mechanical construction we should start in this direction
 		// instantiate Sensors and Motors
 		XMotor = Motor.A;
 		YMotor = Motor.B;
@@ -41,95 +44,190 @@ public class Scanner implements IScanner {
 		XMotor.setAcceleration(acceleration);
 		YMotor.setAcceleration(acceleration);
 		YMotor.setStallThreshold(3, 5); // TODO: Find good values
+		XMotor.setStallThreshold(3, 5); // TODO: Find good values
 
 		// get an instance of this sensor in measurement mode
 		RgbSample = Sensor.getRGBMode();
-		RgbFilter = new MedianFilter(RgbSample, filterSize);
+		RgbFilter = new MedianFilter(RgbSample, sensorSamples);
 	}
 
 	@Override
+	/**
+	 * scan whole image and calculate the characteristics of the objects
+	 */
 	public IDataPoint scanNewDataPoint() {
-		return this.computeTrait(this.readImage());
+		return this.calculateCharacteristics(this.readImage());
 	}
 
+	/**
+	 * scan the whole picture. This is done in a meander shape.
+	 * See the following illustration (s is a scan, -> symbolize movement):
+	 * s->s->s->s
+	 * 		   \/
+	 * s<-s<-s<-s
+	 * \/
+	 * s->s->s->s
+	 * 		   \/
+	 * s<-s<-s<-s
+	 * 
+	 * This shows that for the reading of a line are one scan more is necessary than movements.
+	 */
 	private int[][] readImage() {
 		// calculate pixel size with the given constraints
 		int yAnglePerPixel = minYAngle * resolution;
 		int xAnglePerPixel = minXAngle * resolution;
-		pixel = yMax / yAnglePerPixel;
+		int yMovements = yMax / yAnglePerPixel;
+		int xMovements = yMovements - 1;
+		pixel = yMovements + 1;
 		Logger.log("Scanner: Read " + pixel + " Pixels");
 
 		// create array to hold the scanned image
 		int[][] Image = new int[pixel][pixel];
-		boolean dir = false; // variable to determine the direction of the y axis
-		// Initialize an array of floats for fetching samples
-		float[] Rgb = new float[RgbFilter.sampleSize()];
 		
-		for (int sample = 0; sample < filterSize; sample++) {
-			RgbFilter.fetchSample(Rgb, 0);
-		}
+		//do dummy read out to initalize sensor
+		getPixelColor();
+		
 		// For loop for the x-axis
-		for (int j = 0; j < pixel; j++) {
-
-			String debugImLine = "";
+		for (int xIndex = 0; xIndex < pixel; xIndex++) {
+			String debugImLine = "";	//debug variable for showing image
+			
 			// For loop for the y-axis
-			for (int i = 0; i < pixel; i++) {
-				int y_index; // helping variable for image array filling
-				if (dir) {
-					YMotor.rotate(yAnglePerPixel);
-					if (YMotor.isStalled()) {
-						Logger.log("YMotor stalled");
-					}
-					y_index = pixel - i - 1;
-				} else {
-					YMotor.rotate((-1) * yAnglePerPixel);
-					y_index = i;
-				}
-				Delay.msDelay(1);
-				// measure filterSize Times to calculate median value
-				for (int sample = 0; sample < filterSize; sample++) {
-					RgbFilter.fetchSample(Rgb, 0);
-				}
+			for (int yIndex = 0; yIndex < pixel; yIndex++) {				
+				int pixelColor = 0;
 				// fetch a sample
-				Image[j][y_index] = getPixel(Rgb);
-				//Logger.log("r " + Rgb[0] + ", g " + Rgb[1] + ", b " + Rgb[2]);
-				if(getPixel(Rgb) == 1){
+				pixelColor = getPixelColor();
+				Image[xIndex][getYIndex(yIndex)] = pixelColor;
+				
+				//----------Y-Movement--------------
+				if(yIndex < yMovements)
+				{
+					turnYMotor(yAnglePerPixel);
+				}
+				
+				//------debug----------
+				if(pixelColor == 1){
 					debugImLine += '#';
 				}
 				else {
 					debugImLine += '_';
 				}
+				//--------------------
 			}
-
-			XMotor.rotate(xAnglePerPixel);
-			if (XMotor.isStalled()) {
-				Logger.log("XMotor stalled");
+			//------X-Movement--------
+			if(xIndex < xMovements)
+			{
+				turnXMotor(xAnglePerPixel);
 			}
+			
 			// invert direction for the Y-Axis
-			dir = !dir;
-			Logger.log("Progress: line " + (j+1) + " from " + pixel);
+			invertDirection();
+			
+			//debug messages
+			Logger.log("Scanner: Progress line " + (xIndex+1) + " from " + pixel);
 			Logger.log(debugImLine);
 		}
 		
-		//move back to origin position
-		YMotor.rotate(pixel*yAnglePerPixel);
-		XMotor.rotate(-1*pixel*xAnglePerPixel);
+		//return to HomePosition
+		returnToHome(xAnglePerPixel, yAnglePerPixel);
 		
 		return Image;
 	}
 
-	/*
-	 * get pixel color return 0 for white return 1 for black
+	/**
+	 * read in sensor value and filter it
+	 * @return 0 for white 
+	 * 		   1 for black
 	 */
-	private int getPixel(float[] rgb) {
-		float sum = (rgb[0] + rgb[1] + rgb[2]) / 3;
-		if (sum < rgbThreshold) {
+	private int getPixelColor() {
+		// Initialize an array of floats for the filter
+		float[] Rgb = new float[RgbFilter.sampleSize()];
+		
+		// measure filterSize Times to calculate median value
+		for (int sample = 0; sample < sensorSamples; sample++) {
+			RgbFilter.fetchSample(Rgb, 0);
+		}
+		Logger.log("Scanner: Read Pixel r " + Rgb[0] + ", g " + Rgb[1] + ", b " + Rgb[2]);
+		//calculate averageColor
+		float avg = (Rgb[0] + Rgb[1] + Rgb[2]) / 3;
+		if (avg < rgbThreshold) {
 			return 1;
 		}
 		return 0;
 	}
 
-	private IDataPoint computeTrait(int[][] image) {
+	/**
+	 * calculates the y Index for the image buffer
+	 * Depending on the direction the index must be calculated different because of the meander shape of scanning
+	 * @param i: current position y Motor
+	 * @return index for the image buffer
+	 */
+	private int getYIndex(int i)
+	{
+		if (dir < 0) {
+			return (pixel - i - 1);
+		} else {
+			return i;
+		}
+	}
+	
+	/**
+	 * turn the XMotor about given angle
+	 * @param xAnglePerPixel: angle to rotate
+	 */
+	private void turnXMotor(int xAnglePerPixel) {
+		XMotor.rotate(xAnglePerPixel);
+		Delay.msDelay(1);	//Delay is important for mechanical constraining and to ensure correct process of the sw
+		if (XMotor.isStalled()) {
+			Logger.log("Scanner: XMotor stalled");
+		}
+	}
+
+	/**
+	 * turn the YMotor about given angle
+	 * @param yAnglePerPixel: angle to rotate
+	 */
+	private void turnYMotor(int yAnglePerPixel) {
+		YMotor.rotate(dir * yAnglePerPixel);
+		Delay.msDelay(1);	//Delay is important for mechanical constraining and to ensure correct process of the sw
+		if (YMotor.isStalled()) {
+			Logger.log("Scanner: YMotor stalled");
+		}
+	}
+	
+	/**
+	 * return to the origin position after scanning image
+	 */
+	private void returnToHome(int xAnglePerPixel, int yAnglePerPixel) {
+		//move back to origin position
+		if (dir > 0) {	//check if Y Movement is necessary or not
+			YMotor.rotate(pixel*yAnglePerPixel);
+		}
+		XMotor.rotate(-1*pixel*xAnglePerPixel);
+		dir = 1;
+	}
+
+	/**
+	 * invert the direction flag
+	 *  1 means rotate clockwise
+	 * -1 means rotate counter-clockwise
+	 */
+	private void invertDirection() {
+		if(dir > 0)
+		{
+			dir = -1;
+		}
+		else
+		{
+			dir = 1;
+		}
+	}
+	
+	/**
+	 * calculate the characteristics perimeter and area of a given image
+	 * @param image: int buffer of the image
+	 * @return DataPoint with the characteristics perimeter and area
+	 */
+	private IDataPoint calculateCharacteristics(int[][] image) {
 		int area = 0;
 		int perimeter = 0;
 
@@ -156,7 +254,7 @@ public class Scanner implements IScanner {
 				}
 			}
 		}
-		Logger.log("computeTrait: Umfang = " + perimeter + ", Flaeche = " + area);
+		Logger.log("Scanner: Perimeter = " + perimeter + ", Area = " + area);
 		DataPoint point = new DataPoint(perimeter, area);
 		return point;
 	}
