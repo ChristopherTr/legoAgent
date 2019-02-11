@@ -29,6 +29,11 @@ public class Dataset implements IDataset, Serializable {
 	 */
 	private int svmOrientation = 0;
 	
+	public Dataset() {
+		this.dataset = new ArrayList<IDataPoint>();
+		
+	}
+	
 	/**
 	 * TODO: Sort the received array by figure Type ()
 	 * @param sVMPoints
