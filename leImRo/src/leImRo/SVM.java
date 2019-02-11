@@ -53,7 +53,10 @@ public class SVM implements ISVM {
 		if (size < 3) {
 			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
 		} else if(size == 3) { // Easy case: onyl three points are avail. 
-			Logger.log("Compute Support Vectors with 3 Datapoints");
+			Logger.log("Compute Support Vectors with 3 Datapoints:");
+			Logger.log(listDataSet.get(0).toString());
+			Logger.log(listDataSet.get(1).toString());
+			Logger.log(listDataSet.get(2).toString());
 			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
 				this.dataSet.setSvmOrientation(0);
 				IDataPoint[] svmPoints = new IDataPoint[3];
