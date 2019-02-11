@@ -124,6 +124,13 @@ public class Dataset implements IDataset, Serializable {
 	public IDataPoint[] getSVMPoints() {
 		return this.sVMPoints;
 	}
+	
+	/**
+	 * Liefert die String-Repräsentation des Datenpunkts zurück
+	 */
+	public String toSTring() {
+		return "Dataset with " + this.dataset.size() + " elements. ";
+	}
 
 	/**
 	 * removes the currently stored SVM-Points. 
