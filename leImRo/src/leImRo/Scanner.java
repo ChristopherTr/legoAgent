@@ -11,7 +11,7 @@ import lejos.utility.Delay;
 public class Scanner implements IScanner {
 
 	// public variables
-	public final static int resolution = 1;
+	public final static int resolution = 8;
 	public final static int yMax = 946; // maximum Degree for the Y-Axis, X is unlimited
 	public final static int speed = 500; // Speed for the motors [degrees/s]
 	public final static int acceleration = 300; // maximum acceleration for the Motors [degrees/s²]
@@ -19,12 +19,33 @@ public class Scanner implements IScanner {
 	public final static int minXAngle = 25;
 	public final static int filterSize = 5;
 	public final static double rgbThreshold = 0.12;
-
-	// private variables
-	private int pixel = 0;
-	private static RegulatedMotor XMotor = Motor.A;
-	private static RegulatedMotor YMotor = Motor.B;
+	
+	private int pixel;
+	private static RegulatedMotor XMotor;
+	private static RegulatedMotor YMotor;
 	private static EV3ColorSensor Sensor;
+	
+	private static SampleProvider RgbSample;
+	private static SampleProvider RgbFilter;
+
+	public Scanner() {
+		pixel = 0;
+		// instantiate Sensors and Motors
+		XMotor = Motor.A;
+		YMotor = Motor.B;
+		Sensor = new EV3ColorSensor(SensorPort.S4);
+		XMotor.resetTachoCount(); // reset the internal degree reference of the motors
+		YMotor.resetTachoCount();
+		XMotor.setSpeed(speed);
+		YMotor.setSpeed(speed);
+		XMotor.setAcceleration(acceleration);
+		YMotor.setAcceleration(acceleration);
+		YMotor.setStallThreshold(3, 5); // TODO: Find good values
+
+		// get an instance of this sensor in measurement mode
+		RgbSample = Sensor.getRGBMode();
+		RgbFilter = new MedianFilter(RgbSample, filterSize);
+	}
 
 	@Override
 	public IDataPoint scanNewDataPoint() {
@@ -41,26 +62,16 @@ public class Scanner implements IScanner {
 		// create array to hold the scanned image
 		int[][] Image = new int[pixel][pixel];
 		boolean dir = false; // variable to determine the direction of the y axis
-
-		// instantiate Sensors and Motors
-		Sensor = new EV3ColorSensor(SensorPort.S4);
-		XMotor.resetTachoCount(); // reset the internal degree reference of the motors
-		YMotor.resetTachoCount();
-		XMotor.setSpeed(speed);
-		YMotor.setSpeed(speed);
-		XMotor.setAcceleration(acceleration);
-		YMotor.setAcceleration(acceleration);
-		YMotor.setStallThreshold(3, 5); // TODO: Find good values
-
-		// get an instance of this sensor in measurement mode
-		SampleProvider RgbSample = Sensor.getRGBMode();
-		SampleProvider RgbFilter = new MedianFilter(RgbSample, filterSize);
 		// Initialize an array of floats for fetching samples
 		float[] Rgb = new float[RgbFilter.sampleSize()];
-
+		
+		for (int sample = 0; sample < filterSize; sample++) {
+			RgbFilter.fetchSample(Rgb, 0);
+		}
 		// For loop for the x-axis
 		for (int j = 0; j < pixel; j++) {
 
+			String debugImLine = "";
 			// For loop for the y-axis
 			for (int i = 0; i < pixel; i++) {
 				int y_index; // helping variable for image array filling
@@ -81,6 +92,13 @@ public class Scanner implements IScanner {
 				}
 				// fetch a sample
 				Image[j][y_index] = getPixel(Rgb);
+				//Logger.log("r " + Rgb[0] + ", g " + Rgb[1] + ", b " + Rgb[2]);
+				if(getPixel(Rgb) == 1){
+					debugImLine += '#';
+				}
+				else {
+					debugImLine += '_';
+				}
 			}
 
 			XMotor.rotate(xAnglePerPixel);
@@ -89,7 +107,14 @@ public class Scanner implements IScanner {
 			}
 			// invert direction for the Y-Axis
 			dir = !dir;
+			Logger.log("Progress: line " + (j+1) + " from " + pixel);
+			Logger.log(debugImLine);
 		}
+		
+		//move back to origin position
+		YMotor.rotate(pixel*yAnglePerPixel);
+		XMotor.rotate(-1*pixel*xAnglePerPixel);
+		
 		return Image;
 	}
 
@@ -99,9 +124,9 @@ public class Scanner implements IScanner {
 	private int getPixel(float[] rgb) {
 		float sum = (rgb[0] + rgb[1] + rgb[2]) / 3;
 		if (sum < rgbThreshold) {
-			return 0;
+			return 1;
 		}
-		return 1;
+		return 0;
 	}
 
 	private IDataPoint computeTrait(int[][] image) {
@@ -132,6 +157,7 @@ public class Scanner implements IScanner {
 			}
 		}
 		Logger.log("computeTrait: Umfang = " + perimeter + ", Flaeche = " + area);
-		return new DataPoint(perimeter, area);
+		DataPoint point = new DataPoint(perimeter, area);
+		return point;
 	}
 }

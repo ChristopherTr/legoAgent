@@ -50,7 +50,8 @@ public class Recognition implements IRecognition {
 	public void train(Figure figure) {
 		IDataPoint newDataPoint = this.scanner.scanNewDataPoint();
 		newDataPoint.setFigure(figure);
-		
+		Logger.log("TRAIN:" + newDataPoint);
+		Logger.log("Dataset:" + dataset);
 		dataset.addNewData(newDataPoint);
 		
 		this.svm = new SVM(dataset);
