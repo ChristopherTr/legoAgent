@@ -8,7 +8,7 @@ public class Recognition implements IRecognition {
 	
 	public Recognition(){
 		this.scanner = new Scanner();
-		this.dataset = new Dataset();
+		this.dataset = Dataset.load();
 		this.svm = new SVM(this.dataset);
 	}
 
