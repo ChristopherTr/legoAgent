@@ -2,22 +2,25 @@ package leImRo;
 
 public class Recognition implements IRecognition {
 
-	private Scanner scanner;
+	private IScanner scanner;
+	private SVM svm;
+	private Dataset dataset;
 	
-	public Recognition(Scanner scanner){
-		this.scanner=scanner;
+	public Recognition(){
+		this.scanner = new Scanner();
+		this.dataset = new Dataset();
+		this.svm = new SVM(this.dataset);
 	}
 
+	/**
+	 * Erkennung einer Figur - Hauptfunktion
+	 */
 	@Override
 	public Figure recognize() {
 		//get new DataPoint from Scanner
-		Scanner scanner = new Scanner();
-		int[][] image = scanner.readImage();
-		IDataPoint newDataPoint = scanner.computeTrait(image);
+		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		
-		//add new DataPoint to SVM
-		Dataset dataset = new Dataset();
-		SVM svm = new SVM(dataset);
+		//let the SVM compute the 
 		Figure figure = svm.classify(newDataPoint);
 		return figure;
 	}
@@ -26,11 +29,14 @@ public class Recognition implements IRecognition {
 	public void removeAll() {
 		Dataset dataset = new Dataset();
 		dataset.clearAll();
-		dataset.store();
+		Dataset.store(dataset);
 	}
 
+	/**
+	 * Funktion lernt einen neuen Datenpunkt als reine Wahrheit
+	 */
 	@Override
-	public void addNewData(Figure figure) {
+	public void train(Figure figure) {
 		IDataPoint newDataPoint = this.scanner.scanNewDataPoint();
 		newDataPoint.setFigure(figure);
 		

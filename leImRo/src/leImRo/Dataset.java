@@ -92,6 +92,7 @@ public class Dataset implements IDataset, Serializable {
 	public void clearAll() {
 		this.dataset = new ArrayList<IDataPoint>();
 		this.removeStoredSVMPoints();
+		this.svmOrientation = 0;
 	}
 
 	/**
@@ -116,7 +117,6 @@ public class Dataset implements IDataset, Serializable {
 	 */
 	@Override
 	public IDataPoint[] getSVMPoints() {
-		// TODO Auto-generated method stub
 		return this.sVMPoints;
 	}
 

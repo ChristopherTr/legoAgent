@@ -23,6 +23,8 @@ public class SVM implements ISVM {
 	}
 	/*
 	 * compute best hyperplane with the given points
+	 * currently only works with 3 datapoints to compute, else error
+	 * TODO: Support more Points
 	 */
 	@Override
 	public IDataPoint[] findSupportVectors() {
@@ -74,6 +76,10 @@ public class SVM implements ISVM {
 		return null;
 	}
 
+	/**
+	 * Berchnet die Trennlinie zwischen den beiden Punktewolken
+	 * TODO: nochmal ansehen und checken, ob die fertig ist
+	 */
 	@Override
 	public void computeSeparator() {
 		// TODO Auto-generated method stub
