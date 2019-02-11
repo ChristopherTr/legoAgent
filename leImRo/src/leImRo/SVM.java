@@ -57,6 +57,9 @@ public class SVM implements ISVM {
 			Logger.log(listDataSet.get(0).toString());
 			Logger.log(listDataSet.get(1).toString());
 			Logger.log(listDataSet.get(2).toString());
+			if(listCircle.size() == 0 || listRectangle.size() == 0) {
+				throw new IllegalArgumentException("Too broken trainingsdata to compute support-vectors, requered two different Point-types");
+			}
 			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
 				this.dataSet.setSvmOrientation(0);
 				IDataPoint[] svmPoints = new IDataPoint[3];
