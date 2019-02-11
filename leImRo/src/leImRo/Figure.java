@@ -1,4 +1,4 @@
-package legoAgent;
+package leImRo;
 
 public enum Figure {
 

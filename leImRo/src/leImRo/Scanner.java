@@ -1,4 +1,4 @@
-package legoAgent;
+package leImRo;
 
 public class Scanner implements IScanner {
 
