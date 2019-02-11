@@ -36,7 +36,7 @@ public class GUI implements IGUI {
 					// start recognise
 				} else if (selected == 1) {
 					// start train
-					recognition.addNewData(Figure.UNKNOWN);
+					recognition.train(Figure.UNKNOWN);
 					
 				} else if (selected == 2) {
 					// start clear

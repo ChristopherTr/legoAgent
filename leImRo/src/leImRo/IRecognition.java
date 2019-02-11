@@ -6,5 +6,5 @@ public interface IRecognition {
 
 	void removeAll();
 
-	void addNewData(Figure figure);
+	void train(Figure figure);
 }
