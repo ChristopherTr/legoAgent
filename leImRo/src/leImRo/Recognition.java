@@ -2,18 +2,11 @@ package leImRo;
 
 public class Recognition implements IRecognition {
 
-	private Scanner scanner;
-	
-	public Recognition(Scanner scanner){
-		this.scanner=scanner;
-	}
-
 	@Override
 	public Figure recognize() {
 		//get new DataPoint from Scanner
 		Scanner scanner = new Scanner();
-		int[][] image = scanner.readImage();
-		IDataPoint newDataPoint = scanner.computeTrait(image);
+		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		
 		//add new DataPoint to SVM
 		Dataset dataset = new Dataset();
@@ -31,7 +24,8 @@ public class Recognition implements IRecognition {
 
 	@Override
 	public void addNewData(Figure figure) {
-		IDataPoint newDataPoint = this.scanner.scanNewDataPoint();
+		Scanner scanner = new Scanner();
+		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		newDataPoint.setFigure(figure);
 		
 		Dataset dataset = new Dataset();

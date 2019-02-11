@@ -3,8 +3,6 @@
  */
 package leImRo;
 
-import lejos.hardware.lcd.LCD;
-import lejos.utility.Delay;
 
 /**
  * @author trdrc
@@ -16,7 +14,6 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		LCD.drawString("leImRo - TODO: Implement me!", 0, 0);
-		Delay.msDelay(30000);
+		GUI.showMenu();
 	}
 }
