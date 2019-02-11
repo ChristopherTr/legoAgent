@@ -5,11 +5,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Dataset implements IDataset {
+public class Dataset implements IDataset, Serializable {
 
+	/**
+	 * Version ID
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * the path and filename in the filesystem of the serialized data.
 	 */
@@ -38,18 +44,12 @@ public class Dataset implements IDataset {
 	public void setSvmOrientation(int svmOrientation) {
 		this.svmOrientation = svmOrientation;
 	}
-
-	public Dataset() {
-		this.load();
-	}
 	
 	/**
 	 * stores the current status of the dataset to the disk. 
 	 * Storage-path is specified by static variable fileLocation. 
-	 * TODO: storage of SVMPoints in separate file
 	 */
-	@Override
-	public void store() {
+	public static void store(Dataset dataset) {
 		try {
 			FileOutputStream fos = new FileOutputStream(fileLocation);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -68,21 +68,21 @@ public class Dataset implements IDataset {
 	 * Path is specified by static variable fileLocation.
 	 * TODO: Load of SVMPoints from separate file 
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void load() {
+	public static Dataset load() {
+		Dataset dataset;
 		try {
 			FileInputStream fis = new FileInputStream(fileLocation);
 		    ObjectInputStream ois = new ObjectInputStream(fis);
-		    this.dataset = (ArrayList<IDataPoint>) ois.readObject();
+		    dataset = (Dataset) ois.readObject();
 		    ois.close();
 		    fis.close();
 		} catch (IOException | ClassNotFoundException e) {
 			Logger.log(e.getMessage());
-			this.dataset = new ArrayList<IDataPoint>();
+			dataset = new Dataset();
 		} finally {
 			Logger.log("Objekte geladen");
 		}
+		return dataset;
 	}
 	
 	/**
