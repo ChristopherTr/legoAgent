@@ -64,6 +64,22 @@ public class DataPoint implements IDataPoint, Serializable {
 			this.figure = f;
 		}
 	}
+	
+	/**
+	 * Liefert die String-Repräsentation des Datenpunkts zurück
+	 */
+	public String toString() {
+		String form = "";
+		if (this.getFigure() == Figure.rectangle) {
+			form = "[]";
+		} else if (this.getFigure() == Figure.circle) {
+			form = "O";
+		} else {
+			form = "???";
+		}
+		String ret = "Datapoint (area: " + this.getArea() + ", perimeter: " + this.getPerimeter() + ", Form: " + form + ")";
+		return ret;
+	}
 
 	@Override
 	public Vector toVector() {

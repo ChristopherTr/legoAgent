@@ -31,15 +31,20 @@ public class GUI implements IGUI {
 				}
 			}
 			if (Button.ENTER.isDown()) {
+				LCD.clear();
 				Recognition recognition = new Recognition();
 				if (selected == 0) {
 					// start recognise
 				} else if (selected == 1) {
 					// start train
-					recognition.train(Figure.UNKNOWN);
+					recognition.removeAll();
+					recognition.train(Figure.rectangle);
+					recognition.train(Figure.rectangle);
+					recognition.train(Figure.circle);
 					
 				} else if (selected == 2) {
 					// start clear
+					recognition.removeAll();
 				}
 				else {
 					System.exit(0);

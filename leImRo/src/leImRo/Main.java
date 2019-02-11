@@ -14,6 +14,9 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		GUI.showMenu();
+		while(true)
+		{
+			GUI.showMenu();
+		}
 	}
 }

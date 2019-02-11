@@ -32,16 +32,12 @@ public class SVM implements ISVM {
 		this.PointOnSeparator = null;
 		this.vectorParallelToSeparator = null;
 		this.vectorToSeparatorSide = null;
-		/*
-		 * Fill each figure list
-		 */
+		// Fill each figure list
 		ArrayList<IDataPoint> listDataSet = this.dataSet.getAllData();
 		ArrayList<IDataPoint> listCircle = new ArrayList<IDataPoint>();
 		ArrayList<IDataPoint> listRectangle = new ArrayList<IDataPoint>();
 		for(IDataPoint laufDatum: listDataSet) {
 			switch(laufDatum.getFigure()) {
-			//case triangle:
-			//	break;
 			case rectangle:
 				listRectangle.add(laufDatum);
 				break;
@@ -53,26 +49,30 @@ public class SVM implements ISVM {
 			}
 		}
 		// Size of trainigsdata
-		int size = this.dataSet.getAllData().size();
+		int size = listDataSet.size();
 		if (size < 3) {
 			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
 		} else if(size == 3) { // Easy case: onyl three points are avail. 
-			Logger.log("Compute Support Vectors with 3 Datapoints");
-			IDataPoint[] circleArray = (IDataPoint[]) listCircle.toArray();
-			IDataPoint[] rectangleArray = (IDataPoint[]) listRectangle.toArray();
+			Logger.log("Compute Support Vectors with 3 Datapoints:");
+			Logger.log(listDataSet.get(0).toString());
+			Logger.log(listDataSet.get(1).toString());
+			Logger.log(listDataSet.get(2).toString());
+			if(listCircle.size() == 0 || listRectangle.size() == 0) {
+				throw new IllegalArgumentException("Too broken trainingsdata to compute support-vectors, requered two different Point-types");
+			}
 			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
 				this.dataSet.setSvmOrientation(0);
 				IDataPoint[] svmPoints = new IDataPoint[3];
-				svmPoints[0] = circleArray[0];
-				svmPoints[1] = circleArray[1];
-				svmPoints[2] = rectangleArray[0];
+				svmPoints[0] = listCircle.get(0);
+				svmPoints[1] = listCircle.get(1);
+				svmPoints[2] = listRectangle.get(0);
 				this.dataSet.setsVMPoints(svmPoints);
 			} else { // one circle and two rectangles are avail. 
 				this.dataSet.setSvmOrientation(1);
 				IDataPoint[] svmPoints = new IDataPoint[3];
-				svmPoints[0] = rectangleArray[0];
-				svmPoints[1] = rectangleArray[1];
-				svmPoints[2] = circleArray[0];
+				svmPoints[0] = listRectangle.get(0);
+				svmPoints[1] = listRectangle.get(1);
+				svmPoints[2] = listCircle.get(0);
 				this.dataSet.setsVMPoints(svmPoints);
 			}
 		} else { 
