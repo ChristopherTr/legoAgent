@@ -35,5 +35,5 @@ Bei der Verwendung des Scanners gibt es drei verschiedene Use-Cases:
 Der interne Ablauf dieser Anwendungen ist in der folgenden Abbildung dargestellt. 
 ![Programm-Ablaufplan](pictures/Mindstorms_svm_programmablauf.png)
 
-
 ### weitere Schritte
+Aktuell ist das Projekt noch im Prototyp-Status. 
