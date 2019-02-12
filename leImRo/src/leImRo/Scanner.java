@@ -13,8 +13,8 @@ public class Scanner implements IScanner {
 	public final static int resolution = 8;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
 	// constants to define the mechanical constraining
 	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
-	public final static int speed = 500; 			// Speed for the motors [degrees/s]
-	public final static int acceleration = 300; 	// maximum acceleration for the Motors [degrees/s²]
+	public final static int speed = 500; 			// Speed for the motors [degree/s]
+	public final static int acceleration = 300; 	// maximum acceleration for the Motors [degree/s]
 	public final static int minYAngle = 22;			//TODO: validate this
 	public final static int minXAngle = 25;			//TODO: validate this
 	public final static int startDir = -1;			//due mechanical construction we should start in this direction
@@ -100,13 +100,12 @@ public class Scanner implements IScanner {
 				Image[xIndex][getYIndex(yIndex)] = pixelColor;
 				
 				//----------Y-Movement--------------
-				if(yIndex < yMovements)
-				{
+				if(yIndex < yMovements) {
 					turnYMotor(yAnglePerPixel);
 				}
 				
 				//------debug----------
-				if(pixelColor == 1){
+				if(pixelColor == 1) {
 					debugImLine += '#';
 				}
 				else {
@@ -115,8 +114,7 @@ public class Scanner implements IScanner {
 				//--------------------
 			}
 			//------X-Movement--------
-			if(xIndex < xMovements)
-			{
+			if(xIndex < xMovements) {
 				turnXMotor(xAnglePerPixel);
 			}
 			
@@ -162,8 +160,7 @@ public class Scanner implements IScanner {
 	 * @param i: current position y Motor
 	 * @return index for the image buffer
 	 */
-	private int getYIndex(int i)
-	{
+	private int getYIndex(int i) {
 		if (dir < 0) {
 			return (pixel - i - 1);
 		} else {
@@ -213,12 +210,9 @@ public class Scanner implements IScanner {
 	 * -1 means rotate counter-clockwise
 	 */
 	private void invertDirection() {
-		if(dir > 0)
-		{
+		if(dir > 0) {
 			dir = -1;
-		}
-		else
-		{
+		} else {
 			dir = 1;
 		}
 	}
@@ -242,8 +236,7 @@ public class Scanner implements IScanner {
 
 					if (image[i][j] == 1) {
 
-						if ((image[i][j - 1] == 0) || (image[i][j + 1]) == 0 || (image[i + 1][j] == 0)
-								|| (image[i - 1][j] == 0)) {
+						if ((image[i][j - 1] == 0) || (image[i][j + 1]) == 0 || (image[i + 1][j] == 0) || (image[i - 1][j] == 0)) {
 							perimeter = perimeter + 1;
 						}
 					}
