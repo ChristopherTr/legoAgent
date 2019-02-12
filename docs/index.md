@@ -5,7 +5,7 @@ Im folgenden werden wir das "EVE - Lego Image Recognition Project" vorstellen:
 ### Idee des Projekts
 Die Idee des Projektes entstand während der Vorlesung Intelligente Agenten und Multiagentensysteme an der Dualen Hochschule Baden-Württemberg. 
 Ziel war es, einen Roboter zur Erkennung von Bildern zu bauen und zu programmieren. Dabei ging es uns darum, mit einem lernenden Algorithmus (sog. Support Vector Machines) in der Lage zu sein, Kreise von Quadraten zu unterscheiden. Eingesetzt werden sollen zur Unterscheidung die beiden Parameter Flächeninhalt und Umfang der einzelnen Figuren. 
-Eingesetzt wird bei diesem Projektder EV3-Brick von Lego Mindstorms. Dieser wurde mit der Anleitung unter https://github.com/ChristopherTr/legoAgent/wiki/Installation-Toolchain mit dem Projekt LeJOS installiert und kann damit mit Java programmiert werden. 
+Eingesetzt wird bei diesem Projektder EV3-Brick von Lego Mindstorms. Dieser wurde mit der <a href="https://github.com/ChristopherTr/legoAgent/wiki/Installation-Toolchain">Anleitung auf den Wiki-Seiten dieses Projekts</a> mit dem Projekt LeJOS installiert und kann damit mit Java programmiert werden. 
 
 ### Aufbau
 #### Hardware
@@ -25,6 +25,15 @@ Die Software des Roboters ist modular aufgebaut und besteht aus einigen Klassen 
 * Vector ist eine Hilfsklasse, welche verwendet wird, um Berechnungen der SVM zu erleichtern. 
 * Logger dient dem Debugging und der Protokollierung
 
+Eine ausführliche Klassendokumentation ist <a href="https://christophertr.github.io/legoAgent/html/">hier</a> zu finden. 
+
+#### Programmablauf
+Bei der Verwendung des Scanners gibt es drei verschiedene Use-Cases: 
+* Bisherige Daten löschen
+* Anhand eines Bildes trainieren
+* Ein Bild erkennen
+Der interne Ablauf dieser Anwendungen ist in der folgenden Abbildung dargestellt. 
+![Programm-Ablaufplan](pictures/Mindstorms_svm_programmablauf.png)
 
 
 ### weitere Schritte
