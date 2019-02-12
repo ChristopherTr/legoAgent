@@ -14,6 +14,8 @@ public class GUI implements IGUI {
 		TextMenu subMenu = new TextMenu(subEntries, 1, "Train Figure");
 		
 		Figure figure;
+		
+		LCD.clear();
 		switch (mainMenu.select()) {
 		case 0:
 			// start recognize
