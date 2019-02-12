@@ -4,6 +4,7 @@ In the following you will learn about the project, how you can built it and what
 
 ### About the project
 Details see wiki
+![Architecture](pictures/Mindstorms_svm_programmablauf.png)
 
 ### How to build
 
