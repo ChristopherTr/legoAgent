@@ -127,7 +127,7 @@ public class Dataset implements IDataset, Serializable {
 	}
 	
 	/**
-	 * Liefert die String-Repräsentation des Datenpunkts zurück
+	 * returns the String-Repräsentation of this object
 	 */
 	public String toString() {
 		String ret = "Dataset with " + this.dataset.size() + " elements: ";
