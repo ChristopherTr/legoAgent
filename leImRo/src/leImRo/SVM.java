@@ -21,6 +21,7 @@ public class SVM implements ISVM {
 	public SVM(Dataset dataset) {
 		this.dataSet = dataset;
 	}
+	
 	/*
 	 * compute best hyperplane with the given points
 	 * currently only works with 3 datapoints to compute, else error
@@ -126,7 +127,8 @@ public class SVM implements ISVM {
 	public Figure classify(IDataPoint dataPoint) {
 		// if current SVM is resetted or corrupted
 		if(this.vectorParallelToSeparator == null || this.PointOnSeparator == null || this.vectorToSeparatorSide == null ) {
-			this.computeSeparator();
+			Logger.log("SVM not fully initialized, aborting");
+			return Figure.UNKNOWN;
 		}
 		Vector PointToClassify = dataPoint.toVector();
 		
