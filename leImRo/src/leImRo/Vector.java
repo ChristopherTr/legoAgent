@@ -67,4 +67,8 @@ public class Vector {
 		
 		return ret;
 	}
+	
+	public String toString() {
+		return "Vector ( " + this.getX() + " | " + this.getY() + " )";
+	}
 }

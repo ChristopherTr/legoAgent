@@ -1,10 +1,12 @@
-## Welcome to the Lego Image Recognition Project
+## Herzlich Willkommen zum Lego Image Recognition Project
 
-In the following you will learn about the project, how you can built it and what can be the next steps.
+Im folgenden werden wir das "Lego Image Recognition Project" vorstellen:
 
-### About the project
-Details see wiki
 
-### How to build
+### Idee des Projekts
+Die Idee des Projektes entstand während der Vorlesung.
+![Ueberblick](pictures/IMG_20190211_131934.jpg)
 
-### Next steps
+### Aufbau
+
+### weitere Schritte

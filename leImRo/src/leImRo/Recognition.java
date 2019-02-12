@@ -51,8 +51,8 @@ public class Recognition implements IRecognition {
 		IDataPoint newDataPoint = this.scanner.scanNewDataPoint();
 		newDataPoint.setFigure(figure);
 		Logger.log("TRAIN:" + newDataPoint);
-		Logger.log("Dataset:" + dataset);
-		dataset.addNewData(newDataPoint);
+		Logger.log("Dataset:" + this.dataset);
+		this.dataset.addNewData(newDataPoint);
 		
 		this.svm = new SVM(dataset);
 		//calculate new SupportVectors

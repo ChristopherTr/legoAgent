@@ -21,6 +21,7 @@ public class SVM implements ISVM {
 	public SVM(Dataset dataset) {
 		this.dataSet = dataset;
 	}
+	
 	/*
 	 * compute best hyperplane with the given points
 	 * currently only works with 3 datapoints to compute, else error
@@ -110,7 +111,12 @@ public class SVM implements ISVM {
 		 * g(x, y) = this.PointOnSeparator + n * this.vectorParallelToSeparator (die Straße entlang)
 		 * mit dem orthogonalen Vektor this.vectorToSeparatorSide (von der Straßenmitte zum Rand der Straße in genau einem Schritt)
 		 */
-		
+		Logger.log("Vector Parallel to Separator:");
+		Logger.log("" + this.vectorParallelToSeparator);
+		Logger.log("Vector Separator Side:");
+		Logger.log("" + this.vectorToSeparatorSide);
+		Logger.log("Point on Separator:");
+		Logger.log("" + this.PointOnSeparator);
 	}
 
 	/**
@@ -121,7 +127,8 @@ public class SVM implements ISVM {
 	public Figure classify(IDataPoint dataPoint) {
 		// if current SVM is resetted or corrupted
 		if(this.vectorParallelToSeparator == null || this.PointOnSeparator == null || this.vectorToSeparatorSide == null ) {
-			this.computeSeparator();
+			Logger.log("SVM not fully initialized, aborting");
+			return Figure.UNKNOWN;
 		}
 		Vector PointToClassify = dataPoint.toVector();
 		
@@ -132,6 +139,8 @@ public class SVM implements ISVM {
 		 * die Orientation der SVM ist 0, wenn Kreise negative Werte liefern, 
 		 * die Orientation der SVM ist 1, wenn Rechtecke negative Werte liefern. 
 		 */
+		Logger.log("SVM-Orientation (0: Kreise negativ): " + this.dataSet.getSvmOrientation());
+		Logger.log("Distance: " + vectorCombination[1]);
 		if(this.dataSet.getSvmOrientation() == 0) {
 			if(vectorCombination[1] > 0) {
 				return Figure.rectangle;

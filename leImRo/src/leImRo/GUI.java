@@ -2,55 +2,51 @@ package leImRo;
 
 import lejos.hardware.Button;
 import lejos.hardware.lcd.LCD;
+import lejos.utility.TextMenu;
 
 public class GUI implements IGUI {
-
-	public static void showMenu(){
-		// menu
+	
+	public static void processMenu(Recognition recognition)
+	{
 		String[] menuEntries = { "Recognise", "Train", "Clear", "Exit" };
-		int selected = 0;
-		while (true) {
+		String[] subEntries = { "Rectangle", "Circle" };
+		
+		TextMenu mainMenu = new TextMenu(menuEntries, 1, "Main LeImRo");
+		TextMenu subMenu = new TextMenu(subEntries, 1, "Train Figure");
+		
+		switch (mainMenu.select()) {
+		case 0:
+			// start recognize
+			Figure figure = recognition.recognize();
 			LCD.clear();
-			for (int i = 0; i < menuEntries.length; i++) {
-				if (selected == i) {
-					LCD.drawString(">", 0, i);
-				}
-				LCD.drawString(menuEntries[i], 2, i);
+			if (figure == Figure.rectangle) {
+				LCD.drawString("Rectangle", 0, 0);
+			} else {
+				LCD.drawString("Circle", 0, 0);
 			}
-			Button.waitForAnyPress();
-			if (Button.DOWN.isDown()) {
-				selected++;
-				if (selected > menuEntries.length - 1) {
-					selected = menuEntries.length - 1;
-				}
+			break;
+		case 1:
+			LCD.clear();
+			if(subMenu.select() == 0)
+			{
+				recognition.train(Figure.rectangle);
 			}
-			if (Button.UP.isDown()) {
-				selected--;
-				if (selected < 0) {
-					selected = 0;
-				}
+			else
+			{
+				recognition.train(Figure.circle);
 			}
-			if (Button.ENTER.isDown()) {
-				LCD.clear();
-				Recognition recognition = new Recognition();
-				if (selected == 0) {
-					// start recognise
-				} else if (selected == 1) {
-					// start train
-					recognition.removeAll();
-					recognition.train(Figure.rectangle);
-					recognition.train(Figure.rectangle);
-					recognition.train(Figure.circle);
-					
-				} else if (selected == 2) {
-					// start clear
-					recognition.removeAll();
-				}
-				else {
-					System.exit(0);
-				}
-			}
+			break;
+		case 2:
+		{
+			recognition.removeAll();
+			break;
+		}
+		case 3:
+			System.exit(0);
+			break;
+		default:
+			break;
 		}
 	}
-
+	
 }

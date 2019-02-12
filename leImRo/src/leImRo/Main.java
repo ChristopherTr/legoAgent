@@ -3,7 +3,6 @@
  */
 package leImRo;
 
-
 /**
  * @author trdrc
  *
@@ -14,9 +13,11 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
+		Recognition recognition = new Recognition();
+		
 		while(true)
 		{
-			GUI.showMenu();
-		}
+			GUI.processMenu(recognition);
+		}		
 	}
 }
