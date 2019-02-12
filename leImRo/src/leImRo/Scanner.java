@@ -114,6 +114,7 @@ public class Scanner implements IScanner {
 				if(yIndex < yMovements)
 				{
 					turnYMotor(yAnglePerPixel);
+					Logger.log("Scanner: Move Y" + yIndex + " von " + yMovements);
 				}
 				
 			}
@@ -121,6 +122,7 @@ public class Scanner implements IScanner {
 			if(xIndex < xMovements)
 			{
 				turnXMotor(xAnglePerPixel);
+				Logger.log("Scanner: Move X" + xIndex + " von " + xMovements);
 			}
 			
 			// invert direction for the Y-Axis

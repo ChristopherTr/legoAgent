@@ -26,6 +26,7 @@ public class GUI implements IGUI {
 			} else {
 				LCD.drawString("Circle", 0, 0);
 			}
+			Button.waitForAnyPress();
 			break;
 		case 1:
 			// start recognize
