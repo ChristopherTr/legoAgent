@@ -6,8 +6,7 @@ import lejos.utility.TextMenu;
 
 public class GUI implements IGUI {
 	
-	public static void processMenu(Recognition recognition)
-	{
+	public static void processMenu(Recognition recognition) {
 		String[] menuEntries = { "Recognise", "Train", "Clear", "Exit" };
 		String[] subEntries = { "Rectangle", "Circle" };
 		
@@ -27,20 +26,15 @@ public class GUI implements IGUI {
 			break;
 		case 1:
 			LCD.clear();
-			if(subMenu.select() == 0)
-			{
+			if(subMenu.select() == 0) {
 				recognition.train(Figure.rectangle);
-			}
-			else
-			{
+			} else {
 				recognition.train(Figure.circle);
 			}
 			break;
 		case 2:
-		{
 			recognition.removeAll();
 			break;
-		}
 		case 3:
 			System.exit(0);
 			break;
@@ -48,5 +42,4 @@ public class GUI implements IGUI {
 			break;
 		}
 	}
-	
 }
