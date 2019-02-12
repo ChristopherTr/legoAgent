@@ -17,6 +17,7 @@ public class Scanner implements IScanner {
 	public final static int acceleration = 300; 	// maximum acceleration for the Motors [degrees/s²]
 	public final static int minYAngle = 22;			//TODO: validate this
 	public final static int minXAngle = 25;			//TODO: validate this
+	public final static int startDir = -1;			//due mechanical construction we should start in this direction
 	public final static int sensorSamples = 5;		//specify samples for median filter
 	public final static double rgbThreshold = 0.12;	//Threshold for the average of the rgb sensor result to seperate between black and white
 	
@@ -32,7 +33,7 @@ public class Scanner implements IScanner {
 
 	public Scanner() {
 		pixel = 0;
-		dir = -1; //due mechanical construction we should start in this direction
+		dir = startDir; 
 		// instantiate Sensors and Motors
 		XMotor = Motor.A;
 		YMotor = Motor.B;
@@ -203,7 +204,7 @@ public class Scanner implements IScanner {
 			YMotor.rotate(pixel*yAnglePerPixel);
 		}
 		XMotor.rotate(-1*pixel*xAnglePerPixel);
-		dir = 1;
+		dir = startDir;
 	}
 
 	/**
