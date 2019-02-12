@@ -1,2 +1,2 @@
 echo off
-docs\tools\doxygen\doxygen.exe docs\tools\documentation.cfg
+tools\doxygen\doxygen.exe tools\documentation.cfg

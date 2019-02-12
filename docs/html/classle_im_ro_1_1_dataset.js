@@ -9,5 +9,8 @@ var classle_im_ro_1_1_dataset =
     [ "removeStoredSVMPoints", "classle_im_ro_1_1_dataset.html#a96a41c2e34b7d1a6f4f8625c32dcfea7", null ],
     [ "setSvmOrientation", "classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b", null ],
     [ "setsVMPoints", "classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1", null ],
-    [ "toSTring", "classle_im_ro_1_1_dataset.html#aaf0fe63bcaa9f261b51d59db0e448211", null ]
+    [ "toString", "classle_im_ro_1_1_dataset.html#ad146fa8579a5f8a876c4688cc5a68520", null ],
+    [ "dataset", "classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25", null ],
+    [ "svmOrientation", "classle_im_ro_1_1_dataset.html#ac6527fa526325e8bd92d72816e1baeb1", null ],
+    [ "sVMPoints", "classle_im_ro_1_1_dataset.html#afd4e568985e7eb02b88453b37e8da267", null ]
 ];

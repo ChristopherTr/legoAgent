@@ -1,3 +1,10 @@
 <map id="Recognition" name="Recognition">
-<area shape="rect" id="node2" href="$interfacele_im_ro_1_1_i_recognition.html" title="IRecognition" alt="" coords="5,5,99,32"/>
+<area shape="rect" id="node2" href="$interfacele_im_ro_1_1_i_recognition.html" title="IRecognition" alt="" coords="5,213,99,240"/>
+<area shape="rect" id="node3" href="$interfacele_im_ro_1_1_i_scanner.html" title="IScanner" alt="" coords="123,213,197,240"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_dataset.html" title="Dataset" alt="" coords="339,95,405,121"/>
+<area shape="rect" id="node9" href="$classle_im_ro_1_1_s_v_m.html" title="SVM" alt="" coords="221,213,272,240"/>
+<area shape="rect" id="node5" href="$interfacele_im_ro_1_1_i_dataset.html" title="IDataset" alt="" coords="147,5,218,32"/>
+<area shape="rect" id="node8" href="$interfacele_im_ro_1_1_i_data_point.html" title="IDataPoint" alt="" coords="583,5,665,32"/>
+<area shape="rect" id="node10" href="$interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="50,95,105,121"/>
+<area shape="rect" id="node11" href="$classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="129,95,189,121"/>
 </map>

@@ -1,4 +1,7 @@
 <map id="SVM" name="SVM">
-<area shape="rect" id="node2" href="$interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="5,5,60,32"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="84,5,144,32"/>
+<area shape="rect" id="node2" href="$interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="84,95,144,121"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_dataset.html" title="Dataset" alt="" coords="259,95,326,121"/>
+<area shape="rect" id="node5" href="$interfacele_im_ro_1_1_i_dataset.html" title="IDataset" alt="" coords="68,5,139,32"/>
+<area shape="rect" id="node8" href="$interfacele_im_ro_1_1_i_data_point.html" title="IDataPoint" alt="" coords="503,5,586,32"/>
 </map>

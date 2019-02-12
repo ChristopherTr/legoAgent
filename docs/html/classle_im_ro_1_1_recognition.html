@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_recognition.html',''
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classle_im_ro_1_1_recognition-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Recognition Class Reference</div>  </div>
@@ -126,7 +127,14 @@ Collaboration diagram for Recognition:</div>
 <div class="dyncontent">
 <div class="center"><img src="classle_im_ro_1_1_recognition__coll__graph.png" border="0" usemap="#_recognition_coll__map" alt="Collaboration graph"/></div>
 <map name="_recognition_coll__map" id="_recognition_coll__map">
-<area shape="rect" id="node2" href="interfacele_im_ro_1_1_i_recognition.html" title="IRecognition" alt="" coords="5,5,99,32"/>
+<area shape="rect" id="node2" href="interfacele_im_ro_1_1_i_recognition.html" title="IRecognition" alt="" coords="5,213,99,240"/>
+<area shape="rect" id="node3" href="interfacele_im_ro_1_1_i_scanner.html" title="IScanner" alt="" coords="123,213,197,240"/>
+<area shape="rect" id="node4" href="classle_im_ro_1_1_dataset.html" title="Dataset" alt="" coords="339,95,405,121"/>
+<area shape="rect" id="node9" href="classle_im_ro_1_1_s_v_m.html" title="SVM" alt="" coords="221,213,272,240"/>
+<area shape="rect" id="node5" href="interfacele_im_ro_1_1_i_dataset.html" title="IDataset" alt="" coords="147,5,218,32"/>
+<area shape="rect" id="node8" href="interfacele_im_ro_1_1_i_data_point.html" title="IDataPoint" alt="" coords="583,5,665,32"/>
+<area shape="rect" id="node10" href="interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="50,95,105,121"/>
+<area shape="rect" id="node11" href="classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="129,95,189,121"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -143,6 +151,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b21cda634b2b134fafe776f1bc52f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c">train</a> (<a class="el" href="enumle_im_ro_1_1_figure.html">Figure</a> figure)</td></tr>
 <tr class="memdesc:a8b21cda634b2b134fafe776f1bc52f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funktion lernt einen neuen Datenpunkt als reine Wahrheit.  <a href="#a8b21cda634b2b134fafe776f1bc52f5c">More...</a><br /></td></tr>
 <tr class="separator:a8b21cda634b2b134fafe776f1bc52f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0d2ee663a67b30e63014c4a87265aea9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacele_im_ro_1_1_i_scanner.html">IScanner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_recognition.html#a0d2ee663a67b30e63014c4a87265aea9">scanner</a></td></tr>
+<tr class="separator:a0d2ee663a67b30e63014c4a87265aea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a129d65e2427eaf43f653d5730224a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classle_im_ro_1_1_s_v_m.html">SVM</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_recognition.html#a58a129d65e2427eaf43f653d5730224a">svm</a></td></tr>
+<tr class="separator:a58a129d65e2427eaf43f653d5730224a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ac6bae9ac302cfa5655f964e2e922a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_recognition.html#a50ac6bae9ac302cfa5655f964e2e922a">dataset</a></td></tr>
+<tr class="separator:a50ac6bae9ac302cfa5655f964e2e922a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a604c35cdf397b382d05aafc7a4476e41"></a>
@@ -307,26 +324,26 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classle_im_ro_1_1_recognition_a8b21cda634b2b134fafe776f1bc52f5c_cgraph.png" border="0" usemap="#classle_im_ro_1_1_recognition_a8b21cda634b2b134fafe776f1bc52f5c_cgraph" alt=""/></div>
 <map name="classle_im_ro_1_1_recognition_a8b21cda634b2b134fafe776f1bc52f5c_cgraph" id="classle_im_ro_1_1_recognition_a8b21cda634b2b134fafe776f1bc52f5c_cgraph">
-<area shape="rect" id="node2" href="classle_im_ro_1_1_dataset.html#aa53699729ce302bb94de49975fc79302" title="Adds a new data to the dataset in RAM, does not store this changes to disk. " alt="" coords="111,208,299,235"/>
-<area shape="rect" id="node3" href="classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="100,259,309,285"/>
-<area shape="rect" id="node5" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="668,385,795,412"/>
-<area shape="rect" id="node19" href="interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="leImRo.IScanner.scanNewData\lPoint" alt="" coords="104,361,305,402"/>
-<area shape="rect" id="node20" href="interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="113,427,297,453"/>
-<area shape="rect" id="node21" href="classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="396,411,540,437"/>
-<area shape="rect" id="node4" href="classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="381,208,555,235"/>
-<area shape="rect" id="node6" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="357,259,579,285"/>
-<area shape="rect" id="node7" href="classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="369,360,567,387"/>
-<area shape="rect" id="node8" href="classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="365,157,571,184"/>
-<area shape="rect" id="node9" href="classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d" title="returns the current SVM&#45;Points to create the border, or null, if no data is stored ..." alt="" coords="632,157,831,184"/>
-<area shape="rect" id="node10" href="interfacele_im_ro_1_1_i_data_point.html#ae81becd7d491f95b5d7464c9b344aab4" title="leImRo.IDataPoint.toVector" alt="" coords="642,208,821,235"/>
-<area shape="rect" id="node11" href="classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="leImRo.Vector.subtract" alt="" coords="654,259,809,285"/>
-<area shape="rect" id="node15" href="classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="leImRo.Vector.getOrthogonal" alt="" coords="637,56,826,83"/>
-<area shape="rect" id="node16" href="classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="627,5,836,32"/>
-<area shape="rect" id="node17" href="classle_im_ro_1_1_vector.html#a6ee4a06b8c7acbd583fa0c6b8ca63def" title="leImRo.Vector.multiply" alt="" coords="655,309,808,336"/>
-<area shape="rect" id="node18" href="classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="leImRo.Vector.add" alt="" coords="667,107,796,133"/>
-<area shape="rect" id="node12" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc" title="leImRo.Vector.Vector" alt="" coords="884,208,1031,235"/>
-<area shape="rect" id="node13" href="classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409" title="leImRo.Vector.getX" alt="" coords="891,107,1024,133"/>
-<area shape="rect" id="node14" href="classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358" title="leImRo.Vector.getY" alt="" coords="890,56,1025,83"/>
+<area shape="rect" id="node2" href="classle_im_ro_1_1_dataset.html#aa53699729ce302bb94de49975fc79302" title="Adds a new data to the dataset in RAM, does not store this changes to disk. " alt="" coords="374,30,562,56"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="668,80,795,107"/>
+<area shape="rect" id="node4" href="classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="100,175,309,202"/>
+<area shape="rect" id="node19" href="interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="leImRo.IScanner.scanNewData\lPoint" alt="" coords="104,226,305,268"/>
+<area shape="rect" id="node20" href="interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="113,292,297,319"/>
+<area shape="rect" id="node21" href="classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="133,112,277,139"/>
+<area shape="rect" id="node5" href="classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="381,182,555,208"/>
+<area shape="rect" id="node6" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="357,232,579,259"/>
+<area shape="rect" id="node7" href="classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="369,283,567,310"/>
+<area shape="rect" id="node8" href="classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="365,334,571,360"/>
+<area shape="rect" id="node9" href="classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d" title="returns the current SVM&#45;Points to create the border, or null, if no data is stored ..." alt="" coords="632,334,831,360"/>
+<area shape="rect" id="node10" href="interfacele_im_ro_1_1_i_data_point.html#ae81becd7d491f95b5d7464c9b344aab4" title="leImRo.IDataPoint.toVector" alt="" coords="642,384,821,411"/>
+<area shape="rect" id="node11" href="classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="leImRo.Vector.subtract" alt="" coords="654,435,809,462"/>
+<area shape="rect" id="node15" href="classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="leImRo.Vector.getOrthogonal" alt="" coords="637,232,826,259"/>
+<area shape="rect" id="node16" href="classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="627,182,836,208"/>
+<area shape="rect" id="node17" href="classle_im_ro_1_1_vector.html#a6ee4a06b8c7acbd583fa0c6b8ca63def" title="leImRo.Vector.multiply" alt="" coords="655,486,808,512"/>
+<area shape="rect" id="node18" href="classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="leImRo.Vector.add" alt="" coords="667,283,796,310"/>
+<area shape="rect" id="node12" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc" title="leImRo.Vector.Vector" alt="" coords="884,384,1031,411"/>
+<area shape="rect" id="node13" href="classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409" title="leImRo.Vector.getX" alt="" coords="891,283,1024,310"/>
+<area shape="rect" id="node14" href="classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358" title="leImRo.Vector.getY" alt="" coords="890,232,1025,259"/>
 </map>
 </div>
 </p>
@@ -344,6 +361,67 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a50ac6bae9ac302cfa5655f964e2e922a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a> dataset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d2ee663a67b30e63014c4a87265aea9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacele_im_ro_1_1_i_scanner.html">IScanner</a> scanner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a129d65e2427eaf43f653d5730224a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classle_im_ro_1_1_s_v_m.html">SVM</a> svm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>leImRo/src/leImRo/<a class="el" href="_recognition_8java.html">Recognition.java</a></li>
 </ul>
@@ -353,7 +431,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacele_im_ro.html">leImRo</a></li><li class="navelem"><a class="el" href="classle_im_ro_1_1_recognition.html">Recognition</a></li>
-    <li class="footer">Generated on Tue Feb 12 2019 12:01:52 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 14:21:24 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

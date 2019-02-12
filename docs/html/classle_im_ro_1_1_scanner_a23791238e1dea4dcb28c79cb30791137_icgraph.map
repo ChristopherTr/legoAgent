@@ -1,0 +1,4 @@
+<map id="turnXMotor" name="turnXMotor">
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="137,5,220,32"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="268,5,400,32"/>
+</map>
