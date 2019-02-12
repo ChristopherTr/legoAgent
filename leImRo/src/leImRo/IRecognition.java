@@ -2,7 +2,9 @@ package leImRo;
 
 public interface IRecognition {
 
-	public Figure recognize();
+	public Figure recognizeSVM();
+	
+	public Figure recognizeKNN();
 
 	void removeAll();
 

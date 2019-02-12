@@ -10,15 +10,25 @@ public class NearestNeighbour implements INearestNeighbour{
 	/**
 	 * Constructor
 	 * @param dataset: Set dataset of classified Figures
-	 * 
 	 */
 	public NearestNeighbour(Dataset dataset) {
 		this.dataSet = dataset;
 	}
 	
+	
+	/**
+	 * Constructor
+	 * @param dataset: Set dataset of classified Figures
+	 * @param kNeighbours: Amount of selected nearest neighbours
+	 */
+	public NearestNeighbour(Dataset dataset, int kNeighbours) {
+		this.dataSet = dataset;
+		this.kNeighbours = kNeighbours;
+	}
+	
 	/**
 	 * Set amount of selected nearest neighbour
-	 * @param:kNeighbour: Amount of selected nearest neighbour
+	 * @param:kNeighbour: Amount of selected nearest neighbours
 	 */
 	public void SetKNeighbours( int kNeighbour) {
 		this.kNeighbours = kNeighbour;

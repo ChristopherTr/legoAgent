@@ -4,12 +4,14 @@ public class Recognition implements IRecognition {
 
 	private IScanner scanner;
 	private SVM svm;
+	private NearestNeighbour knn;
 	private Dataset dataset;
 	
 	public Recognition(){
 		this.scanner = new Scanner();
 		this.dataset = Dataset.load();
 		this.svm = new SVM(this.dataset);
+		this.knn = new NearestNeighbour(this.dataset, 10);
 	}
 
 	/**
@@ -18,15 +20,34 @@ public class Recognition implements IRecognition {
 	 *  - Scannen des Bildes
 	 *  - Vorbereiten der SVM, wenn erforderlich
 	 *  - Bestimmen des Bildes mit der SVM
-	 * Gibt die berechnete Figur zurueck
+	 * @return Figure Gibt die berechnete Figur zurueck
 	 */
 	@Override
-	public Figure recognize() {
+	public Figure recognizeSVM() {
 		//get new DataPoint from Scanner
 		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		
 		//let the SVM compute the 
 		Figure figure = svm.classify(newDataPoint);
+		Logger.log("Detected figure (corious if this works...): " + figure);
+		return figure;
+	}
+
+	/**
+	 * Erkennung einer Figur - Hauptfunktion
+	 * Beinhaltet
+	 *  - Scannen des Bildes
+	 *  - Vorbereiten der SVM, wenn erforderlich
+	 *  - Bestimmen des Bildes mit dem K Nearest Neighbour- Algorithmus
+	 * @return: Figure Gibt die berechnete Figur zurueck
+	 */
+	@Override
+	public Figure recognizeKNN() {
+		//get new DataPoint from Scanner
+		IDataPoint newDataPoint = scanner.scanNewDataPoint();
+		
+		//let the SVM compute the 
+		Figure figure = knn.classify(newDataPoint);
 		Logger.log("Detected figure (corious if this works...): " + figure);
 		return figure;
 	}
