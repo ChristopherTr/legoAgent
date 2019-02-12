@@ -18,7 +18,7 @@ public class Recognition implements IRecognition {
 	 *  - Scannen des Bildes
 	 *  - Vorbereiten der SVM, wenn erforderlich
 	 *  - Bestimmen des Bildes mit der SVM
-	 * Gibt die berechnete Figur zurück
+	 * Gibt die berechnete Figur zurueck
 	 */
 	@Override
 	public Figure recognize() {
@@ -31,15 +31,15 @@ public class Recognition implements IRecognition {
 		return figure;
 	}
 	
+	
 	/**
-	 * Löscht alle bisherigen Daten inklusive Trainingsdaten, gescannte Bilder, etc. 
+	 * Loescht alle bisherigen Daten inklusive Trainingsdaten, gescannte Bilder, etc. 
 	 */
 	@Override
 	public void removeAll() {
 		Logger.log("Full Reset started");
-		Dataset dataset = new Dataset();
-		dataset.clearAll();
-		Dataset.store(dataset);
+		this.dataset.clearAll();
+		Dataset.store(this.dataset);
 		Logger.log("Full Reset completed");
 	}
 

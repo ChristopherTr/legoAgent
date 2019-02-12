@@ -1,2 +1,2 @@
 # legoAgent
-tbd
+Lego Image Recognition Roboter
