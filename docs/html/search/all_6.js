@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['leimro',['leImRo',['../namespacele_im_ro.html',1,'']]],
-  ['linearcombination',['linearcombination',['../classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4',1,'leImRo::Vector']]],
-  ['load',['load',['../classle_im_ro_1_1_dataset.html#abb79e4c27b756c93f66d058b0204525a',1,'leImRo::Dataset']]],
-  ['log',['log',['../classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac',1,'leImRo::Logger']]],
-  ['logger',['Logger',['../classle_im_ro_1_1_logger.html',1,'leImRo']]],
-  ['logger_2ejava',['Logger.java',['../_logger_8java.html',1,'']]],
-  ['legoagent',['legoAgent',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['kneighbours',['kNeighbours',['../classle_im_ro_1_1_nearest_neighbour.html#a67d37bdc40d63584a9facc460a8cd0d7',1,'leImRo::NearestNeighbour']]],
+  ['knn',['knn',['../classle_im_ro_1_1_recognition.html#a9726a56fbee0706780321c4c68ca947c',1,'leImRo::Recognition']]]
 ];

@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
@@ -144,11 +145,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>calcEuklidDistance()
+: <a class="el" href="classle_im_ro_1_1_nearest_neighbour.html#aaae11fa4893234f31f4307c258d776de">NearestNeighbour</a>
+</li>
 <li>calculateCharacteristics()
 : <a class="el" href="classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0">Scanner</a>
 </li>
 <li>classify()
-: <a class="el" href="interfacele_im_ro_1_1_i_s_v_m.html#aaed9a726bf737acf9359eff868843049">ISVM</a>
+: <a class="el" href="interfacele_im_ro_1_1_i_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049">INearestNeighbour</a>
+, <a class="el" href="interfacele_im_ro_1_1_i_s_v_m.html#aaed9a726bf737acf9359eff868843049">ISVM</a>
+, <a class="el" href="classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049">NearestNeighbour</a>
 , <a class="el" href="classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049">SVM</a>
 </li>
 <li>clearAll()
@@ -255,6 +261,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NearestNeighbour()
+: <a class="el" href="classle_im_ro_1_1_nearest_neighbour.html#a17a106a083a690e448a5afa6d9fc00e3">NearestNeighbour</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>printImageOnLCD()
 : <a class="el" href="classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07">Scanner</a>
@@ -272,9 +285,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>Recognition()
 : <a class="el" href="classle_im_ro_1_1_recognition.html#a604c35cdf397b382d05aafc7a4476e41">Recognition</a>
 </li>
-<li>recognize()
-: <a class="el" href="interfacele_im_ro_1_1_i_recognition.html#a2a405eaf66bc8e2aefe44f56fef53647">IRecognition</a>
-, <a class="el" href="classle_im_ro_1_1_recognition.html#a2a405eaf66bc8e2aefe44f56fef53647">Recognition</a>
+<li>recognizeKNN()
+: <a class="el" href="interfacele_im_ro_1_1_i_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0">IRecognition</a>
+, <a class="el" href="classle_im_ro_1_1_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0">Recognition</a>
+</li>
+<li>recognizeSVM()
+: <a class="el" href="interfacele_im_ro_1_1_i_recognition.html#a3f126432326e425825a566c32f644d02">IRecognition</a>
+, <a class="el" href="classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02">Recognition</a>
 </li>
 <li>removeAll()
 : <a class="el" href="interfacele_im_ro_1_1_i_recognition.html#a9b0a5a3ad9972ab0e8eb0b54873aac6b">IRecognition</a>
@@ -301,6 +318,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>setFigure()
 : <a class="el" href="classle_im_ro_1_1_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6">DataPoint</a>
 , <a class="el" href="interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6">IDataPoint</a>
+</li>
+<li>SetKNeighbours()
+: <a class="el" href="interfacele_im_ro_1_1_i_nearest_neighbour.html#a404cb9079006cb45156bb423f90bfa5b">INearestNeighbour</a>
+, <a class="el" href="classle_im_ro_1_1_nearest_neighbour.html#a97632eed7d1580f018adc0c1dfd07107">NearestNeighbour</a>
 </li>
 <li>setSvmOrientation()
 : <a class="el" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b">Dataset</a>
@@ -353,7 +374,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 12 2019 14:21:25 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 16:38:51 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

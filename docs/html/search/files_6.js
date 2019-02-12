@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['recognition_2ejava',['Recognition.java',['../_recognition_8java.html',1,'']]]
+  ['nearestneighbour_2ejava',['NearestNeighbour.java',['../_nearest_neighbour_8java.html',1,'']]]
 ];
