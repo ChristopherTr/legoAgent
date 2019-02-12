@@ -10,11 +10,13 @@ import lejos.utility.Delay;
 
 public class Scanner implements IScanner {
 
-	public final static int resolution = 8;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
+	public final static int resolution = 4;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
 	// constants to define the mechanical constraining
 	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
-	public final static int speed = 500; 			// Speed for the motors [degree/s]
-	public final static int acceleration = 300; 	// maximum acceleration for the Motors [degree/s]
+	public final static int xSpeed = 100; 			// Speed for the motors [degrees/s]
+	public final static int xAcceleration = 100; 	// maximum acceleration for the Motors [degrees/s²]
+	public final static int ySpeed = 500; 			// Speed for the motors [degrees/s]
+	public final static int yAcceleration = 500; 	// maximum acceleration for the Motors [degrees/s²]
 	public final static int minYAngle = 22;			//TODO: validate this
 	public final static int minXAngle = 25;			//TODO: validate this
 	public final static int startDir = -1;			//due mechanical construction we should start in this direction
@@ -40,10 +42,10 @@ public class Scanner implements IScanner {
 		Sensor = new EV3ColorSensor(SensorPort.S4);
 		XMotor.resetTachoCount(); // reset the internal degree reference of the motors
 		YMotor.resetTachoCount();
-		XMotor.setSpeed(speed);
-		YMotor.setSpeed(speed);
-		XMotor.setAcceleration(acceleration);
-		YMotor.setAcceleration(acceleration);
+		XMotor.setSpeed(xSpeed);
+		YMotor.setSpeed(ySpeed);
+		XMotor.setAcceleration(xAcceleration);
+		YMotor.setAcceleration(xAcceleration);
 		YMotor.setStallThreshold(3, 5); // TODO: Find good values
 		XMotor.setStallThreshold(3, 5); // TODO: Find good values
 
@@ -85,12 +87,12 @@ public class Scanner implements IScanner {
 		// create array to hold the scanned image
 		int[][] Image = new int[pixel][pixel];
 		
+		
 		//do dummy read out to initalize sensor
 		getPixelColor();
 		
 		// For loop for the x-axis
 		for (int xIndex = 0; xIndex < pixel; xIndex++) {
-			String debugImLine = "";	//debug variable for showing image
 			
 			// For loop for the y-axis
 			for (int yIndex = 0; yIndex < pixel; yIndex++) {				
@@ -100,21 +102,15 @@ public class Scanner implements IScanner {
 				Image[xIndex][getYIndex(yIndex)] = pixelColor;
 				
 				//----------Y-Movement--------------
-				if(yIndex < yMovements) {
+				if(yIndex < yMovements)
+				{
 					turnYMotor(yAnglePerPixel);
 				}
 				
-				//------debug----------
-				if(pixelColor == 1) {
-					debugImLine += '#';
-				}
-				else {
-					debugImLine += '_';
-				}
-				//--------------------
 			}
 			//------X-Movement--------
-			if(xIndex < xMovements) {
+			if(xIndex < xMovements)
+			{
 				turnXMotor(xAnglePerPixel);
 			}
 			
@@ -123,7 +119,7 @@ public class Scanner implements IScanner {
 			
 			//debug messages
 			Logger.log("Scanner: Progress line " + (xIndex+1) + " from " + pixel);
-			Logger.log(debugImLine);
+			Logger.log(this.debugImage(Image));
 		}
 		
 		//return to HomePosition
@@ -160,7 +156,8 @@ public class Scanner implements IScanner {
 	 * @param i: current position y Motor
 	 * @return index for the image buffer
 	 */
-	private int getYIndex(int i) {
+	private int getYIndex(int i)
+	{
 		if (dir < 0) {
 			return (pixel - i - 1);
 		} else {
@@ -174,7 +171,7 @@ public class Scanner implements IScanner {
 	 */
 	private void turnXMotor(int xAnglePerPixel) {
 		XMotor.rotate(xAnglePerPixel);
-		Delay.msDelay(1);	//Delay is important for mechanical constraining and to ensure correct process of the sw
+		Delay.msDelay(100);	//Delay is important for mechanical constraining and to ensure correct process of the sw
 		if (XMotor.isStalled()) {
 			Logger.log("Scanner: XMotor stalled");
 		}
@@ -186,7 +183,7 @@ public class Scanner implements IScanner {
 	 */
 	private void turnYMotor(int yAnglePerPixel) {
 		YMotor.rotate(dir * yAnglePerPixel);
-		Delay.msDelay(1);	//Delay is important for mechanical constraining and to ensure correct process of the sw
+		Delay.msDelay(100);	//Delay is important for mechanical constraining and to ensure correct process of the sw
 		if (YMotor.isStalled()) {
 			Logger.log("Scanner: YMotor stalled");
 		}
@@ -198,9 +195,9 @@ public class Scanner implements IScanner {
 	private void returnToHome(int xAnglePerPixel, int yAnglePerPixel) {
 		//move back to origin position
 		if (dir > 0) {	//check if Y Movement is necessary or not
-			YMotor.rotate(pixel*yAnglePerPixel);
+			YMotor.rotate((pixel-1)*yAnglePerPixel);
 		}
-		XMotor.rotate(-1*pixel*xAnglePerPixel);
+		XMotor.rotate(-1*(pixel-1)*xAnglePerPixel);
 		dir = startDir;
 	}
 
@@ -210,11 +207,36 @@ public class Scanner implements IScanner {
 	 * -1 means rotate counter-clockwise
 	 */
 	private void invertDirection() {
-		if(dir > 0) {
+		if(dir > 0)
+		{
 			dir = -1;
-		} else {
+		}
+		else
+		{
 			dir = 1;
 		}
+	}
+	
+	/**
+	 * print Image as String as Debug String
+	 */
+	private String debugImage(int[][] Image)
+	{
+		String debugImLine = "\n";
+		for(int y= 0; y < pixel; y++)
+		{
+			for(int x=0; x < pixel; x++ )
+			{
+				if(Image[y][x] == 1){
+					debugImLine += '#';
+				}
+				else {
+					debugImLine += '_';
+				}
+			}
+			debugImLine += "\n";
+		}
+		return debugImLine;
 	}
 	
 	/**
