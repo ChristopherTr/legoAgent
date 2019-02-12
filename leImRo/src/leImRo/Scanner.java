@@ -271,7 +271,7 @@ public class Scanner implements IScanner {
 	}
 	
 	/**
-	 * calculate the characteristics perimeter and area of a given image
+	 * calculate the characteristics perimeter (sqared) and area of a given image
 	 * @param image: int buffer of the image
 	 * @return DataPoint with the characteristics perimeter and area
 	 */
@@ -279,28 +279,32 @@ public class Scanner implements IScanner {
 		int area = 0;
 		int perimeter = 0;
 
+		// iterate over all points
 		for (int i = 0; i < pixel; i++) {
 			for (int j = 0; j < pixel; j++) {
+				// sum for area
 				if (image[i][j] == 1) {
 					area = area + 1;
 				}
 
+				// sum for perimeter
 				if ((i > 0) && (j > 0) && (i < pixel - 1) && (j < pixel - 1)) {
-
+					// case 1 in the center of the image, not the borders
 					if (image[i][j] == 1) {
-
 						if ((image[i][j - 1] == 0) || (image[i][j + 1]) == 0 || (image[i + 1][j] == 0) || (image[i - 1][j] == 0)) {
 							perimeter = perimeter + 1;
 						}
 					}
-
 				} else {
+					// case 2: border of the image
 					if (image[i][j] == 1) {
 						perimeter = perimeter + 1;
 					}
 				}
 			}
 		}
+		// for cleaner distribution: square of perimeter
+		perimeter = (int) Math.pow(perimeter, 2);
 		Logger.log("Scanner: Perimeter = " + perimeter + ", Area = " + area);
 		DataPoint point = new DataPoint(perimeter, area);
 		return point;
