@@ -105,6 +105,7 @@ public class Dataset implements IDataset, Serializable {
 	 */
 	@Override
 	public void addNewData(IDataPoint data) {
+		Logger.log("Saving " + data + " to dataset.");
 		this.dataset.add(data);
 	}
 
@@ -126,10 +127,14 @@ public class Dataset implements IDataset, Serializable {
 	}
 	
 	/**
-	 * Liefert die String-Repräsentation des Datenpunkts zurück
+	 * returns the String-Repräsentation of this object
 	 */
-	public String toSTring() {
-		return "Dataset with " + this.dataset.size() + " elements. ";
+	public String toString() {
+		String ret = "Dataset with " + this.dataset.size() + " elements: ";
+		for (IDataPoint dataPoint : this.dataset) {
+			ret += System.lineSeparator() + dataPoint;
+		}
+		return ret;
 	}
 
 	/**
