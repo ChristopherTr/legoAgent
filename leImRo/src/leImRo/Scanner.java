@@ -7,6 +7,7 @@ import lejos.robotics.RegulatedMotor;
 import lejos.robotics.SampleProvider;
 import lejos.robotics.filter.MedianFilter;
 import lejos.utility.Delay;
+import lejos.hardware.lcd.LCD;
 
 public class Scanner implements IScanner {
 
@@ -14,9 +15,9 @@ public class Scanner implements IScanner {
 	// constants to define the mechanical constraining
 	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
 	public final static int xSpeed = 100; 			// Speed for the motors [degrees/s]
-	public final static int xAcceleration = 100; 	// maximum acceleration for the Motors [degrees/s²]
+	public final static int xAcceleration = 100; 	// maximum acceleration for the Motors [degrees/sï¿½]
 	public final static int ySpeed = 500; 			// Speed for the motors [degrees/s]
-	public final static int yAcceleration = 500; 	// maximum acceleration for the Motors [degrees/s²]
+	public final static int yAcceleration = 500; 	// maximum acceleration for the Motors [degrees/sï¿½]
 	public final static int minYAngle = 22;			//TODO: validate this
 	public final static int minXAngle = 25;			//TODO: validate this
 	public final static int startDir = -1;			//due mechanical construction we should start in this direction
@@ -86,6 +87,12 @@ public class Scanner implements IScanner {
 
 		// create array to hold the scanned image
 		int[][] Image = new int[pixel][pixel];
+		//initialize with -1
+		for(int x = 0 ; x < pixel; x++) {
+			for(int y = 0; y < pixel; y++) {
+				Image[x][y] = -1;
+			}
+		}
 		
 		
 		//do dummy read out to initalize sensor
@@ -100,6 +107,7 @@ public class Scanner implements IScanner {
 				// fetch a sample
 				pixelColor = getPixelColor();
 				Image[xIndex][getYIndex(yIndex)] = pixelColor;
+				printImageOnLCD(Image);
 				
 				//----------Y-Movement--------------
 				if(yIndex < yMovements)
@@ -237,6 +245,29 @@ public class Scanner implements IScanner {
 			debugImLine += "\n";
 		}
 		return debugImLine;
+	}
+	
+	/*
+	 * prints Image on LCD display
+	 * white: " "; black: "#"; unknown: "O"
+	 */
+	private void printImageOnLCD(int[][] image) {
+		for(int i = 0; i < image.length; i++) {
+			String newLine = "";
+			for(int j = 0; j < image[j].length; j++) {
+				if(image[i][j] == 0) {
+					newLine += " ";
+				}
+				else if(image[i][j] == 1) {
+					newLine += "#";
+				}
+				else {
+					newLine += "0";
+				}
+				
+			}
+			LCD.drawString(newLine, i, 0);
+		}
 	}
 	
 	/**
