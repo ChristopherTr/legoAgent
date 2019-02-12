@@ -10,6 +10,9 @@ var hierarchy =
     [ "IGUI", "interfacele_im_ro_1_1_i_g_u_i.html", [
       [ "GUI", "classle_im_ro_1_1_g_u_i.html", null ]
     ] ],
+    [ "INearestNeighbour", "interfacele_im_ro_1_1_i_nearest_neighbour.html", [
+      [ "NearestNeighbour", "classle_im_ro_1_1_nearest_neighbour.html", null ]
+    ] ],
     [ "IRecognition", "interfacele_im_ro_1_1_i_recognition.html", [
       [ "Recognition", "classle_im_ro_1_1_recognition.html", null ]
     ] ],

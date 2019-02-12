@@ -1,6 +1,7 @@
 <map id="scanNewDataPoint" name="scanNewDataPoint">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_recognition.html#a2a405eaf66bc8e2aefe44f56fef53647" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="185,5,380,32"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="201,56,364,83"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="428,31,599,57"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="647,31,773,57"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="186,5,407,32"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="185,56,408,83"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="215,107,378,133"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="456,56,627,83"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="675,56,801,83"/>
 </map>

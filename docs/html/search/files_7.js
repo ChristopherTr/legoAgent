@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scanner_2ejava',['Scanner.java',['../_scanner_8java.html',1,'']]],
-  ['svm_2ejava',['SVM.java',['../_s_v_m_8java.html',1,'']]]
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['recognition_2ejava',['Recognition.java',['../_recognition_8java.html',1,'']]]
 ];

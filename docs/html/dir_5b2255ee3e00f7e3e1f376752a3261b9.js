@@ -21,6 +21,9 @@ var dir_5b2255ee3e00f7e3e1f376752a3261b9 =
     [ "IGUI.java", "_i_g_u_i_8java.html", [
       [ "IGUI", "interfacele_im_ro_1_1_i_g_u_i.html", null ]
     ] ],
+    [ "INearestNeighbour.java", "_i_nearest_neighbour_8java.html", [
+      [ "INearestNeighbour", "interfacele_im_ro_1_1_i_nearest_neighbour.html", "interfacele_im_ro_1_1_i_nearest_neighbour" ]
+    ] ],
     [ "IRecognition.java", "_i_recognition_8java.html", [
       [ "IRecognition", "interfacele_im_ro_1_1_i_recognition.html", "interfacele_im_ro_1_1_i_recognition" ]
     ] ],
@@ -35,6 +38,9 @@ var dir_5b2255ee3e00f7e3e1f376752a3261b9 =
     ] ],
     [ "Main.java", "_main_8java.html", [
       [ "Main", "classle_im_ro_1_1_main.html", null ]
+    ] ],
+    [ "NearestNeighbour.java", "_nearest_neighbour_8java.html", [
+      [ "NearestNeighbour", "classle_im_ro_1_1_nearest_neighbour.html", "classle_im_ro_1_1_nearest_neighbour" ]
     ] ],
     [ "Recognition.java", "_recognition_8java.html", [
       [ "Recognition", "classle_im_ro_1_1_recognition.html", "classle_im_ro_1_1_recognition" ]

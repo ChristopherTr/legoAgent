@@ -14,6 +14,8 @@ public class GUI implements IGUI {
 		TextMenu subMenu = new TextMenu(subEntries, 1, "Train Figure");
 		
 		Figure figure;
+		
+		LCD.clear();
 		switch (mainMenu.select()) {
 		case 0:
 			// start recognize
@@ -24,6 +26,7 @@ public class GUI implements IGUI {
 			} else {
 				LCD.drawString("Circle", 0, 0);
 			}
+			Button.waitForAnyPress();
 			break;
 		case 1:
 			// start recognize

@@ -1,5 +1,5 @@
 <map id="classify" name="classify">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_recognition.html#a2a405eaf66bc8e2aefe44f56fef53647" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="120,5,315,32"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="363,5,533,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="581,5,708,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="120,5,343,32"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="391,5,561,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="609,5,736,32"/>
 </map>

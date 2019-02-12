@@ -1,6 +1,8 @@
 <map id="getAllData" name="getAllData">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="136,5,345,32"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="393,5,556,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="604,5,775,32"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="823,5,949,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049" title="Classify new Figure with k&#45; Nearest Neighbour Algorithmn. " alt="" coords="136,5,353,32"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="140,56,349,83"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="401,5,623,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="671,31,841,57"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="889,31,1016,57"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="431,56,593,83"/>
 </map>

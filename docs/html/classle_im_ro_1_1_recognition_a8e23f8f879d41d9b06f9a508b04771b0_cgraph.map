@@ -1,0 +1,10 @@
+<map id="recognizeKNN" name="recognizeKNN">
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049" title="Classify new Figure with k&#45; Nearest Neighbour Algorithmn. " alt="" coords="159,89,376,116"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="204,140,331,167"/>
+<area shape="rect" id="node9" href="$interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="leImRo.IScanner.scanNewData\lPoint" alt="" coords="167,191,368,233"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_nearest_neighbour.html#aaae11fa4893234f31f4307c258d776de" title="Calc euclidean distance between two Figures. " alt="" coords="424,23,621,65"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="435,89,610,116"/>
+<area shape="rect" id="node7" href="$interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="431,140,615,167"/>
+<area shape="rect" id="node4" href="$interfacele_im_ro_1_1_i_data_point.html#a6d134b5e08ea486cf99b8a6c195c07f4" title="leImRo.IDataPoint.getArea" alt="" coords="684,5,859,32"/>
+<area shape="rect" id="node5" href="$interfacele_im_ro_1_1_i_data_point.html#ace5dff853c2586fa3066d02c72e705b2" title="leImRo.IDataPoint.getPerimeter" alt="" coords="669,56,873,83"/>
+</map>
