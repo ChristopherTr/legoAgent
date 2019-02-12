@@ -108,6 +108,8 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_s_v_m.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classle_im_ro_1_1_s_v_m-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SVM Class Reference</div>  </div>
@@ -126,8 +128,11 @@ Collaboration diagram for SVM:</div>
 <div class="dyncontent">
 <div class="center"><img src="classle_im_ro_1_1_s_v_m__coll__graph.png" border="0" usemap="#_s_v_m_coll__map" alt="Collaboration graph"/></div>
 <map name="_s_v_m_coll__map" id="_s_v_m_coll__map">
-<area shape="rect" id="node2" href="interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="5,5,60,32"/>
-<area shape="rect" id="node3" href="classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="84,5,144,32"/>
+<area shape="rect" id="node2" href="interfacele_im_ro_1_1_i_s_v_m.html" title="ISVM" alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_vector.html" title="Vector" alt="" coords="84,95,144,121"/>
+<area shape="rect" id="node4" href="classle_im_ro_1_1_dataset.html" title="Dataset" alt="" coords="259,95,326,121"/>
+<area shape="rect" id="node5" href="interfacele_im_ro_1_1_i_dataset.html" title="IDataset" alt="" coords="68,5,139,32"/>
+<area shape="rect" id="node8" href="interfacele_im_ro_1_1_i_data_point.html" title="IDataPoint" alt="" coords="503,5,586,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -144,6 +149,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaed9a726bf737acf9359eff868843049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumle_im_ro_1_1_figure.html">Figure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049">classify</a> (<a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a> dataPoint)</td></tr>
 <tr class="memdesc:aaed9a726bf737acf9359eff868843049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten.  <a href="#aaed9a726bf737acf9359eff868843049">More...</a><br /></td></tr>
 <tr class="separator:aaed9a726bf737acf9359eff868843049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9b9a7262261c393ced24e4088eb77b67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_s_v_m.html#a9b9a7262261c393ced24e4088eb77b67">dataSet</a></td></tr>
+<tr class="separator:a9b9a7262261c393ced24e4088eb77b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef9a7ddbd7eff007b98ae8343edc813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classle_im_ro_1_1_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_s_v_m.html#a4ef9a7ddbd7eff007b98ae8343edc813">PointOnSeparator</a></td></tr>
+<tr class="memdesc:a4ef9a7ddbd7eff007b98ae8343edc813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Es sei im 2D-Raum die Gerade des Separators (Hyperebene) als g(x, y) = this.PointOnSeparator + n * this.vectorParallelToSeparator (die Straße entlang) mit dem orthogonalen Vektor this.vectorToSeparatorSide (von der Straßenmitte zum Rand der Straße in einem Schritt)  <a href="#a4ef9a7ddbd7eff007b98ae8343edc813">More...</a><br /></td></tr>
+<tr class="separator:a4ef9a7ddbd7eff007b98ae8343edc813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a9a5ba39468cf97014ad09b2d46fbe6a5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_s_v_m.html#a9a5ba39468cf97014ad09b2d46fbe6a5">classifierRectangle</a> = 1</td></tr>
+<tr class="separator:a9a5ba39468cf97014ad09b2d46fbe6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a237f1a119e58e4fbfd9dbd588091f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_s_v_m.html#a65a237f1a119e58e4fbfd9dbd588091f">classifierCircle</a> = -1</td></tr>
+<tr class="separator:a65a237f1a119e58e4fbfd9dbd588091f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8b72b0aa71faad6bd9da06ac31e279d9"></a>
@@ -341,6 +361,89 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a65a237f1a119e58e4fbfd9dbd588091f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classifierCircle = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a5ba39468cf97014ad09b2d46fbe6a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classifierRectangle = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b9a7262261c393ced24e4088eb77b67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a> dataSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4ef9a7ddbd7eff007b98ae8343edc813"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classle_im_ro_1_1_vector.html">Vector</a> PointOnSeparator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Es sei im 2D-Raum die Gerade des Separators (Hyperebene) als g(x, y) = this.PointOnSeparator + n * this.vectorParallelToSeparator (die Straße entlang) mit dem orthogonalen Vektor this.vectorToSeparatorSide (von der Straßenmitte zum Rand der Straße in einem Schritt) </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>leImRo/src/leImRo/<a class="el" href="_s_v_m_8java.html">SVM.java</a></li>
 </ul>
@@ -350,7 +453,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacele_im_ro.html">leImRo</a></li><li class="navelem"><a class="el" href="classle_im_ro_1_1_s_v_m.html">SVM</a></li>
-    <li class="footer">Generated on Tue Feb 12 2019 12:01:52 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 14:21:24 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

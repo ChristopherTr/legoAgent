@@ -1,22 +1,22 @@
 <map id="train" name="train">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#aa53699729ce302bb94de49975fc79302" title="Adds a new data to the dataset in RAM, does not store this changes to disk. " alt="" coords="111,208,299,235"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="100,259,309,285"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="668,385,795,412"/>
-<area shape="rect" id="node19" href="$interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="leImRo.IScanner.scanNewData\lPoint" alt="" coords="104,361,305,402"/>
-<area shape="rect" id="node20" href="$interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="113,427,297,453"/>
-<area shape="rect" id="node21" href="$classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="396,411,540,437"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="381,208,555,235"/>
-<area shape="rect" id="node6" href="$classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="357,259,579,285"/>
-<area shape="rect" id="node7" href="$classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="369,360,567,387"/>
-<area shape="rect" id="node8" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="365,157,571,184"/>
-<area shape="rect" id="node9" href="$classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d" title="returns the current SVM&#45;Points to create the border, or null, if no data is stored ..." alt="" coords="632,157,831,184"/>
-<area shape="rect" id="node10" href="$interfacele_im_ro_1_1_i_data_point.html#ae81becd7d491f95b5d7464c9b344aab4" title="leImRo.IDataPoint.toVector" alt="" coords="642,208,821,235"/>
-<area shape="rect" id="node11" href="$classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="leImRo.Vector.subtract" alt="" coords="654,259,809,285"/>
-<area shape="rect" id="node15" href="$classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="leImRo.Vector.getOrthogonal" alt="" coords="637,56,826,83"/>
-<area shape="rect" id="node16" href="$classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="627,5,836,32"/>
-<area shape="rect" id="node17" href="$classle_im_ro_1_1_vector.html#a6ee4a06b8c7acbd583fa0c6b8ca63def" title="leImRo.Vector.multiply" alt="" coords="655,309,808,336"/>
-<area shape="rect" id="node18" href="$classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="leImRo.Vector.add" alt="" coords="667,107,796,133"/>
-<area shape="rect" id="node12" href="$classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc" title="leImRo.Vector.Vector" alt="" coords="884,208,1031,235"/>
-<area shape="rect" id="node13" href="$classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409" title="leImRo.Vector.getX" alt="" coords="891,107,1024,133"/>
-<area shape="rect" id="node14" href="$classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358" title="leImRo.Vector.getY" alt="" coords="890,56,1025,83"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#aa53699729ce302bb94de49975fc79302" title="Adds a new data to the dataset in RAM, does not store this changes to disk. " alt="" coords="374,30,562,56"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="668,80,795,107"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="100,175,309,202"/>
+<area shape="rect" id="node19" href="$interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="leImRo.IScanner.scanNewData\lPoint" alt="" coords="104,226,305,268"/>
+<area shape="rect" id="node20" href="$interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="113,292,297,319"/>
+<area shape="rect" id="node21" href="$classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="133,112,277,139"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="381,182,555,208"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="357,232,579,259"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="369,283,567,310"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="365,334,571,360"/>
+<area shape="rect" id="node9" href="$classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d" title="returns the current SVM&#45;Points to create the border, or null, if no data is stored ..." alt="" coords="632,334,831,360"/>
+<area shape="rect" id="node10" href="$interfacele_im_ro_1_1_i_data_point.html#ae81becd7d491f95b5d7464c9b344aab4" title="leImRo.IDataPoint.toVector" alt="" coords="642,384,821,411"/>
+<area shape="rect" id="node11" href="$classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="leImRo.Vector.subtract" alt="" coords="654,435,809,462"/>
+<area shape="rect" id="node15" href="$classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="leImRo.Vector.getOrthogonal" alt="" coords="637,232,826,259"/>
+<area shape="rect" id="node16" href="$classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="627,182,836,208"/>
+<area shape="rect" id="node17" href="$classle_im_ro_1_1_vector.html#a6ee4a06b8c7acbd583fa0c6b8ca63def" title="leImRo.Vector.multiply" alt="" coords="655,486,808,512"/>
+<area shape="rect" id="node18" href="$classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="leImRo.Vector.add" alt="" coords="667,283,796,310"/>
+<area shape="rect" id="node12" href="$classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc" title="leImRo.Vector.Vector" alt="" coords="884,384,1031,411"/>
+<area shape="rect" id="node13" href="$classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409" title="leImRo.Vector.getX" alt="" coords="891,283,1024,310"/>
+<area shape="rect" id="node14" href="$classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358" title="leImRo.Vector.getY" alt="" coords="890,232,1025,259"/>
 </map>

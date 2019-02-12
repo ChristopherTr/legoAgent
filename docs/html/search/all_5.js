@@ -6,6 +6,7 @@ var searchData=
   ['idataset_2ejava',['IDataset.java',['../_i_dataset_8java.html',1,'']]],
   ['igui',['IGUI',['../interfacele_im_ro_1_1_i_g_u_i.html',1,'leImRo']]],
   ['igui_2ejava',['IGUI.java',['../_i_g_u_i_8java.html',1,'']]],
+  ['invertdirection',['invertDirection',['../classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238',1,'leImRo::Scanner']]],
   ['irecognition',['IRecognition',['../interfacele_im_ro_1_1_i_recognition.html',1,'leImRo']]],
   ['irecognition_2ejava',['IRecognition.java',['../_i_recognition_8java.html',1,'']]],
   ['iscanner',['IScanner',['../interfacele_im_ro_1_1_i_scanner.html',1,'leImRo']]],

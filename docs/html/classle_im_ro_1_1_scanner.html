@@ -109,6 +109,8 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_scanner.html','');})
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classle_im_ro_1_1_scanner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Scanner Class Reference</div>  </div>
@@ -163,6 +165,55 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a7eafaea8cdf31a30244f75b9c226dbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fbbfccf0de555ec72d218eb272b66b0"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a5fbbfccf0de555ec72d218eb272b66b0">rgbThreshold</a> = 0.12</td></tr>
 <tr class="separator:a5fbbfccf0de555ec72d218eb272b66b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab84faeebf80b871fbe138f89d92fc319"><td class="memItemLeft" align="right" valign="top">int[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">readImage</a> ()</td></tr>
+<tr class="memdesc:ab84faeebf80b871fbe138f89d92fc319"><td class="mdescLeft">&#160;</td><td class="mdescRight">scan the whole picture.  <a href="#ab84faeebf80b871fbe138f89d92fc319">More...</a><br /></td></tr>
+<tr class="separator:ab84faeebf80b871fbe138f89d92fc319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d6113905bfe4cc164efabfa82d2f6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a25d6113905bfe4cc164efabfa82d2f6b">getPixelColor</a> ()</td></tr>
+<tr class="memdesc:a25d6113905bfe4cc164efabfa82d2f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read in sensor value and filter it  <a href="#a25d6113905bfe4cc164efabfa82d2f6b">More...</a><br /></td></tr>
+<tr class="separator:a25d6113905bfe4cc164efabfa82d2f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf743222053559e8729dad95af972eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#adaf743222053559e8729dad95af972eb">getYIndex</a> (int i)</td></tr>
+<tr class="memdesc:adaf743222053559e8729dad95af972eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the y Index for the image buffer Depending on the direction the index must be calculated different because of the meander shape of scanning  <a href="#adaf743222053559e8729dad95af972eb">More...</a><br /></td></tr>
+<tr class="separator:adaf743222053559e8729dad95af972eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23791238e1dea4dcb28c79cb30791137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a23791238e1dea4dcb28c79cb30791137">turnXMotor</a> (int xAnglePerPixel)</td></tr>
+<tr class="memdesc:a23791238e1dea4dcb28c79cb30791137"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn the XMotor about given angle  <a href="#a23791238e1dea4dcb28c79cb30791137">More...</a><br /></td></tr>
+<tr class="separator:a23791238e1dea4dcb28c79cb30791137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab419690385aae0a67dc258cead3e6b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#ab419690385aae0a67dc258cead3e6b64">turnYMotor</a> (int yAnglePerPixel)</td></tr>
+<tr class="memdesc:ab419690385aae0a67dc258cead3e6b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn the YMotor about given angle  <a href="#ab419690385aae0a67dc258cead3e6b64">More...</a><br /></td></tr>
+<tr class="separator:ab419690385aae0a67dc258cead3e6b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c20403d4daf9ecae7b015f631a9dc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a46c20403d4daf9ecae7b015f631a9dc3">returnToHome</a> (int xAnglePerPixel, int yAnglePerPixel)</td></tr>
+<tr class="memdesc:a46c20403d4daf9ecae7b015f631a9dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return to the origin position after scanning image  <a href="#a46c20403d4daf9ecae7b015f631a9dc3">More...</a><br /></td></tr>
+<tr class="separator:a46c20403d4daf9ecae7b015f631a9dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab735cbc5e812deb5fa964a8a2c302238"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238">invertDirection</a> ()</td></tr>
+<tr class="memdesc:ab735cbc5e812deb5fa964a8a2c302238"><td class="mdescLeft">&#160;</td><td class="mdescRight">invert the direction flag 1 means rotate clockwise -1 means rotate counter-clockwise  <a href="#ab735cbc5e812deb5fa964a8a2c302238">More...</a><br /></td></tr>
+<tr class="separator:ab735cbc5e812deb5fa964a8a2c302238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13db6b682f46a55108c9ad4dcbdc2d08"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08">debugImage</a> (int[][] Image)</td></tr>
+<tr class="memdesc:a13db6b682f46a55108c9ad4dcbdc2d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">print Image as String as Debug String  <a href="#a13db6b682f46a55108c9ad4dcbdc2d08">More...</a><br /></td></tr>
+<tr class="separator:a13db6b682f46a55108c9ad4dcbdc2d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56e9bf237e7638836e4ca4bfbb7ab07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07">printImageOnLCD</a> (int[][] image)</td></tr>
+<tr class="separator:aa56e9bf237e7638836e4ca4bfbb7ab07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacecdc750ec106db9c8a88c4675f7ff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0">calculateCharacteristics</a> (int[][] image)</td></tr>
+<tr class="memdesc:aacecdc750ec106db9c8a88c4675f7ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the characteristics perimeter and area of a given image  <a href="#aacecdc750ec106db9c8a88c4675f7ff0">More...</a><br /></td></tr>
+<tr class="separator:aacecdc750ec106db9c8a88c4675f7ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a10343bbbd2178606a4a93244b593e35a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a">pixel</a></td></tr>
+<tr class="separator:a10343bbbd2178606a4a93244b593e35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851cf68c8f607573c1a5e987784c83f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a851cf68c8f607573c1a5e987784c83f6">dir</a></td></tr>
+<tr class="separator:a851cf68c8f607573c1a5e987784c83f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3f8369008cbb1345848dc0dcc7e39d"><td class="memItemLeft" align="right" valign="top">RegulatedMotor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a4b3f8369008cbb1345848dc0dcc7e39d">XMotor</a></td></tr>
+<tr class="separator:a4b3f8369008cbb1345848dc0dcc7e39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe75bb892f5c210209f54474b834faaa"><td class="memItemLeft" align="right" valign="top">RegulatedMotor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#afe75bb892f5c210209f54474b834faaa">YMotor</a></td></tr>
+<tr class="separator:afe75bb892f5c210209f54474b834faaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0106e93ebbedfd010c70e84c82a78bc5"><td class="memItemLeft" align="right" valign="top">EV3ColorSensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a0106e93ebbedfd010c70e84c82a78bc5">Sensor</a></td></tr>
+<tr class="separator:a0106e93ebbedfd010c70e84c82a78bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37c28cd6835ec9c6d5d888d9c0e2524"><td class="memItemLeft" align="right" valign="top">SampleProvider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#ac37c28cd6835ec9c6d5d888d9c0e2524">RgbSample</a></td></tr>
+<tr class="separator:ac37c28cd6835ec9c6d5d888d9c0e2524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cc63e4a672f3503bfd0a5252fd7e7d"><td class="memItemLeft" align="right" valign="top">SampleProvider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_scanner.html#a72cc63e4a672f3503bfd0a5252fd7e7d">RgbFilter</a></td></tr>
+<tr class="separator:a72cc63e4a672f3503bfd0a5252fd7e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a850c7b3c6593b4dfd0135701ecc7692f"></a>
@@ -183,6 +234,386 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aacecdc750ec106db9c8a88c4675f7ff0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a> calculateCharacteristics </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image</em>[][]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>calculate the characteristics perimeter and area of a given image </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>int buffer of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classle_im_ro_1_1_data_point.html">DataPoint</a> with the characteristics perimeter and area </dd></dl>
+
+<p>References <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a">Scanner.pixel</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be">Scanner.scanNewDataPoint()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_cgraph" id="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="215,5,341,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_icgraph" id="classle_im_ro_1_1_scanner_aacecdc750ec106db9c8a88c4675f7ff0_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="215,5,347,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a13db6b682f46a55108c9ad4dcbdc2d08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String debugImage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Image</em>[][]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>print Image as String as Debug String </p>
+
+<p>References <a class="el" href="classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a">Scanner.pixel</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a13db6b682f46a55108c9ad4dcbdc2d08_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a13db6b682f46a55108c9ad4dcbdc2d08_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a13db6b682f46a55108c9ad4dcbdc2d08_icgraph" id="classle_im_ro_1_1_scanner_a13db6b682f46a55108c9ad4dcbdc2d08_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="145,5,228,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="276,5,408,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a25d6113905bfe4cc164efabfa82d2f6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getPixelColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>read in sensor value and filter it </p>
+<dl class="section return"><dt>Returns</dt><dd>0 for white 1 for black </dd></dl>
+
+<p>References <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#a7eafaea8cdf31a30244f75b9c226dbc0">Scanner.sensorSamples</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_cgraph" id="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="152,5,279,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_icgraph" id="classle_im_ro_1_1_scanner_a25d6113905bfe4cc164efabfa82d2f6b_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="152,5,235,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="283,5,415,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adaf743222053559e8729dad95af972eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getYIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>calculates the y Index for the image buffer Depending on the direction the index must be calculated different because of the meander shape of scanning </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>current position y Motor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>index for the image buffer </dd></dl>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_adaf743222053559e8729dad95af972eb_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_adaf743222053559e8729dad95af972eb_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_adaf743222053559e8729dad95af972eb_icgraph" id="classle_im_ro_1_1_scanner_adaf743222053559e8729dad95af972eb_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="133,5,216,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="264,5,396,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab735cbc5e812deb5fa964a8a2c302238"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void invertDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>invert the direction flag 1 means rotate clockwise -1 means rotate counter-clockwise </p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_ab735cbc5e812deb5fa964a8a2c302238_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_ab735cbc5e812deb5fa964a8a2c302238_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_ab735cbc5e812deb5fa964a8a2c302238_icgraph" id="classle_im_ro_1_1_scanner_ab735cbc5e812deb5fa964a8a2c302238_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="156,5,239,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="287,5,419,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa56e9bf237e7638836e4ca4bfbb7ab07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printImageOnLCD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>image</em>[][]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_aa56e9bf237e7638836e4ca4bfbb7ab07_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_aa56e9bf237e7638836e4ca4bfbb7ab07_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_aa56e9bf237e7638836e4ca4bfbb7ab07_icgraph" id="classle_im_ro_1_1_scanner_aa56e9bf237e7638836e4ca4bfbb7ab07_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="177,5,260,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="308,5,440,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab84faeebf80b871fbe138f89d92fc319"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [][] readImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>scan the whole picture. </p>
+<p>This is done in a meander shape. See the following illustration (s is a scan, -&gt; symbolize movement): s-&gt;s-&gt;s-&gt;s \/ s&lt;-s&lt;-s&lt;-s \/ s-&gt;s-&gt;s-&gt;s \/ s&lt;-s&lt;-s&lt;-s</p>
+<p>This shows that for the reading of a line are one scan more is necessary than movements. </p>
+
+<p>References <a class="el" href="classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08">Scanner.debugImage()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#a25d6113905bfe4cc164efabfa82d2f6b">Scanner.getPixelColor()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#adaf743222053559e8729dad95af972eb">Scanner.getYIndex()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238">Scanner.invertDirection()</a>, <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a">Scanner.pixel</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07">Scanner.printImageOnLCD()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#abb80be0b2d3c902b225e999d738c28a0">Scanner.resolution</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#a46c20403d4daf9ecae7b015f631a9dc3">Scanner.returnToHome()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#a23791238e1dea4dcb28c79cb30791137">Scanner.turnXMotor()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#ab419690385aae0a67dc258cead3e6b64">Scanner.turnYMotor()</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be">Scanner.scanNewDataPoint()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_cgraph" id="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08" title="print Image as String as Debug String " alt="" coords="152,5,244,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#a25d6113905bfe4cc164efabfa82d2f6b" title="read in sensor value and filter it " alt="" coords="149,56,247,83"/>
+<area shape="rect" id="node4" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="308,233,435,260"/>
+<area shape="rect" id="node5" href="classle_im_ro_1_1_scanner.html#adaf743222053559e8729dad95af972eb" title="calculates the y Index for the image buffer Depending on the direction the index must be calculated d..." alt="" coords="158,157,238,184"/>
+<area shape="rect" id="node6" href="classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238" title="invert the direction flag 1 means rotate clockwise &#45;1 means rotate counter&#45;clockwise ..." alt="" coords="147,208,249,235"/>
+<area shape="rect" id="node7" href="classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07" title="printImageOnLCD" alt="" coords="136,259,260,285"/>
+<area shape="rect" id="node8" href="classle_im_ro_1_1_scanner.html#a46c20403d4daf9ecae7b015f631a9dc3" title="return to the origin position after scanning image " alt="" coords="147,309,249,336"/>
+<area shape="rect" id="node9" href="classle_im_ro_1_1_scanner.html#a23791238e1dea4dcb28c79cb30791137" title="turn the XMotor about given angle " alt="" coords="156,360,240,387"/>
+<area shape="rect" id="node10" href="classle_im_ro_1_1_scanner.html#ab419690385aae0a67dc258cead3e6b64" title="turn the YMotor about given angle " alt="" coords="155,411,241,437"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_icgraph" id="classle_im_ro_1_1_scanner_ab84faeebf80b871fbe138f89d92fc319_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="136,5,268,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a46c20403d4daf9ecae7b015f631a9dc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void returnToHome </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xAnglePerPixel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yAnglePerPixel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return to the origin position after scanning image </p>
+
+<p>References <a class="el" href="classle_im_ro_1_1_scanner.html#aabbcd97ee1e39733989ae018445ab140">Scanner.startDir</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a46c20403d4daf9ecae7b015f631a9dc3_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a46c20403d4daf9ecae7b015f631a9dc3_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a46c20403d4daf9ecae7b015f631a9dc3_icgraph" id="classle_im_ro_1_1_scanner_a46c20403d4daf9ecae7b015f631a9dc3_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="156,5,239,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="287,5,419,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="aa6cc7c29dc435d586987e9bcb3d548be"></a>
 <div class="memitem">
 <div class="memproto">
@@ -200,9 +631,165 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfacele_im_ro_1_1_i_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be">IScanner</a>.</p>
 
+<p>References <a class="el" href="classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0">Scanner.calculateCharacteristics()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_aa6cc7c29dc435d586987e9bcb3d548be_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_aa6cc7c29dc435d586987e9bcb3d548be_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_aa6cc7c29dc435d586987e9bcb3d548be_cgraph" id="classle_im_ro_1_1_scanner_aa6cc7c29dc435d586987e9bcb3d548be_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0" title="calculate the characteristics perimeter and area of a given image " alt="" coords="185,49,347,76"/>
+<area shape="rect" id="node4" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="225,201,307,228"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="567,125,693,152"/>
+<area shape="rect" id="node5" href="classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08" title="print Image as String as Debug String " alt="" coords="411,74,503,101"/>
+<area shape="rect" id="node6" href="classle_im_ro_1_1_scanner.html#a25d6113905bfe4cc164efabfa82d2f6b" title="read in sensor value and filter it " alt="" coords="407,125,506,152"/>
+<area shape="rect" id="node7" href="classle_im_ro_1_1_scanner.html#adaf743222053559e8729dad95af972eb" title="calculates the y Index for the image buffer Depending on the direction the index must be calculated d..." alt="" coords="417,176,497,202"/>
+<area shape="rect" id="node8" href="classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238" title="invert the direction flag 1 means rotate clockwise &#45;1 means rotate counter&#45;clockwise ..." alt="" coords="405,226,508,253"/>
+<area shape="rect" id="node9" href="classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07" title="printImageOnLCD" alt="" coords="395,277,519,304"/>
+<area shape="rect" id="node10" href="classle_im_ro_1_1_scanner.html#a46c20403d4daf9ecae7b015f631a9dc3" title="return to the origin position after scanning image " alt="" coords="405,328,508,354"/>
+<area shape="rect" id="node11" href="classle_im_ro_1_1_scanner.html#a23791238e1dea4dcb28c79cb30791137" title="turn the XMotor about given angle " alt="" coords="415,378,499,405"/>
+<area shape="rect" id="node12" href="classle_im_ro_1_1_scanner.html#ab419690385aae0a67dc258cead3e6b64" title="turn the YMotor about given angle " alt="" coords="413,429,500,456"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a23791238e1dea4dcb28c79cb30791137"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turnXMotor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xAnglePerPixel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>turn the XMotor about given angle </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xAnglePerPixel</td><td>angle to rotate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>References <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_cgraph" id="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="137,5,264,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_icgraph" id="classle_im_ro_1_1_scanner_a23791238e1dea4dcb28c79cb30791137_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="137,5,220,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="268,5,400,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab419690385aae0a67dc258cead3e6b64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turnYMotor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yAnglePerPixel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>turn the YMotor about given angle </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yAnglePerPixel</td><td>angle to rotate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>References <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>.</p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_cgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_cgraph" id="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="140,5,267,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_icgraph.png" border="0" usemap="#classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_icgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_icgraph" id="classle_im_ro_1_1_scanner_ab419690385aae0a67dc258cead3e6b64_icgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="140,5,223,32"/>
+<area shape="rect" id="node3" href="classle_im_ro_1_1_scanner.html#aa6cc7c29dc435d586987e9bcb3d548be" title="scan whole image and calculate the characteristics of the objects " alt="" coords="271,5,403,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a851cf68c8f607573c1a5e987784c83f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a82315802fcd2dcfc0e6f1f81a0362be8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -243,6 +830,28 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a10343bbbd2178606a4a93244b593e35a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pixel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0">Scanner.calculateCharacteristics()</a>, <a class="el" href="classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08">Scanner.debugImage()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abb80be0b2d3c902b225e999d738c28a0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -257,6 +866,48 @@ Static Public Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319">Scanner.readImage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72cc63e4a672f3503bfd0a5252fd7e7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SampleProvider RgbFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac37c28cd6835ec9c6d5d888d9c0e2524"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SampleProvider RgbSample</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -283,6 +934,26 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0106e93ebbedfd010c70e84c82a78bc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EV3ColorSensor Sensor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7eafaea8cdf31a30244f75b9c226dbc0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -300,6 +971,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#a25d6113905bfe4cc164efabfa82d2f6b">Scanner.getPixelColor()</a>.</p>
 
 </div>
 </div>
@@ -321,7 +994,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#a850c7b3c6593b4dfd0135701ecc7692f">Scanner.Scanner()</a>.</p>
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_scanner.html#a46c20403d4daf9ecae7b015f631a9dc3">Scanner.returnToHome()</a>, and <a class="el" href="classle_im_ro_1_1_scanner.html#a850c7b3c6593b4dfd0135701ecc7692f">Scanner.Scanner()</a>.</p>
 
 </div>
 </div>
@@ -339,6 +1012,26 @@ Static Public Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b3f8369008cbb1345848dc0dcc7e39d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegulatedMotor XMotor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -405,6 +1098,26 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afe75bb892f5c210209f54474b834faaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegulatedMotor YMotor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aede6139bc2f06d8ef0f0656501fd2dac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -434,7 +1147,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacele_im_ro.html">leImRo</a></li><li class="navelem"><a class="el" href="classle_im_ro_1_1_scanner.html">Scanner</a></li>
-    <li class="footer">Generated on Tue Feb 12 2019 12:01:52 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 14:21:24 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

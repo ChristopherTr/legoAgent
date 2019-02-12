@@ -109,6 +109,8 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_dataset.html','');})
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classle_im_ro_1_1_dataset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Dataset Class Reference</div>  </div>
@@ -128,6 +130,7 @@ Collaboration diagram for Dataset:</div>
 <div class="center"><img src="classle_im_ro_1_1_dataset__coll__graph.png" border="0" usemap="#_dataset_coll__map" alt="Collaboration graph"/></div>
 <map name="_dataset_coll__map" id="_dataset_coll__map">
 <area shape="rect" id="node2" href="interfacele_im_ro_1_1_i_dataset.html" title="IDataset" alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node5" href="interfacele_im_ro_1_1_i_data_point.html" title="IDataPoint" alt="" coords="441,5,523,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -135,12 +138,12 @@ Collaboration diagram for Dataset:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4aecdcc53b93c41eedd5d73926aaec06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06">Dataset</a> ()</td></tr>
 <tr class="separator:a4aecdcc53b93c41eedd5d73926aaec06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111eac9dc62ade7cb31b379db954fab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1">setsVMPoints</a> (<a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>[] sVMPoints)</td></tr>
+<tr class="memitem:a111eac9dc62ade7cb31b379db954fab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1">setsVMPoints</a> (<a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>[] <a class="el" href="classle_im_ro_1_1_dataset.html#afd4e568985e7eb02b88453b37e8da267">sVMPoints</a>)</td></tr>
 <tr class="memdesc:a111eac9dc62ade7cb31b379db954fab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO: Sort the received array by figure Type ()  <a href="#a111eac9dc62ade7cb31b379db954fab1">More...</a><br /></td></tr>
 <tr class="separator:a111eac9dc62ade7cb31b379db954fab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a04b23a7c039472b5777294b3defd9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a3a04b23a7c039472b5777294b3defd9c">getSvmOrientation</a> ()</td></tr>
 <tr class="separator:a3a04b23a7c039472b5777294b3defd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f34955e9b72f9662e9c26d57343655b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b">setSvmOrientation</a> (int svmOrientation)</td></tr>
+<tr class="memitem:a1f34955e9b72f9662e9c26d57343655b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b">setSvmOrientation</a> (int <a class="el" href="classle_im_ro_1_1_dataset.html#ac6527fa526325e8bd92d72816e1baeb1">svmOrientation</a>)</td></tr>
 <tr class="separator:a1f34955e9b72f9662e9c26d57343655b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798729dca95209ecdc609807a653a2bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a798729dca95209ecdc609807a653a2bf">clearAll</a> ()</td></tr>
 <tr class="memdesc:a798729dca95209ecdc609807a653a2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the currently existing dataset, does not store this changes to disk.  <a href="#a798729dca95209ecdc609807a653a2bf">More...</a><br /></td></tr>
@@ -154,21 +157,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a14c9d90f167e40605761fec766b1268d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d">getSVMPoints</a> ()</td></tr>
 <tr class="memdesc:a14c9d90f167e40605761fec766b1268d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the current SVM-Points to create the border, or null, if no data is stored  <a href="#a14c9d90f167e40605761fec766b1268d">More...</a><br /></td></tr>
 <tr class="separator:a14c9d90f167e40605761fec766b1268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf0fe63bcaa9f261b51d59db0e448211"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#aaf0fe63bcaa9f261b51d59db0e448211">toSTring</a> ()</td></tr>
-<tr class="memdesc:aaf0fe63bcaa9f261b51d59db0e448211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert die String-Repräsentation des Datenpunkts zurück.  <a href="#aaf0fe63bcaa9f261b51d59db0e448211">More...</a><br /></td></tr>
-<tr class="separator:aaf0fe63bcaa9f261b51d59db0e448211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad146fa8579a5f8a876c4688cc5a68520"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#ad146fa8579a5f8a876c4688cc5a68520">toString</a> ()</td></tr>
+<tr class="memdesc:ad146fa8579a5f8a876c4688cc5a68520"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the String-Repräsentation of this object  <a href="#ad146fa8579a5f8a876c4688cc5a68520">More...</a><br /></td></tr>
+<tr class="separator:ad146fa8579a5f8a876c4688cc5a68520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96a41c2e34b7d1a6f4f8625c32dcfea7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a96a41c2e34b7d1a6f4f8625c32dcfea7">removeStoredSVMPoints</a> ()</td></tr>
 <tr class="memdesc:a96a41c2e34b7d1a6f4f8625c32dcfea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the currently stored SVM-Points.  <a href="#a96a41c2e34b7d1a6f4f8625c32dcfea7">More...</a><br /></td></tr>
 <tr class="separator:a96a41c2e34b7d1a6f4f8625c32dcfea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa9f485a4ce5cded9b0c758e154f12975"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975">store</a> (<a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a> dataset)</td></tr>
+<tr class="memitem:aa9f485a4ce5cded9b0c758e154f12975"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975">store</a> (<a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a> <a class="el" href="classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25">dataset</a>)</td></tr>
 <tr class="memdesc:aa9f485a4ce5cded9b0c758e154f12975"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the current status of the dataset to the disk.  <a href="#aa9f485a4ce5cded9b0c758e154f12975">More...</a><br /></td></tr>
 <tr class="separator:aa9f485a4ce5cded9b0c758e154f12975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb79e4c27b756c93f66d058b0204525a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#abb79e4c27b756c93f66d058b0204525a">load</a> ()</td></tr>
 <tr class="memdesc:abb79e4c27b756c93f66d058b0204525a"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the data that are currently stored in the filesystem.  <a href="#abb79e4c27b756c93f66d058b0204525a">More...</a><br /></td></tr>
 <tr class="separator:abb79e4c27b756c93f66d058b0204525a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a33e6b2b2364405b0d3ef170e40c6ce25"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25">dataset</a></td></tr>
+<tr class="separator:a33e6b2b2364405b0d3ef170e40c6ce25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4e568985e7eb02b88453b37e8da267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#afd4e568985e7eb02b88453b37e8da267">sVMPoints</a></td></tr>
+<tr class="separator:afd4e568985e7eb02b88453b37e8da267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6527fa526325e8bd92d72816e1baeb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#ac6527fa526325e8bd92d72816e1baeb1">svmOrientation</a> = 0</td></tr>
+<tr class="memdesc:ac6527fa526325e8bd92d72816e1baeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">orientation, whether negative values means circles or rectangles 0: circles get negative values, 1: rectangles get negative values  <a href="#ac6527fa526325e8bd92d72816e1baeb1">More...</a><br /></td></tr>
+<tr class="separator:ac6527fa526325e8bd92d72816e1baeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a3238d314ecdee14d2966760945d00c3b"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a3238d314ecdee14d2966760945d00c3b">serialVersionUID</a> = 1L</td></tr>
+<tr class="memdesc:a3238d314ecdee14d2966760945d00c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version ID.  <a href="#a3238d314ecdee14d2966760945d00c3b">More...</a><br /></td></tr>
+<tr class="separator:a3238d314ecdee14d2966760945d00c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e4b88368a1774f4eb7bb4b56811a01"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_dataset.html#a32e4b88368a1774f4eb7bb4b56811a01">fileLocation</a> = &quot;location.data&quot;</td></tr>
+<tr class="memdesc:a32e4b88368a1774f4eb7bb4b56811a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">the path and filename in the filesystem of the serialized data.  <a href="#a32e4b88368a1774f4eb7bb4b56811a01">More...</a><br /></td></tr>
+<tr class="separator:a32e4b88368a1774f4eb7bb4b56811a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4aecdcc53b93c41eedd5d73926aaec06"></a>
@@ -218,7 +240,19 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacele_im_ro_1_1_i_dataset.html#aa53699729ce302bb94de49975fc79302">IDataset</a>.</p>
 
+<p>References <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>.</p>
+
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c">Recognition.train()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classle_im_ro_1_1_dataset_aa53699729ce302bb94de49975fc79302_cgraph.png" border="0" usemap="#classle_im_ro_1_1_dataset_aa53699729ce302bb94de49975fc79302_cgraph" alt=""/></div>
+<map name="classle_im_ro_1_1_dataset_aa53699729ce302bb94de49975fc79302_cgraph" id="classle_im_ro_1_1_dataset_aa53699729ce302bb94de49975fc79302_cgraph">
+<area shape="rect" id="node2" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="148,5,275,32"/>
+</map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -296,6 +330,8 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacele_im_ro_1_1_i_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7">IDataset</a>.</p>
 
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25">Dataset.dataset</a>.</p>
+
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca">SVM.findSupportVectors()</a>.</p>
 
 <p><div class="dynheader">
@@ -325,6 +361,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#ac6527fa526325e8bd92d72816e1baeb1">Dataset.svmOrientation</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049">SVM.classify()</a>.</p>
 
@@ -359,6 +397,8 @@ Here is the caller graph for this function:</div>
 <p>returns the current SVM-Points to create the border, or null, if no data is stored </p>
 
 <p>Implements <a class="el" href="interfacele_im_ro_1_1_i_dataset.html#a14c9d90f167e40605761fec766b1268d">IDataset</a>.</p>
+
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#afd4e568985e7eb02b88453b37e8da267">Dataset.sVMPoints</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b">SVM.computeSeparator()</a>.</p>
 
@@ -402,7 +442,7 @@ Here is the caller graph for this function:</div>
 <p>loads the data that are currently stored in the filesystem. </p>
 <p>Path is specified by static variable fileLocation. TODO: Load of SVMPoints from separate file </p>
 
-<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06">Dataset.Dataset()</a>, and <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>.</p>
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25">Dataset.dataset</a>, <a class="el" href="classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06">Dataset.Dataset()</a>, and <a class="el" href="classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac">Logger.log()</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_recognition.html#a604c35cdf397b382d05aafc7a4476e41">Recognition.Recognition()</a>.</p>
 
@@ -478,6 +518,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#ac6527fa526325e8bd92d72816e1baeb1">Dataset.svmOrientation</a>.</p>
+
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca">SVM.findSupportVectors()</a>.</p>
 
 <p><div class="dynheader">
@@ -516,6 +558,8 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p>References <a class="el" href="classle_im_ro_1_1_dataset.html#afd4e568985e7eb02b88453b37e8da267">Dataset.sVMPoints</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca">SVM.findSupportVectors()</a>.</p>
 
@@ -588,12 +632,12 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="aaf0fe63bcaa9f261b51d59db0e448211"></a>
+<a class="anchor" id="ad146fa8579a5f8a876c4688cc5a68520"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String toSTring </td>
+          <td class="memname">String toString </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -601,7 +645,120 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Liefert die String-Repräsentation des Datenpunkts zurück. </p>
+<p>returns the String-Repräsentation of this object </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a33e6b2b2364405b0d3ef170e40c6ce25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a>&gt; dataset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7">Dataset.getAllData()</a>, and <a class="el" href="classle_im_ro_1_1_dataset.html#abb79e4c27b756c93f66d058b0204525a">Dataset.load()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32e4b88368a1774f4eb7bb4b56811a01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String fileLocation = &quot;location.data&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the path and filename in the filesystem of the serialized data. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3238d314ecdee14d2966760945d00c3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long serialVersionUID = 1L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Version ID. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac6527fa526325e8bd92d72816e1baeb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svmOrientation = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>orientation, whether negative values means circles or rectangles 0: circles get negative values, 1: rectangles get negative values </p>
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_dataset.html#a3a04b23a7c039472b5777294b3defd9c">Dataset.getSvmOrientation()</a>, and <a class="el" href="classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b">Dataset.setSvmOrientation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd4e568985e7eb02b88453b37e8da267"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacele_im_ro_1_1_i_data_point.html">IDataPoint</a> [] sVMPoints</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d">Dataset.getSVMPoints()</a>, and <a class="el" href="classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1">Dataset.setsVMPoints()</a>.</p>
 
 </div>
 </div>
@@ -614,7 +771,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacele_im_ro.html">leImRo</a></li><li class="navelem"><a class="el" href="classle_im_ro_1_1_dataset.html">Dataset</a></li>
-    <li class="footer">Generated on Tue Feb 12 2019 12:01:51 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 14:21:23 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

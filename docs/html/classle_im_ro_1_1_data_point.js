@@ -7,5 +7,7 @@ var classle_im_ro_1_1_data_point =
     [ "getPerimeter", "classle_im_ro_1_1_data_point.html#ace5dff853c2586fa3066d02c72e705b2", null ],
     [ "setFigure", "classle_im_ro_1_1_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6", null ],
     [ "toString", "classle_im_ro_1_1_data_point.html#ad146fa8579a5f8a876c4688cc5a68520", null ],
-    [ "toVector", "classle_im_ro_1_1_data_point.html#ae81becd7d491f95b5d7464c9b344aab4", null ]
+    [ "toVector", "classle_im_ro_1_1_data_point.html#ae81becd7d491f95b5d7464c9b344aab4", null ],
+    [ "figure", "classle_im_ro_1_1_data_point.html#a69a09cf156d42da0b4a62f1914847d5b", null ],
+    [ "perimeter", "classle_im_ro_1_1_data_point.html#aa39c090c071d7e141e1875275d812131", null ]
 ];

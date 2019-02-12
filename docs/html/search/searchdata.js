@@ -4,8 +4,8 @@ var indexSectionsWithContent =
   1: "dfgilmrsv",
   2: "l",
   3: "dfgilmrsv",
-  4: "acdfglmprstv",
-  5: "cfmrsuxy",
+  4: "acdfgilmprstv",
+  5: "cdfmprsuxy",
   6: "r",
   7: "l"
 };

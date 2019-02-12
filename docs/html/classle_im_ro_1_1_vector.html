@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_vector.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classle_im_ro_1_1_vector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Vector Class Reference</div>  </div>
@@ -117,7 +118,7 @@ $(document).ready(function(){initNavTree('classle_im_ro_1_1_vector.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a5818fd7465ff3176afa63c019e23cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc">Vector</a> (double x, double y)</td></tr>
+<tr class="memitem:a5a5818fd7465ff3176afa63c019e23cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc">Vector</a> (double <a class="el" href="classle_im_ro_1_1_vector.html#af88b946fb90d5f08b5fb740c70e98c10">x</a>, double <a class="el" href="classle_im_ro_1_1_vector.html#ab927965981178aa1fba979a37168db2a">y</a>)</td></tr>
 <tr class="separator:a5a5818fd7465ff3176afa63c019e23cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b69e4312b7814c6efce42f851893409"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409">getX</a> ()</td></tr>
 <tr class="separator:a2b69e4312b7814c6efce42f851893409"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,6 +140,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a161eceec763a6d561717b2499a34ead4"><td class="memItemLeft" align="right" valign="top">static double[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4">linearcombination</a> (<a class="el" href="classle_im_ro_1_1_vector.html">Vector</a> vector1, <a class="el" href="classle_im_ro_1_1_vector.html">Vector</a> vector2, <a class="el" href="classle_im_ro_1_1_vector.html">Vector</a> destination)</td></tr>
 <tr class="memdesc:a161eceec763a6d561717b2499a34ead4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC.  <a href="#a161eceec763a6d561717b2499a34ead4">More...</a><br /></td></tr>
 <tr class="separator:a161eceec763a6d561717b2499a34ead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af88b946fb90d5f08b5fb740c70e98c10"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#af88b946fb90d5f08b5fb740c70e98c10">x</a></td></tr>
+<tr class="separator:af88b946fb90d5f08b5fb740c70e98c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab927965981178aa1fba979a37168db2a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classle_im_ro_1_1_vector.html#ab927965981178aa1fba979a37168db2a">y</a></td></tr>
+<tr class="separator:ab927965981178aa1fba979a37168db2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5a5818fd7465ff3176afa63c019e23cc"></a>
@@ -164,6 +172,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>References <a class="el" href="classle_im_ro_1_1_vector.html#af88b946fb90d5f08b5fb740c70e98c10">Vector.x</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#ab927965981178aa1fba979a37168db2a">Vector.y</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61">Vector.add()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d">Vector.getOrthogonal()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a6ee4a06b8c7acbd583fa0c6b8ca63def">Vector.multiply()</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8">Vector.subtract()</a>.</p>
 
@@ -321,6 +331,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>References <a class="el" href="classle_im_ro_1_1_vector.html#af88b946fb90d5f08b5fb740c70e98c10">Vector.x</a>.</p>
+
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61">Vector.add()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d">Vector.getOrthogonal()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4">Vector.linearcombination()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8">Vector.subtract()</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#ad146fa8579a5f8a876c4688cc5a68520">Vector.toString()</a>.</p>
 
 <p><div class="dynheader">
@@ -358,6 +370,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>References <a class="el" href="classle_im_ro_1_1_vector.html#ab927965981178aa1fba979a37168db2a">Vector.y</a>.</p>
 
 <p>Referenced by <a class="el" href="classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61">Vector.add()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d">Vector.getOrthogonal()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4">Vector.linearcombination()</a>, <a class="el" href="classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8">Vector.subtract()</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#ad146fa8579a5f8a876c4688cc5a68520">Vector.toString()</a>.</p>
 
@@ -602,6 +616,51 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="af88b946fb90d5f08b5fb740c70e98c10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409">Vector.getX()</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc">Vector.Vector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab927965981178aa1fba979a37168db2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358">Vector.getY()</a>, and <a class="el" href="classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc">Vector.Vector()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>leImRo/src/leImRo/<a class="el" href="_vector_8java.html">Vector.java</a></li>
 </ul>
@@ -611,7 +670,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacele_im_ro.html">leImRo</a></li><li class="navelem"><a class="el" href="classle_im_ro_1_1_vector.html">Vector</a></li>
-    <li class="footer">Generated on Tue Feb 12 2019 12:01:53 for LegoAgent-Eve by
+    <li class="footer">Generated on Tue Feb 12 2019 14:21:24 for LegoAgent-Eve by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
