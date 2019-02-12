@@ -1,0 +1,10 @@
+<map id="classify" name="classify">
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#a3a04b23a7c039472b5777294b3defd9c" title="leImRo.Dataset.getSvmOrientation" alt="" coords="120,5,341,32"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="126,56,335,83"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="167,157,294,184"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="leImRo.Vector.subtract" alt="" coords="153,107,308,133"/>
+<area shape="rect" id="node9" href="$interfacele_im_ro_1_1_i_data_point.html#ae81becd7d491f95b5d7464c9b344aab4" title="leImRo.IDataPoint.toVector" alt="" coords="141,208,320,235"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_vector.html#a2b69e4312b7814c6efce42f851893409" title="leImRo.Vector.getX" alt="" coords="396,107,529,133"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_vector.html#a15f19cf52955c8c3406831b288681358" title="leImRo.Vector.getY" alt="" coords="395,56,530,83"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_vector.html#a5a5818fd7465ff3176afa63c019e23cc" title="leImRo.Vector.Vector" alt="" coords="389,157,536,184"/>
+</map>

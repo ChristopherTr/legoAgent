@@ -1,0 +1,9 @@
+<map id="subtract" name="subtract">
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="154,5,297,32"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="123,56,328,83"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a2a405eaf66bc8e2aefe44f56fef53647" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="633,5,828,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="876,31,1047,57"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1095,31,1221,57"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="376,56,585,83"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="649,56,812,83"/>
+</map>

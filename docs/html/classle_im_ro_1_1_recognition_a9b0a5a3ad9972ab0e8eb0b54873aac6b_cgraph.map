@@ -1,0 +1,6 @@
+<map id="removeAll" name="removeAll">
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#a798729dca95209ecdc609807a653a2bf" title="removes the currently existing dataset, does not store this changes to disk. " alt="" coords="132,13,291,39"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="373,93,499,119"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="139,114,283,141"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_dataset.html#a96a41c2e34b7d1a6f4f8625c32dcfea7" title="removes the currently stored SVM&#45;Points. " alt="" coords="339,5,533,47"/>
+</map>
