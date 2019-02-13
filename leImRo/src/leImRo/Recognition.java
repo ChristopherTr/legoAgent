@@ -27,7 +27,7 @@ public class Recognition implements IRecognition {
 		//get new DataPoint from Scanner
 		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		
-		//let the SVM compute the 
+		//let the SVM compute the type of image
 		Figure figure = svm.classify(newDataPoint);
 		Logger.log("Detected figure (corious if this works...): " + figure);
 		return figure;

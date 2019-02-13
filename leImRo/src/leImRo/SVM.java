@@ -3,8 +3,6 @@ import java.util.ArrayList;
 
 public class SVM implements ISVM {
 
-	private static int classifierRectangle = 1;
-	private static int classifierCircle = -1;
 	private Dataset dataSet;
 	/**
 	 * Es sei im 2D-Raum die Gerade des Separators (Hyperebene) als 
@@ -20,6 +18,12 @@ public class SVM implements ISVM {
 	 */
 	public SVM(Dataset dataset) {
 		this.dataSet = dataset;
+		try {
+			this.findSupportVectors();
+		} catch (Exception e) {
+			// silently ignore error if svm cannot be initialized completely 
+			// --> dataset does not contain enough points, so user has to lern anyway. 
+		}
 	}
 	
 	/*
@@ -53,15 +57,12 @@ public class SVM implements ISVM {
 		int size = listDataSet.size();
 		if (size < 3) {
 			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
-		} else if(size == 3) { // Easy case: onyl three points are avail. 
+		} else if(size >= 3 && listCircle.size() > 0 && listRectangle.size() > 0) { 
 			Logger.log("Compute Support Vectors with 3 Datapoints:");
 			Logger.log(listDataSet.get(0).toString());
 			Logger.log(listDataSet.get(1).toString());
 			Logger.log(listDataSet.get(2).toString());
-			if(listCircle.size() == 0 || listRectangle.size() == 0) {
-				throw new IllegalArgumentException("Too broken trainingsdata to compute support-vectors, requered two different Point-types");
-			}
-			if(listCircle.size() == 2) { // 2 circles and one rectangle are avail. 
+			if(listCircle.size() >= 2) { // 2 circles and one rectangle are avail. 
 				this.dataSet.setSvmOrientation(0);
 				IDataPoint[] svmPoints = new IDataPoint[3];
 				svmPoints[0] = listCircle.get(0);
@@ -76,8 +77,8 @@ public class SVM implements ISVM {
 				svmPoints[2] = listCircle.get(0);
 				this.dataSet.setsVMPoints(svmPoints);
 			}
-		} else { 
-			throw new IllegalArgumentException("Too much trainingsdata to compute support-vectors: " + size + ", requered: 3");
+		} else {
+			throw new IllegalArgumentException("Too broken trainingsdata to compute support-vectors: requirered at least  one circle and one square, need in sum three datapoints");
 		}
 		// New computation of separator
 		this.computeSeparator();
@@ -88,7 +89,6 @@ public class SVM implements ISVM {
 	 */
 	@Override
 	public void computeSeparator() {
-		// TODO Auto-generated method stub
 		IDataPoint[] points = this.dataSet.getSVMPoints();
 		Vector a = points[0].toVector();
 		Vector b = points[1].toVector();
@@ -134,7 +134,7 @@ public class SVM implements ISVM {
 		
 		double[] vectorCombination = Vector.linearcombination(this.vectorParallelToSeparator, this.vectorToSeparatorSide, Vector.subtract(PointToClassify, this.PointOnSeparator));
 		
-		/**
+		/*
 		 * Etwas viel Hirnschmalz führte zu dem Ergebnis: 
 		 * die Orientation der SVM ist 0, wenn Kreise negative Werte liefern, 
 		 * die Orientation der SVM ist 1, wenn Rechtecke negative Werte liefern. 
