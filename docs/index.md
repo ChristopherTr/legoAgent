@@ -35,6 +35,15 @@ Bei der Verwendung des Scanners gibt es drei verschiedene Use-Cases:
 Der interne Ablauf dieser Anwendungen ist in der folgenden Abbildung dargestellt. 
 ![Programm-Ablaufplan](pictures/Mindstorms_svm_programmablauf.png)
 
+#### Funktionsweise der SVM
+Die SVM arbeitet darüber, die erkannten Bilder anhand der beiden Parameter Umfang und Flächeninhalt zu klassifizieren. Dabei wird der Umfang quadriert, um die Formen besser voneinander unterscheiden zu können. Mit Testdaten ergeben sich folgende Bilder: 
+![Programm-Ablaufplan](pictures/punktewolke_testdaten.png)
+damit können beide Gruppen sehr gut durch eine Gerade angenähert werden: 
+![Programm-Ablaufplan](pictures/punktewolke_strich.png)
+Folgendes Schaubild verdeutlicht die Funktionsweise der SVM, welche vektorbasiert eine Trennung der beiden Gruppen errechnet.
+![Programm-Ablaufplan](SVM_Funktionsweise.png)
+Dabei wird eine Gerade zur Trennung der Punktewolken erstellt und durch Abstandsbestimmung eines Punktes zu dieser Geraden kann der zu analysierende Punkt bestimmt werden. Im Bild wird die Gerade zur Trennung durch die rote Markierung und den Vektor AB erstellt. 
+
 ### weitere Schritte
 Aktuell ist das Projekt noch im Prototyp-Status. Es sollte im Folgenden ein Code-Review durchgeführt werden, um Bugs zu finden und Performance-Probleme zu identifizieren. 
 Auch ist die Mechanik des Scanners nicht vollständig zuverlässig und verursacht teilweise geringe Abweichungen, die die Messergebnisse verfälschen. Diese Fehler sollten ausgebessert werden. 
