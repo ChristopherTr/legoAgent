@@ -1,5 +1,8 @@
 package leImRo;
 
+/**
+ * zentrale Klasse, welche alle benoetigten Komponenten beinhaltet und ueber welche alle Funktionen gestartet werden
+ */
 public class Recognition implements IRecognition {
 
 	private IScanner scanner;
@@ -7,6 +10,13 @@ public class Recognition implements IRecognition {
 	private NearestNeighbour knn;
 	private Dataset dataset;
 	
+	/*
+	 * Im Konstruktor werden alle benoetigten Komponenten initialisiert
+	 * Scanner
+	 * Dataset
+	 * SVM
+	 * NearestNeighbour
+	 */
 	public Recognition(){
 		this.scanner = new Scanner();
 		this.dataset = Dataset.load();
@@ -29,7 +39,7 @@ public class Recognition implements IRecognition {
 		
 		//let the SVM compute the 
 		Figure figure = svm.classify(newDataPoint);
-		Logger.log("Detected figure (corious if this works...): " + figure);
+		Logger.log("Detected figure: " + figure);
 		return figure;
 	}
 
@@ -37,7 +47,6 @@ public class Recognition implements IRecognition {
 	 * Erkennung einer Figur - Hauptfunktion
 	 * Beinhaltet
 	 *  - Scannen des Bildes
-	 *  - Vorbereiten der SVM, wenn erforderlich
 	 *  - Bestimmen des Bildes mit dem K Nearest Neighbour- Algorithmus
 	 * @return: Figure Gibt die berechnete Figur zurueck
 	 */
@@ -48,7 +57,7 @@ public class Recognition implements IRecognition {
 		
 		//let the SVM compute the 
 		Figure figure = knn.classify(newDataPoint);
-		Logger.log("Detected figure (corious if this works...): " + figure);
+		Logger.log("Detected figure: " + figure);
 		return figure;
 	}
 	

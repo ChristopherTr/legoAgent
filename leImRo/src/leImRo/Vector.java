@@ -1,5 +1,12 @@
 package leImRo;
 
+
+/**
+ * 
+ * Hilfsklasse fuer SVM Implementierung
+ * Stellt Vector und Rechenmethoden fuer Vectoren zur Verfuegung
+ *
+ */
 public class Vector {
 	private double x;
 	private double y;

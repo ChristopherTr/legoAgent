@@ -9,6 +9,14 @@ import lejos.robotics.filter.MedianFilter;
 import lejos.utility.Delay;
 import lejos.hardware.lcd.LCD;
 
+/**
+ * 
+ * Klasse feur die Scan-Funktion des Roboters
+ * Alle Interaktion mit der Hardware (außer Display) findet in dieser Klasse statt
+ * Motoren werden angesprochen und Sensoren ausgelesen
+ * Von Außen wird die Methode scanNewDataPoint angesprochen, welche einen Datenpunkt mit den benoetigten Merkmalen, aber unbestimmten Figur-Typ zurueckliefert
+ *
+ */
 public class Scanner implements IScanner {
 
 	public final static int resolution = 4;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)

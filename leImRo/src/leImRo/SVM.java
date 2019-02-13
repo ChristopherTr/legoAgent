@@ -1,6 +1,11 @@
 package leImRo;
 import java.util.ArrayList;
 
+/**
+ * 
+ * Klasse zur Erkennung des Figurtyps mithilfe einer Support-Vector-Machine
+ *
+ */
 public class SVM implements ISVM {
 
 	private static int classifierRectangle = 1;

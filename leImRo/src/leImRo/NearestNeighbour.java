@@ -2,6 +2,11 @@ package leImRo;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * Klasse zur Erkennung des Figurtyps mithilfe des k-NearestNeighbour Verfahrens
+ *
+ */
 public class NearestNeighbour implements INearestNeighbour{
 	
 	private Dataset dataSet;

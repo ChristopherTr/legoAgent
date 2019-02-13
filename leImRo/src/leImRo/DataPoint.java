@@ -2,6 +2,9 @@ package leImRo;
 
 import java.io.Serializable;
 
+/**
+ * Basisklasse zur Beschreibung eines Datensatzes (ein gescanntes Bildes) mit den benoetigten Werten zur Erkennung
+ */
 public class DataPoint implements IDataPoint, Serializable {
 
 	
