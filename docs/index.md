@@ -40,11 +40,11 @@ Der interne Ablauf dieser Anwendungen ist in der folgenden Abbildung dargestellt
 
 #### Funktionsweise der SVM
 Die SVM arbeitet darüber, die erkannten Bilder anhand der beiden Parameter Umfang und Flächeninhalt zu klassifizieren. Dabei wird der Umfang quadriert, um die Formen besser voneinander unterscheiden zu können. Mit Testdaten ergeben sich folgende Bilder: 
-![Programm-Ablaufplan](pictures/punktewolke_testdaten.png)
+![Punkte Rohdaten](pictures/punktewolke_testdaten.png)
 damit können beide Gruppen sehr gut durch eine Gerade angenähert werden: 
-![Programm-Ablaufplan](pictures/punktewolke_strich.png)
+![Punkte mit Annäherungsgeraden](pictures/punktewolke_strich.png)
 Folgendes Schaubild verdeutlicht die Funktionsweise der SVM, welche vektorbasiert eine Trennung der beiden Gruppen errechnet.
-![Programm-Ablaufplan](SVM_Funktionsweise.png)
+![Funktionsweise der SVM](pictures/SVM_Funktionsweise.png)
 Dabei wird eine Gerade zur Trennung der Punktewolken erstellt und durch Abstandsbestimmung eines Punktes zu dieser Geraden kann der zu analysierende Punkt bestimmt werden. Im Bild wird die Gerade zur Trennung durch die rote Markierung und den Vektor AB erstellt. 
 
 ### weitere Schritte
