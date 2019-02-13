@@ -104,6 +104,7 @@ public class Dataset implements IDataset {
 					dataset.addNewData(new DataPoint(perimeter, area, Figure.rectangle));
 				} else {
 					Logger.log("ERROR while loading: " + line);
+					Logger.log("failed to compare '" + tmp[2] + "' with '" + Figure.circle + "' or '" + Figure.rectangle + "'");
 				}
 			}
 			br.close();
