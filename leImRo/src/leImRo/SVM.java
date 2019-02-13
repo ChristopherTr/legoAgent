@@ -63,25 +63,25 @@ public class SVM implements ISVM {
 		if (size < 3) {
 			throw new IllegalArgumentException("Too few trainingsdata to compute support-vectors: " + size + ", requered: 3+");
 		} else if(size >= 3 && listCircle.size() > 0 && listRectangle.size() > 0) { 
-			Logger.log("Compute Support Vectors with 3 Datapoints:");
-			Logger.log(listDataSet.get(0).toString());
-			Logger.log(listDataSet.get(1).toString());
-			Logger.log(listDataSet.get(2).toString());
+			IDataPoint[] svmPoints = new IDataPoint[3];
 			if(listCircle.size() >= 2) { // 2 circles and one rectangle are avail. 
 				this.dataSet.setSvmOrientation(0);
-				IDataPoint[] svmPoints = new IDataPoint[3];
 				svmPoints[0] = listCircle.get(0);
 				svmPoints[1] = listCircle.get(1);
 				svmPoints[2] = listRectangle.get(0);
-				this.dataSet.setsVMPoints(svmPoints);
 			} else { // one circle and two rectangles are avail. 
 				this.dataSet.setSvmOrientation(1);
-				IDataPoint[] svmPoints = new IDataPoint[3];
 				svmPoints[0] = listRectangle.get(0);
 				svmPoints[1] = listRectangle.get(1);
 				svmPoints[2] = listCircle.get(0);
-				this.dataSet.setsVMPoints(svmPoints);
 			}
+			Logger.log("Compute Support Vectors with 3 Datapoints:");
+			Logger.log("" + svmPoints[0]);
+			Logger.log("" + svmPoints[1]);
+			Logger.log("" + svmPoints[2]);
+			Logger.log("SVM-Orientation: " + this.dataSet.getSvmOrientation());
+			Logger.log("(0: Quadrate positiv, 1: Kreise positiv)");
+			this.dataSet.setsVMPoints(svmPoints);
 		} else {
 			throw new IllegalArgumentException("Too broken trainingsdata to compute support-vectors: requirered at least  one circle and one square, need in sum three datapoints");
 		}
