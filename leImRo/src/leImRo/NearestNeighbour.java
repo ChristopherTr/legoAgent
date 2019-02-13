@@ -150,11 +150,12 @@ public class NearestNeighbour implements INearestNeighbour{
 	 * @return 
 	 */
 	private boolean validateAmountOfTrainingData() {
-		boolean trainingDataSetOk = false;
+		boolean trainingDataSetOk = true;
 		int amountDataInDataSet = 0;
 		
 		amountDataInDataSet = this.dataSet.getAllData().size();
 		if ( amountDataInDataSet<5 ) {
+			trainingDataSetOk = false;
 			throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+amountDataInDataSet+ "Minimum: 5");	
 		}
 		else {
@@ -172,6 +173,7 @@ public class NearestNeighbour implements INearestNeighbour{
 			}
 			//Variante 2: k- param available: Minimum amount of trainingsdataset = k- param
 			else if ((this.kNeighbours>0) &&(amountDataInDataSet<this.kNeighbours)) {
+				trainingDataSetOk = false;
 				throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+amountDataInDataSet+ "k- Parameter:"+ this.kNeighbours);
 			}		
 		}
