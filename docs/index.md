@@ -36,4 +36,5 @@ Der interne Ablauf dieser Anwendungen ist in der folgenden Abbildung dargestellt
 ![Programm-Ablaufplan](pictures/Mindstorms_svm_programmablauf.png)
 
 ### weitere Schritte
-Aktuell ist das Projekt noch im Prototyp-Status. 
+Aktuell ist das Projekt noch im Prototyp-Status. Es sollte im Folgenden ein Code-Review durchgeführt werden, um Bugs zu finden und Performance-Probleme zu identifizieren. 
+Auch ist die Mechanik des Scanners nicht vollständig zuverlässig und verursacht teilweise geringe Abweichungen, die die Messergebnisse verfälschen. Diese Fehler sollten ausgebessert werden. 
