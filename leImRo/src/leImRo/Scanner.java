@@ -119,16 +119,14 @@ public class Scanner implements IScanner {
 				printImageOnLCD(Image);
 				
 				//----------Y-Movement--------------
-				if(yIndex < yMovements)
-				{
+				if(yIndex < yMovements) {
 					turnYMotor(yAnglePerPixel);
 					Logger.log("Scanner: Move Y" + yIndex + " von " + yMovements);
 				}
 				
 			}
 			//------X-Movement--------
-			if(xIndex < xMovements)
-			{
+			if(xIndex < xMovements) {
 				turnXMotor(xAnglePerPixel);
 				Logger.log("Scanner: Move X" + xIndex + " von " + xMovements);
 			}
@@ -175,8 +173,7 @@ public class Scanner implements IScanner {
 	 * @param i: current position y Motor
 	 * @return index for the image buffer
 	 */
-	private int getYIndex(int i)
-	{
+	private int getYIndex(int i) {
 		if (dir < 0) {
 			return (pixel - i - 1);
 		} else {
@@ -226,30 +223,23 @@ public class Scanner implements IScanner {
 	 * -1 means rotate counter-clockwise
 	 */
 	private void invertDirection() {
-		if(dir > 0)
-		{
+		if(dir > 0) {
 			dir = -1;
-		}
-		else
-		{
+		} else {
 			dir = 1;
 		}
 	}
-	
+
 	/**
 	 * print Image as String as Debug String
 	 */
-	private String debugImage(int[][] Image)
-	{
+	private String debugImage(int[][] Image) {
 		String debugImLine = "\n";
-		for(int y= 0; y < pixel; y++)
-		{
-			for(int x=0; x < pixel; x++ )
-			{
-				if(Image[y][x] == 1){
+		for(int y= 0; y < pixel; y++) {
+			for(int x=0; x < pixel; x++ ) {
+				if(Image[y][x] == 1) {
 					debugImLine += '#';
-				}
-				else {
+				} else {
 					debugImLine += '_';
 				}
 			}
@@ -269,14 +259,11 @@ public class Scanner implements IScanner {
 			for(int j = 0; j < pixel; j++) {
 				if(image[i][j] == 0) {
 					newLine += " ";
-				}
-				else if(image[i][j] == 1) {
+				} else if(image[i][j] == 1) {
 					newLine += "#";
-				}
-				else {
+				} else {
 					newLine += "0";
 				}
-				
 			}
 			LCD.drawString(newLine, 0, i);
 		}

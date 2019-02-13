@@ -155,8 +155,7 @@ public class SVM implements ISVM {
 				return Figure.UNKNOWN;
 			}
 		} else {
-			if(vectorCombination[1] > 0)
-			{
+			if(vectorCombination[1] > 0) {
 				return Figure.circle;
 			} else if(vectorCombination[1] < 0) {
 				return Figure.rectangle;
