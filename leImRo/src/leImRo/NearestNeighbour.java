@@ -57,6 +57,8 @@ public class NearestNeighbour implements INearestNeighbour{
 		ArrayList<IDataPoint> listDataSet = this.dataSet.getAllData();
 		//System.out.print(this.dataSet.toString());
 		ArrayList<IDataPoint> listNearestKNeighbours = new ArrayList<IDataPoint>();
+		
+		Logger.log("Starte Erkennung SVM");
 	
 		if (validateAmountOfTrainingData())  {
 			//Step 1: setFirstElement in Neighbourhood
@@ -79,6 +81,7 @@ public class NearestNeighbour implements INearestNeighbour{
 			//Step 3: Set distances at first k neighbours
 			for(int varCount=0; varCount<this.kNeighbours;varCount++) {
 				distance[varCount] = calcEuklidDistance(dataPoint, listNearestKNeighbours.get(varCount));
+				Logger.log("Initiale Distanz von Knoten "+varCount+" Distanz:"+distance[varCount]);
 			}
 			//Step 4:Search k Nodes, that has the nearest distance to new datapoint
 			for(int count=this.kNeighbours; count<listDataSet.size();count++) {
@@ -104,6 +107,7 @@ public class NearestNeighbour implements INearestNeighbour{
 					}
 				}
 			}
+			Logger.log("Anzahl nearest Neighbours:"+listNearestKNeighbours.size());
 			for(IDataPoint element : listNearestKNeighbours) {
 				if ( element.getFigure()==Figure.circle ) {
 					neighbourCircleCount++;
@@ -168,6 +172,7 @@ public class NearestNeighbour implements INearestNeighbour{
 				throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+amountDataInDataSet+ "k- Parameter:"+ this.kNeighbours);
 			}		
 		}
+		Logger.log("Amount of nearest Neighbour:"+ this.kNeighbours);
 		return trainingDataSetOk;
 	}
 
