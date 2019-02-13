@@ -45,7 +45,7 @@ public class NearestNeighbour implements INearestNeighbour{
 	 * @param dataPoint: Figure to classify
 	 */
 	public Figure classify(IDataPoint dataPoint) {
-		double[] distance = new double[this.kNeighbours];
+		double[] distance;
 		Figure searchedFigure = Figure.UNKNOWN;
 		int neighbourCircleCount = 0;
 		int neighbourRectCount   = 0;
@@ -62,6 +62,7 @@ public class NearestNeighbour implements INearestNeighbour{
 	
 		if (validateAmountOfTrainingData())  {
 			//Step 1: setFirstElement in Neighbourhood
+			distance = new double[this.kNeighbours];
 			listNearestKNeighbours.add(listDataSet.get(0));
 			
 			//Step 2: set first k Neighbourhoods and sort by distance
