@@ -50,11 +50,11 @@ public class Dataset implements IDataset {
 		try {
 			FileWriter fw = new FileWriter(Dataset.fileLocation);
 			BufferedWriter bw = new BufferedWriter(fw);
-			outstring = "Perimeter" + Dataset.csvSplit + "Area" + Dataset.csvSplit + "Form" + System.lineSeparator();
+			outstring = "Perimeter_squared" + Dataset.csvSplit + "Area" + Dataset.csvSplit + "Form" + System.lineSeparator();
 			Logger.log(outstring);
 			bw.write(outstring);
 			for (IDataPoint point : dataset.getAllData()) {
-				outstring = "" + point.getPerimeter() + Dataset.csvSplit + point.getArea() + Dataset.csvSplit + point.getFigure();
+				outstring = "" + point.getPerimeter() + Dataset.csvSplit + point.getArea() + Dataset.csvSplit + point.getFigure() + System.lineSeparator();
 //				switch (point.getFigure()) { // Maybe replace the string components beneath with constant representations ...
 //					case circle:
 //						outstring += Figure.circle;
