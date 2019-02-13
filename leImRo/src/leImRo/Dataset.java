@@ -98,9 +98,9 @@ public class Dataset implements IDataset {
 				}
 				int perimeter = Integer.parseInt(tmp[0]);
 				int area = Integer.parseInt(tmp[1]);
-				if(tmp[2] == Figure.circle.toString()) {
+				if(0 == Figure.circle.toString().compareTo(tmp[2])) {
 					dataset.addNewData(new DataPoint(perimeter, area, Figure.circle));
-				} else if (tmp[2] == Figure.rectangle.toString()) {
+				} else if (0 == Figure.rectangle.toString().compareTo(tmp[2])) {
 					dataset.addNewData(new DataPoint(perimeter, area, Figure.rectangle));
 				} else {
 					Logger.log("ERROR while loading: " + line);
