@@ -14,6 +14,7 @@ Der Scanner ist so konstruiert, dass der obere Motor den Lego-Farbsensor auf ein
 ![Bild der Hardware von oben](pictures/IMG_0206.JPG)
 
 <video src="pictures/video1.mp4" width="320" height="200" controls preload></video>
+<video src="pictures/video2.mp4" width="320" height="200" controls preload></video>
 
 #### Software
 Die Software des Roboters ist modular aufgebaut und besteht aus einigen Klassen für verschiedene Aufgaben. 
