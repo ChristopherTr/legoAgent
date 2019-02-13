@@ -10,7 +10,7 @@ public class Logger {
 	private static BufferedWriter bw;
 	static {
 		try {
-			fw = new FileWriter(fileLocation);
+			fw = new FileWriter(fileLocation, false);
 			bw = new BufferedWriter(fw);
 		} catch (Exception e) {
 			// Silently ignore Exceptions ;)
