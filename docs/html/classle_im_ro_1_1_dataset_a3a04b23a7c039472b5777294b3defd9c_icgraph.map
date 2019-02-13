@@ -1,6 +1,9 @@
 <map id="getSvmOrientation" name="getSvmOrientation">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="181,5,324,32"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="372,5,595,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="643,5,813,32"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="861,5,988,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="215,5,357,32"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="181,56,391,83"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="439,5,661,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="709,31,880,57"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="928,31,1055,57"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="469,56,631,83"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="486,107,614,133"/>
 </map>

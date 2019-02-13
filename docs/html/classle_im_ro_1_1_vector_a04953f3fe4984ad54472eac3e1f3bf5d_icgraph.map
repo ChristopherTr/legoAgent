@@ -1,7 +1,8 @@
 <map id="getOrthogonal" name="getOrthogonal">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="156,5,361,32"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="409,5,619,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="667,5,829,32"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="877,5,1048,32"/>
-<area shape="rect" id="node6" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1096,5,1223,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="156,31,361,57"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="409,31,619,57"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="684,5,812,32"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="667,56,829,83"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="877,56,1048,83"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1096,56,1223,83"/>
 </map>

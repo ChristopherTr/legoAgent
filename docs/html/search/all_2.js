@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['datapoint',['DataPoint',['../classle_im_ro_1_1_data_point.html',1,'leImRo']]],
-  ['datapoint',['DataPoint',['../classle_im_ro_1_1_data_point.html#ab878816e2bf6c34ac1e19931b9aa49cb',1,'leImRo.DataPoint.DataPoint(int perimeter, int area)'],['../classle_im_ro_1_1_data_point.html#a282da517ed944a8cd14492d558bf95da',1,'leImRo.DataPoint.DataPoint(int perimeter, int area, Figure figure)']]],
-  ['datapoint_2ejava',['DataPoint.java',['../_data_point_8java.html',1,'']]],
-  ['dataset',['Dataset',['../classle_im_ro_1_1_dataset.html',1,'leImRo']]],
-  ['dataset',['dataSet',['../classle_im_ro_1_1_nearest_neighbour.html#a9b9a7262261c393ced24e4088eb77b67',1,'leImRo.NearestNeighbour.dataSet()'],['../classle_im_ro_1_1_s_v_m.html#a9b9a7262261c393ced24e4088eb77b67',1,'leImRo.SVM.dataSet()'],['../classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06',1,'leImRo.Dataset.Dataset()'],['../classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25',1,'leImRo.Dataset.dataset()'],['../classle_im_ro_1_1_recognition.html#a50ac6bae9ac302cfa5655f964e2e922a',1,'leImRo.Recognition.dataset()']]],
-  ['dataset_2ejava',['Dataset.java',['../_dataset_8java.html',1,'']]],
-  ['debugimage',['debugImage',['../classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08',1,'leImRo::Scanner']]],
-  ['dir',['dir',['../classle_im_ro_1_1_scanner.html#a851cf68c8f607573c1a5e987784c83f6',1,'leImRo::Scanner']]]
+  ['calceukliddistance',['calcEuklidDistance',['../classle_im_ro_1_1_nearest_neighbour.html#aaae11fa4893234f31f4307c258d776de',1,'leImRo::NearestNeighbour']]],
+  ['calculatecharacteristics',['calculateCharacteristics',['../classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0',1,'leImRo::Scanner']]],
+  ['circle',['circle',['../enumle_im_ro_1_1_figure.html#abf7c2c3a34f5da034b14e89486f97f16',1,'leImRo::Figure']]],
+  ['classify',['classify',['../interfacele_im_ro_1_1_i_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049',1,'leImRo.INearestNeighbour.classify()'],['../interfacele_im_ro_1_1_i_s_v_m.html#aaed9a726bf737acf9359eff868843049',1,'leImRo.ISVM.classify()'],['../classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049',1,'leImRo.NearestNeighbour.classify()'],['../classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049',1,'leImRo.SVM.classify()']]],
+  ['clearall',['clearAll',['../classle_im_ro_1_1_dataset.html#a798729dca95209ecdc609807a653a2bf',1,'leImRo.Dataset.clearAll()'],['../interfacele_im_ro_1_1_i_dataset.html#a798729dca95209ecdc609807a653a2bf',1,'leImRo.IDataset.clearAll()']]],
+  ['computeseparator',['computeSeparator',['../interfacele_im_ro_1_1_i_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b',1,'leImRo.ISVM.computeSeparator()'],['../classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b',1,'leImRo.SVM.computeSeparator()']]],
+  ['csvsplit',['csvSplit',['../classle_im_ro_1_1_dataset.html#a1101fbc46403c0840cd438804b6a1360',1,'leImRo::Dataset']]]
 ];

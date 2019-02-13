@@ -1,8 +1,12 @@
 <map id="getAllData" name="getAllData">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049" title="Classify new Figure with k&#45; Nearest Neighbour Algorithmn. " alt="" coords="136,5,353,32"/>
-<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="140,56,349,83"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="401,5,623,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="671,31,841,57"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="889,31,1016,57"/>
-<area shape="rect" id="node7" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="431,56,593,83"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaed9a726bf737acf9359eff868843049" title="Classify new Figure with k&#45; Nearest Neighbour Algorithmn. " alt="" coords="400,23,617,49"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="139,103,349,129"/>
+<area shape="rect" id="node9" href="$classle_im_ro_1_1_dataset.html#aa9f485a4ce5cded9b0c758e154f12975" title="stores the current status of the dataset to the disk. " alt="" coords="219,153,269,180"/>
+<area shape="rect" id="node11" href="$classle_im_ro_1_1_nearest_neighbour.html#a71ddc6f9a263ae1d0540703ef27a27a1" title="Check amount of Trainingsdata to config k&#45; Parameter. " alt="" coords="136,37,352,78"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a8e23f8f879d41d9b06f9a508b04771b0" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="665,48,887,75"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="935,124,1105,151"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1153,124,1280,151"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="427,124,590,151"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="445,73,573,100"/>
+<area shape="rect" id="node10" href="$classle_im_ro_1_1_recognition.html#a9b0a5a3ad9972ab0e8eb0b54873aac6b" title="Loescht alle bisherigen Daten inklusive Trainingsdaten, gescannte Bilder, etc. " alt="" coords="679,175,873,201"/>
 </map>

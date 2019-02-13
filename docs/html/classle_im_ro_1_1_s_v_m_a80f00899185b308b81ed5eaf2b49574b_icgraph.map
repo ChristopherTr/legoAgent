@@ -1,6 +1,7 @@
 <map id="computeSeparator" name="computeSeparator">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="findSupportVectors" alt="" coords="181,5,313,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="findSupportVectors" alt="" coords="181,31,313,57"/>
 <area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="361,5,524,32"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="417,56,468,83"/>
 <area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="572,5,743,32"/>
 <area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="791,5,917,32"/>
 </map>

@@ -1,7 +1,9 @@
 <map id="classify" name="classify">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaae11fa4893234f31f4307c258d776de" title="Calc euclidean distance between two Figures. " alt="" coords="145,31,279,57"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="125,81,299,108"/>
-<area shape="rect" id="node6" href="$interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="120,132,304,159"/>
-<area shape="rect" id="node3" href="$interfacele_im_ro_1_1_i_data_point.html#a6d134b5e08ea486cf99b8a6c195c07f4" title="leImRo.IDataPoint.getArea" alt="" coords="367,5,541,32"/>
-<area shape="rect" id="node4" href="$interfacele_im_ro_1_1_i_data_point.html#ace5dff853c2586fa3066d02c72e705b2" title="leImRo.IDataPoint.getPerimeter" alt="" coords="352,56,556,83"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html#aaae11fa4893234f31f4307c258d776de" title="Calc euclidean distance between two Figures. " alt="" coords="151,43,284,69"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="377,132,552,159"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="401,208,528,235"/>
+<area shape="rect" id="node7" href="$interfacele_im_ro_1_1_i_data_point.html#a6a91a6b36d2132d82cd8ba9706ad3cc6" title="leImRo.IDataPoint.setFigure" alt="" coords="125,195,309,221"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_nearest_neighbour.html#a71ddc6f9a263ae1d0540703ef27a27a1" title="Check amount of Trainingsdata to config k&#45; Parameter. " alt="" coords="120,144,315,171"/>
+<area shape="rect" id="node3" href="$interfacele_im_ro_1_1_i_data_point.html#a6d134b5e08ea486cf99b8a6c195c07f4" title="leImRo.IDataPoint.getArea" alt="" coords="377,5,552,32"/>
+<area shape="rect" id="node4" href="$interfacele_im_ro_1_1_i_data_point.html#ace5dff853c2586fa3066d02c72e705b2" title="leImRo.IDataPoint.getPerimeter" alt="" coords="363,56,567,83"/>
 </map>

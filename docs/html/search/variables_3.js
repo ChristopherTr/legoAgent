@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['kneighbours',['kNeighbours',['../classle_im_ro_1_1_nearest_neighbour.html#a67d37bdc40d63584a9facc460a8cd0d7',1,'leImRo::NearestNeighbour']]],
-  ['knn',['knn',['../classle_im_ro_1_1_recognition.html#a9726a56fbee0706780321c4c68ca947c',1,'leImRo::Recognition']]]
+  ['figure',['figure',['../classle_im_ro_1_1_data_point.html#a69a09cf156d42da0b4a62f1914847d5b',1,'leImRo::DataPoint']]],
+  ['filelocation',['fileLocation',['../classle_im_ro_1_1_dataset.html#a2fe54941ffbf8a8a9c72831e55db1169',1,'leImRo.Dataset.fileLocation()'],['../classle_im_ro_1_1_logger.html#a2fe54941ffbf8a8a9c72831e55db1169',1,'leImRo.Logger.fileLocation()']]],
+  ['fw',['fw',['../classle_im_ro_1_1_logger.html#a8e3739a8597855f77df9ba5d6a559f95',1,'leImRo::Logger']]]
 ];

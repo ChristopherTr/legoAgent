@@ -1,9 +1,10 @@
 <map id="toVector" name="toVector">
 <area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="155,5,298,32"/>
 <area shape="rect" id="node6" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="124,56,329,83"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="635,5,857,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="905,31,1076,57"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1124,31,1251,57"/>
-<area shape="rect" id="node7" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="377,56,587,83"/>
-<area shape="rect" id="node8" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="665,56,827,83"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="377,5,600,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="859,31,1029,57"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1077,31,1204,57"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="384,56,593,83"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="648,56,811,83"/>
+<area shape="rect" id="node9" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="665,107,793,133"/>
 </map>

@@ -24,9 +24,5 @@ var hierarchy =
     ] ],
     [ "Logger", "classle_im_ro_1_1_logger.html", null ],
     [ "Main", "classle_im_ro_1_1_main.html", null ],
-    [ "Vector", "classle_im_ro_1_1_vector.html", null ],
-    [ "Serializable", null, [
-      [ "DataPoint", "classle_im_ro_1_1_data_point.html", null ],
-      [ "Dataset", "classle_im_ro_1_1_dataset.html", null ]
-    ] ]
+    [ "Vector", "classle_im_ro_1_1_vector.html", null ]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['perimeter',['perimeter',['../classle_im_ro_1_1_data_point.html#aa39c090c071d7e141e1875275d812131',1,'leImRo::DataPoint']]],
-  ['pixel',['pixel',['../classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a',1,'leImRo::Scanner']]],
-  ['pointonseparator',['PointOnSeparator',['../classle_im_ro_1_1_s_v_m.html#a4ef9a7ddbd7eff007b98ae8343edc813',1,'leImRo::SVM']]],
-  ['printimageonlcd',['printImageOnLCD',['../classle_im_ro_1_1_scanner.html#aa56e9bf237e7638836e4ca4bfbb7ab07',1,'leImRo::Scanner']]],
-  ['processmenu',['processMenu',['../classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043',1,'leImRo::GUI']]]
+  ['nearestneighbour',['NearestNeighbour',['../classle_im_ro_1_1_nearest_neighbour.html',1,'leImRo']]],
+  ['nearestneighbour',['NearestNeighbour',['../classle_im_ro_1_1_nearest_neighbour.html#a17a106a083a690e448a5afa6d9fc00e3',1,'leImRo.NearestNeighbour.NearestNeighbour(Dataset dataset)'],['../classle_im_ro_1_1_nearest_neighbour.html#a21df07ff6a60cbfd6f6bd15d2aafc254',1,'leImRo.NearestNeighbour.NearestNeighbour(Dataset dataset, int kNeighbours)']]],
+  ['nearestneighbour_2ejava',['NearestNeighbour.java',['../_nearest_neighbour_8java.html',1,'']]]
 ];

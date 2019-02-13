@@ -1,5 +1,18 @@
 var searchData=
 [
-  ['kneighbours',['kNeighbours',['../classle_im_ro_1_1_nearest_neighbour.html#a67d37bdc40d63584a9facc460a8cd0d7',1,'leImRo::NearestNeighbour']]],
-  ['knn',['knn',['../classle_im_ro_1_1_recognition.html#a9726a56fbee0706780321c4c68ca947c',1,'leImRo::Recognition']]]
+  ['idatapoint',['IDataPoint',['../interfacele_im_ro_1_1_i_data_point.html',1,'leImRo']]],
+  ['idatapoint_2ejava',['IDataPoint.java',['../_i_data_point_8java.html',1,'']]],
+  ['idataset',['IDataset',['../interfacele_im_ro_1_1_i_dataset.html',1,'leImRo']]],
+  ['idataset_2ejava',['IDataset.java',['../_i_dataset_8java.html',1,'']]],
+  ['igui',['IGUI',['../interfacele_im_ro_1_1_i_g_u_i.html',1,'leImRo']]],
+  ['igui_2ejava',['IGUI.java',['../_i_g_u_i_8java.html',1,'']]],
+  ['inearestneighbour',['INearestNeighbour',['../interfacele_im_ro_1_1_i_nearest_neighbour.html',1,'leImRo']]],
+  ['inearestneighbour_2ejava',['INearestNeighbour.java',['../_i_nearest_neighbour_8java.html',1,'']]],
+  ['invertdirection',['invertDirection',['../classle_im_ro_1_1_scanner.html#ab735cbc5e812deb5fa964a8a2c302238',1,'leImRo::Scanner']]],
+  ['irecognition',['IRecognition',['../interfacele_im_ro_1_1_i_recognition.html',1,'leImRo']]],
+  ['irecognition_2ejava',['IRecognition.java',['../_i_recognition_8java.html',1,'']]],
+  ['iscanner',['IScanner',['../interfacele_im_ro_1_1_i_scanner.html',1,'leImRo']]],
+  ['iscanner_2ejava',['IScanner.java',['../_i_scanner_8java.html',1,'']]],
+  ['isvm',['ISVM',['../interfacele_im_ro_1_1_i_s_v_m.html',1,'leImRo']]],
+  ['isvm_2ejava',['ISVM.java',['../_i_s_v_m_8java.html',1,'']]]
 ];

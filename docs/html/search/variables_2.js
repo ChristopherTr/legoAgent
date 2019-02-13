@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['figure',['figure',['../classle_im_ro_1_1_data_point.html#a69a09cf156d42da0b4a62f1914847d5b',1,'leImRo::DataPoint']]],
-  ['filelocation',['fileLocation',['../classle_im_ro_1_1_dataset.html#a32e4b88368a1774f4eb7bb4b56811a01',1,'leImRo.Dataset.fileLocation()'],['../classle_im_ro_1_1_logger.html#a2fe54941ffbf8a8a9c72831e55db1169',1,'leImRo.Logger.fileLocation()']]]
+  ['dataset',['dataset',['../classle_im_ro_1_1_dataset.html#a33e6b2b2364405b0d3ef170e40c6ce25',1,'leImRo.Dataset.dataset()'],['../classle_im_ro_1_1_recognition.html#a50ac6bae9ac302cfa5655f964e2e922a',1,'leImRo.Recognition.dataset()'],['../classle_im_ro_1_1_nearest_neighbour.html#a9b9a7262261c393ced24e4088eb77b67',1,'leImRo.NearestNeighbour.dataSet()'],['../classle_im_ro_1_1_s_v_m.html#a9b9a7262261c393ced24e4088eb77b67',1,'leImRo.SVM.dataSet()']]],
+  ['description',['description',['../enumle_im_ro_1_1_figure.html#ab64918f8c1480972c11828a0ab8a25e8',1,'leImRo::Figure']]],
+  ['dir',['dir',['../classle_im_ro_1_1_scanner.html#a851cf68c8f607573c1a5e987784c83f6',1,'leImRo::Scanner']]]
 ];

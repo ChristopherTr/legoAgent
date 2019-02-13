@@ -1,14 +1,15 @@
 <map id="getY" name="getY">
 <area shape="rect" id="node2" href="$classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="add" alt="" coords="143,56,185,83"/>
-<area shape="rect" id="node8" href="$classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="getOrthogonal" alt="" coords="113,5,215,32"/>
-<area shape="rect" id="node9" href="$classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="103,157,225,184"/>
-<area shape="rect" id="node12" href="$classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="subtract" alt="" coords="129,107,199,133"/>
-<area shape="rect" id="node13" href="$classle_im_ro_1_1_vector.html#ad146fa8579a5f8a876c4688cc5a68520" title="toString" alt="" coords="131,208,197,235"/>
+<area shape="rect" id="node9" href="$classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="getOrthogonal" alt="" coords="113,5,215,32"/>
+<area shape="rect" id="node10" href="$classle_im_ro_1_1_vector.html#a161eceec763a6d561717b2499a34ead4" title="Berechne Linearkombination von vektorA und vectorB zu vectorC a * vectorA + b * vectorB = vectorC..." alt="" coords="103,157,225,184"/>
+<area shape="rect" id="node13" href="$classle_im_ro_1_1_vector.html#af16e21930b232a01b28f11068822afc8" title="subtract" alt="" coords="129,107,199,133"/>
+<area shape="rect" id="node14" href="$classle_im_ro_1_1_vector.html#ad146fa8579a5f8a876c4688cc5a68520" title="toString" alt="" coords="131,208,197,235"/>
 <area shape="rect" id="node3" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="273,81,479,108"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="527,81,736,108"/>
-<area shape="rect" id="node5" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="814,81,977,108"/>
-<area shape="rect" id="node6" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="1055,107,1225,133"/>
-<area shape="rect" id="node7" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1273,107,1400,133"/>
-<area shape="rect" id="node10" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="305,132,447,159"/>
-<area shape="rect" id="node11" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="784,132,1007,159"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_s_v_m.html#a0ac89e7916b8bc40e9faefc45985b0ca" title="leImRo.SVM.findSupportVectors" alt="" coords="533,81,743,108"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_s_v_m.html#a8b72b0aa71faad6bd9da06ac31e279d9" title="Constructor for Support Vector Machine. " alt="" coords="815,107,943,133"/>
+<area shape="rect" id="node6" href="$classle_im_ro_1_1_recognition.html#a8b21cda634b2b134fafe776f1bc52f5c" title="Funktion lernt einen neuen Datenpunkt als reine Wahrheit. " alt="" coords="797,56,960,83"/>
+<area shape="rect" id="node7" href="$classle_im_ro_1_1_g_u_i.html#a445b4cca29d7f2a7a6931ef29b9b8043" title="leImRo.GUI.processMenu" alt="" coords="1008,107,1179,133"/>
+<area shape="rect" id="node8" href="$classle_im_ro_1_1_main.html#a8b260eecbaabcef8473fd87ada040682" title="leImRo.Main.main" alt="" coords="1227,107,1353,133"/>
+<area shape="rect" id="node11" href="$classle_im_ro_1_1_s_v_m.html#aaed9a726bf737acf9359eff868843049" title="Bestimmt den Typ des gegebenen Datenpunkts anhand der bereitgestellten Daten. " alt="" coords="305,157,447,184"/>
+<area shape="rect" id="node12" href="$classle_im_ro_1_1_recognition.html#a3f126432326e425825a566c32f644d02" title="Erkennung einer Figur &#45; Hauptfunktion Beinhaltet. " alt="" coords="527,157,749,184"/>
 </map>

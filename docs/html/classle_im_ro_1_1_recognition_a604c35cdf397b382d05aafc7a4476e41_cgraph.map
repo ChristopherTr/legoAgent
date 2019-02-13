@@ -1,5 +1,6 @@
 <map id="Recognition" name="Recognition">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#abb79e4c27b756c93f66d058b0204525a" title="loads the data that are currently stored in the filesystem. " alt="" coords="144,31,283,57"/>
-<area shape="rect" id="node3" href="$classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06" title="leImRo.Dataset.Dataset" alt="" coords="331,5,491,32"/>
-<area shape="rect" id="node4" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="347,56,474,83"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_dataset.html#abb79e4c27b756c93f66d058b0204525a" title="loads the data that are currently stored in the filesystem. " alt="" coords="144,56,283,83"/>
+<area shape="rect" id="node3" href="$classle_im_ro_1_1_dataset.html#aa53699729ce302bb94de49975fc79302" title="Adds a new data to the dataset in RAM, does not store this changes to disk. " alt="" coords="331,5,519,32"/>
+<area shape="rect" id="node4" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="567,31,693,57"/>
+<area shape="rect" id="node5" href="$classle_im_ro_1_1_dataset.html#a4aecdcc53b93c41eedd5d73926aaec06" title="leImRo.Dataset.Dataset" alt="" coords="345,107,505,133"/>
 </map>

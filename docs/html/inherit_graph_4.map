@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacele_im_ro_1_1_i_recognition.html" title="IRecognition" alt="" coords="5,5,99,32"/>
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_recognition.html" title="Recognition" alt="" coords="147,5,237,32"/>
+<area shape="rect" id="node1" href="$interfacele_im_ro_1_1_i_nearest_neighbour.html" title="INearestNeighbour" alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_nearest_neighbour.html" title="Klasse zur Erkennung des Figurtyps mithilfe des k&#45;NearestNeighbour Verfahrens. " alt="" coords="181,5,307,32"/>
 </map>

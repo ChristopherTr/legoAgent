@@ -2,8 +2,9 @@
 <area shape="rect" id="node2" href="$classle_im_ro_1_1_s_v_m.html#a80f00899185b308b81ed5eaf2b49574b" title="Berchnet die Trennlinie zwischen den beiden Punktewolken. " alt="" coords="232,208,360,235"/>
 <area shape="rect" id="node10" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="496,360,623,387"/>
 <area shape="rect" id="node14" href="$classle_im_ro_1_1_dataset.html#ab6333e05484aaba53f42325d3e0ee4f7" title="returns the current dataset from RAM. " alt="" coords="209,360,383,387"/>
-<area shape="rect" id="node15" href="$classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="185,411,407,437"/>
-<area shape="rect" id="node16" href="$classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="197,461,395,488"/>
+<area shape="rect" id="node15" href="$classle_im_ro_1_1_dataset.html#a3a04b23a7c039472b5777294b3defd9c" title="leImRo.Dataset.getSvmOrientation" alt="" coords="185,411,407,437"/>
+<area shape="rect" id="node16" href="$classle_im_ro_1_1_dataset.html#a1f34955e9b72f9662e9c26d57343655b" title="leImRo.Dataset.setSvmOrientation" alt="" coords="185,461,407,488"/>
+<area shape="rect" id="node17" href="$classle_im_ro_1_1_dataset.html#a111eac9dc62ade7cb31b379db954fab1" title="TODO: Sort the received array by figure Type () " alt="" coords="197,512,395,539"/>
 <area shape="rect" id="node3" href="$classle_im_ro_1_1_vector.html#a9f8ff0ffe79879182c65070cf70c9a61" title="leImRo.Vector.add" alt="" coords="495,157,624,184"/>
 <area shape="rect" id="node7" href="$classle_im_ro_1_1_vector.html#a04953f3fe4984ad54472eac3e1f3bf5d" title="leImRo.Vector.getOrthogonal" alt="" coords="465,208,654,235"/>
 <area shape="rect" id="node8" href="$classle_im_ro_1_1_dataset.html#a14c9d90f167e40605761fec766b1268d" title="returns the current SVM&#45;Points to create the border, or null, if no data is stored ..." alt="" coords="460,56,659,83"/>
