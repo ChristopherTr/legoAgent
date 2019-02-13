@@ -9,7 +9,7 @@ Eingesetzt wird bei diesem Projektder EV3-Brick von Lego Mindstorms. Dieser wurd
 
 ### Aufbau
 #### Hardware
-![Bild der Hardware von vorne](pictures/IMG_0202.JPG.jpg)
+![Bild der Hardware von vorne](pictures/IMG_0202.JPG)
 Der Scanner ist so konstruiert, dass der obere Motor den Lego-Farbsensor auf einer Linie entlang hin und her bewegen kann und damit eine "Scanner-Linie" bildet. Während der obere Motor diese Linie entlang fährt, scannt der Farbsensor in gleichmäßigen Abständen den Bildpunkt, welcher sich zu diesem Zeitpunkt unterhalb des Farbsensors befindet. Nach jedem Abfahren der Linie wird das Bild von dem unteren Motor (unterhalb des Scanner-Bilds) eine Bildpunkt-Breite weiter geschoben. Nach jedem Schritt fährt der obere Motor einmal die Linie entlang. 
 ![Bild der Hardware von oben](pictures/IMG_0206.JPG)
 
