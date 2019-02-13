@@ -83,11 +83,14 @@ public class Dataset implements IDataset {
 	 */
 	public static Dataset load() {
 		Dataset dataset = new Dataset();
+		Logger.log("Lade Daten von " + Dataset.fileLocation);
 		try {
 			FileReader fr = new FileReader(Dataset.fileLocation);
 			BufferedReader br = new BufferedReader(fr);
 			String line = br.readLine();
+			Logger.log(line);
 			while ((line = br.readLine()) != null) {
+				Logger.log(line);
 				String[] tmp = line.split(Dataset.csvSplit);
 				if (tmp.length != 3) {
 					Logger.log("broken Dataset: " + line);
