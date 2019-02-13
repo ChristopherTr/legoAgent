@@ -1,25 +1,16 @@
 package leImRo;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 
 
-public class Dataset implements IDataset, Serializable {
+public class Dataset implements IDataset {
 
-	/**
-	 * Version ID
-	 */
-	private static final long serialVersionUID = 1L;
-	
 	/**
 	 * the path and filename in the filesystem of the serialized data.
 	 */
-	static private String fileLocation = "location.data";
+	private static final String fileLocation = "datapoints.csv";
+	public static final String csvSplit = ",";
 	private ArrayList<IDataPoint> dataset;
 	private IDataPoint[] sVMPoints;
 	/**
@@ -31,7 +22,7 @@ public class Dataset implements IDataset, Serializable {
 	
 	public Dataset() {
 		this.dataset = new ArrayList<IDataPoint>();
-		
+		this.sVMPoints = new DataPoint[3];
 	}
 	
 	/**
@@ -55,12 +46,29 @@ public class Dataset implements IDataset, Serializable {
 	 * Storage-path is specified by static variable fileLocation. 
 	 */
 	public static void store(Dataset dataset) {
+		String outstring = new String();
 		try {
-			FileOutputStream fos = new FileOutputStream(fileLocation);
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(dataset);
-			oos.close();
-			fos.close();
+			FileWriter fw = new FileWriter(Dataset.fileLocation);
+			BufferedWriter bw = new BufferedWriter(fw);
+			outstring = "Perimeter" + Dataset.csvSplit + "Area" + Dataset.csvSplit + "Form" + System.lineSeparator();
+			Logger.log(outstring);
+			bw.write(outstring);
+			for (IDataPoint point : dataset.getAllData()) {
+				outstring = "" + point.getPerimeter() + Dataset.csvSplit + point.getArea() + Dataset.csvSplit + point.getFigure();
+//				switch (point.getFigure()) { // Maybe replace the string components beneath with constant representations ...
+//					case circle:
+//						outstring += Figure.circle;
+//						break;
+//					case rectangle:
+//						outstring += Figure.rectangle;
+//					default:
+//						break;
+//					}
+				Logger.log(outstring);
+				bw.write(outstring);
+			}
+			bw.close();
+			fw.close();
 		} catch (IOException e) {
 			Logger.log(e.getMessage());
 		} finally {
@@ -74,14 +82,33 @@ public class Dataset implements IDataset, Serializable {
 	 * TODO: Load of SVMPoints from separate file 
 	 */
 	public static Dataset load() {
-		Dataset dataset;
+		Dataset dataset = new Dataset();
 		try {
-			FileInputStream fis = new FileInputStream(fileLocation);
-		    ObjectInputStream ois = new ObjectInputStream(fis);
-		    dataset = (Dataset) ois.readObject();
-		    ois.close();
-		    fis.close();
-		} catch (IOException | ClassNotFoundException e) {
+			FileReader fr = new FileReader(Dataset.fileLocation);
+			BufferedReader br = new BufferedReader(fr);
+			String line = br.readLine();
+			while ((line = br.readLine()) != null) {
+				String[] tmp = line.split(Dataset.csvSplit);
+				if (tmp.length != 3) {
+					Logger.log("broken Dataset: " + line);
+					continue;
+				}
+				int perimeter = Integer.parseInt(tmp[0]);
+				int area = Integer.parseInt(tmp[1]);
+				if(tmp[2] == Figure.circle.toString()) {
+					dataset.addNewData(new DataPoint(perimeter, area, Figure.circle));
+				} else if (tmp[2] == Figure.rectangle.toString()) {
+					dataset.addNewData(new DataPoint(perimeter, area, Figure.rectangle));
+				} else {
+					Logger.log("ERROR while loading: " + line);
+				}
+			}
+			br.close();
+			fr.close();
+		} catch (FileNotFoundException e) {
+			Logger.log("Bisher ist die Datei noch nicht angelegt, starte mit leerem Datensatz ...");
+			dataset = new Dataset();
+		} catch (IOException e) {
 			Logger.log(e.getMessage());
 			dataset = new Dataset();
 		} finally {

@@ -18,6 +18,7 @@ public class NearestNeighbour implements INearestNeighbour{
 	 */
 	public NearestNeighbour(Dataset dataset) {
 		this.dataSet = dataset;
+		
 	}
 	
 	
@@ -57,10 +58,7 @@ public class NearestNeighbour implements INearestNeighbour{
 		//System.out.print(this.dataSet.toString());
 		ArrayList<IDataPoint> listNearestKNeighbours = new ArrayList<IDataPoint>();
 	
-		if (listDataSet.size()<this.kNeighbours) {
-			throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+listDataSet.size()+ "k- Parameter:"+ this.kNeighbours); 
-		}
-		else {
+		if (validateAmountOfTrainingData())  {
 			//Step 1: setFirstElement in Neighbourhood
 			listNearestKNeighbours.add(listDataSet.get(0));
 			
@@ -139,6 +137,38 @@ public class NearestNeighbour implements INearestNeighbour{
 		double distance = 0.0;
 		distance = Math.sqrt(Math.pow((actDataPoint.getArea()-actPointToCompare.getArea()),2)+Math.pow((actDataPoint.getPerimeter()-actPointToCompare.getPerimeter()),2));
 		return distance;
+	}
+	
+	/**
+	 * Check amount of Trainingsdata to config k- Parameter.
+	 * If no k available, the algorithmn use 50% of trainingsdata (odd figure)
+	 * @return 
+	 */
+	private boolean validateAmountOfTrainingData() {
+		boolean trainingDataSetOk = false;
+		int amountDataInDataSet = 0;
+		
+		amountDataInDataSet = this.dataSet.getAllData().size();
+		if ( amountDataInDataSet<5 ) {
+			throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+amountDataInDataSet+ "Minimum: 5");	
+		}
+		else {
+			//Variante 1: no k- Param set: Algorithmn use 50% of Dataset for nearest neighbour validation. Minimum size of Traindataset is 5.
+			if ( this.kNeighbours==0 ) {
+
+				if ( amountDataInDataSet%2==0 ) {
+					this.kNeighbours = amountDataInDataSet/2;
+				}
+				else {
+					this.kNeighbours = (amountDataInDataSet/2)+1;
+				}
+			}
+			//Variante 2: k- param available: Minimum amount of trainingsdataset = k- param
+			else if ((this.kNeighbours>0) &&(amountDataInDataSet<this.kNeighbours)) {
+				throw new IllegalArgumentException("Too few trainingsdata to compute K- Nearest Neighbour. Size of Dataset:"+amountDataInDataSet+ "k- Parameter:"+ this.kNeighbours);
+			}		
+		}
+		return trainingDataSetOk;
 	}
 
 }

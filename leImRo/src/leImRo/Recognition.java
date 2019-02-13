@@ -21,7 +21,7 @@ public class Recognition implements IRecognition {
 		this.scanner = new Scanner();
 		this.dataset = Dataset.load();
 		this.svm = new SVM(this.dataset);
-		this.knn = new NearestNeighbour(this.dataset, 10);
+		this.knn = new NearestNeighbour(this.dataset);
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class Recognition implements IRecognition {
 		//get new DataPoint from Scanner
 		IDataPoint newDataPoint = scanner.scanNewDataPoint();
 		
-		//let the SVM compute the 
+		//let the SVM compute the type of image
 		Figure figure = svm.classify(newDataPoint);
 		Logger.log("Detected figure: " + figure);
 		return figure;

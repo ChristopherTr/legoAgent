@@ -1,17 +1,9 @@
 package leImRo;
 
-import java.io.Serializable;
-
 /**
  * Basisklasse zur Beschreibung eines Datensatzes (ein gescanntes Bildes) mit den benoetigten Werten zur Erkennung
  */
-public class DataPoint implements IDataPoint, Serializable {
-
-	
-	/**
-	 * ID for serializing of objects
-	 */
-	private static final long serialVersionUID = 1L;
+public class DataPoint implements IDataPoint {
 	/**
 	 * periemeter and area of this data
 	 */
@@ -72,15 +64,15 @@ public class DataPoint implements IDataPoint, Serializable {
 	 * Liefert die String-Repräsentation des Datenpunkts zurück
 	 */
 	public String toString() {
-		String form = "";
-		if (this.getFigure() == Figure.rectangle) {
-			form = "[]";
-		} else if (this.getFigure() == Figure.circle) {
-			form = "O";
-		} else {
-			form = "???";
-		}
-		String ret = "Datapoint (area: " + this.getArea() + ", perimeter: " + this.getPerimeter() + ", Form: " + form + ")";
+//		String form = "";
+//		if (this.getFigure() == Figure.rectangle) {
+//			form = "[]";
+//		} else if (this.getFigure() == Figure.circle) {
+//			form = "O";
+//		} else {
+//			form = "???";
+//		}
+		String ret = "Datapoint (area: " + this.getArea() + ", perimeter: " + this.getPerimeter() + ", Form: " + this.getFigure() + ")";
 		return ret;
 	}
 
