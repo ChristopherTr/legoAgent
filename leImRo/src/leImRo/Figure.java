@@ -9,8 +9,8 @@ package leImRo;
 public enum Figure {
 
 	UNKNOWN("???"),
-	circle("0"),
-	rectangle("1");
+	circle("O"),
+	rectangle("[]");
 	
 	private final String description;
 	
