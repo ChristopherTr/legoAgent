@@ -21,17 +21,17 @@ public class Scanner implements IScanner {
 
 	public final static int resolution = 4;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
 	// constants to define the mechanical constraining
-	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
+	public final static int yMax = 900; 			// maximum Degree for the Y-Axis, X is unlimited
 	public final static int xSpeed = 200; 			// Speed for the motors [degrees/s]
 	public final static int xAcceleration = 200; 	// maximum acceleration for the Motors [degrees/s�]
 	public final static int ySpeed = 500; 			// Speed for the motors [degrees/s]
 	public final static int yAcceleration = 500; 	// maximum acceleration for the Motors [degrees/s�]
-	public final static int minYAngle = 22;			//TODO: validate this
-	public final static int minXAngle = 5;			//TODO: validate this
+	public final static int minYAngle = 18;			//TODO: validate this
+	public final static int minXAngle = 3;			//TODO: validate this
 	public final static int startYDir = -1;			//due mechanical construction we should start in this direction
 	public final static int startXDir = -1;			//due mechanical construction we should start in this direction
 	public final static int sensorSamples = 5;		//specify samples for median filter
-	public final static double rgbThreshold = 0.12;	//Threshold for the average of the rgb sensor result to seperate between black and white
+	public final static double rgbThreshold = 0.08;	//Threshold for the average of the rgb sensor result to seperate between black and white
 	
 	// member variables
 	private int pixel;	// variable holding the current pixel size
@@ -119,14 +119,14 @@ public class Scanner implements IScanner {
 				printImageOnLCD(Image);
 				
 				//----------Y-Movement--------------
-				if(yIndex < yMovements) {
+				if(yIndex < yMovements){
 					turnYMotor(yAnglePerPixel);
 					Logger.log("Scanner: Move Y" + yIndex + " von " + yMovements);
 				}
 				
 			}
 			//------X-Movement--------
-			if(xIndex < xMovements) {
+			if(xIndex < xMovements){
 				turnXMotor(xAnglePerPixel);
 				Logger.log("Scanner: Move X" + xIndex + " von " + xMovements);
 			}
@@ -173,7 +173,8 @@ public class Scanner implements IScanner {
 	 * @param i: current position y Motor
 	 * @return index for the image buffer
 	 */
-	private int getYIndex(int i) {
+	private int getYIndex(int i)
+	{
 		if (dir < 0) {
 			return (pixel - i - 1);
 		} else {
@@ -223,23 +224,28 @@ public class Scanner implements IScanner {
 	 * -1 means rotate counter-clockwise
 	 */
 	private void invertDirection() {
-		if(dir > 0) {
+		if(dir > 0){
 			dir = -1;
-		} else {
+		}
+		else{
 			dir = 1;
 		}
 	}
-
+	
 	/**
 	 * print Image as String as Debug String
 	 */
-	private String debugImage(int[][] Image) {
+	private String debugImage(int[][] Image)
+	{
 		String debugImLine = "\n";
-		for(int y= 0; y < pixel; y++) {
-			for(int x=0; x < pixel; x++ ) {
-				if(Image[y][x] == 1) {
+		for(int y= 0; y < pixel; y++)
+		{
+			for(int x=0; x < pixel; x++ )
+			{
+				if(Image[y][x] == 1){
 					debugImLine += '#';
-				} else {
+				}
+				else {
 					debugImLine += '_';
 				}
 			}
@@ -248,24 +254,21 @@ public class Scanner implements IScanner {
 		return debugImLine;
 	}
 	
-	/*
+	/**
 	 * prints Image on LCD display
-	 * white: " "; black: "#"; unknown: "O"
+	 * scale image to fit to the screen
 	 */
 	private void printImageOnLCD(int[][] image) {
 		LCD.clear();
-		for(int i = 0; i < pixel; i++) {
-			String newLine = "";
-			for(int j = 0; j < pixel; j++) {
-				if(image[i][j] == 0) {
-					newLine += " ";
-				} else if(image[i][j] == 1) {
-					newLine += "#";
-				} else {
-					newLine += "0";
+		int scale = resolution*2;	//double size of picture by res = 1
+		for (int k = 0; k < pixel; k++) {
+			for (int l = 0; l < pixel; l++){
+				for(int m=0; m < scale; m++) {
+					for(int n=0; n<scale; n++){
+						LCD.setPixel(k*scale+m, l*scale+n, (int) image[k][l]);
+					}
 				}
 			}
-			LCD.drawString(newLine, 0, i);
 		}
 	}
 	

@@ -32,8 +32,11 @@ public class GUI implements IGUI {
 			LCD.clear();
 			if (figure == Figure.rectangle) {
 				LCD.drawString("Rectangle", 0, 0);
-			} else {
+			} else if(figure == Figure.circle) {
 				LCD.drawString("Circle", 0, 0);
+			}
+			else{
+				LCD.drawString("Unknwown", 0, 0);				
 			}
 			Button.waitForAnyPress();
 			break;
