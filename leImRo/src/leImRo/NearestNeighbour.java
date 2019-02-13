@@ -127,6 +127,7 @@ public class NearestNeighbour implements INearestNeighbour{
 		dataPoint.setFigure(searchedFigure);
 		//System.out.println("Testpunkt:");
 		//System.out.print(dataPoint.toString());
+		Logger.log("Ausgabe der Figur:"+searchedFigure );
 		return searchedFigure;
 	}
 	
@@ -161,10 +162,12 @@ public class NearestNeighbour implements INearestNeighbour{
 			if ( this.kNeighbours==0 ) {
 
 				if ( amountDataInDataSet%2==0 ) {
-					this.kNeighbours = amountDataInDataSet/2;
+					Logger.log("Gerade Anzahl Datensätze");
+					this.kNeighbours = (amountDataInDataSet/2)+1;
 				}
 				else {
-					this.kNeighbours = (amountDataInDataSet/2)+1;
+					Logger.log("Ungerade Anzahl Datensätze");
+					this.kNeighbours = (amountDataInDataSet/2);
 				}
 			}
 			//Variante 2: k- param available: Minimum amount of trainingsdataset = k- param
