@@ -14,13 +14,14 @@ public class Scanner implements IScanner {
 	public final static int resolution = 4;	//specify the resolution 1 = maximum resolution (pixel = yMax/(resolution*minYAngle) + 1)
 	// constants to define the mechanical constraining
 	public final static int yMax = 946; 			// maximum Degree for the Y-Axis, X is unlimited
-	public final static int xSpeed = 100; 			// Speed for the motors [degrees/s]
-	public final static int xAcceleration = 100; 	// maximum acceleration for the Motors [degrees/s�]
+	public final static int xSpeed = 200; 			// Speed for the motors [degrees/s]
+	public final static int xAcceleration = 200; 	// maximum acceleration for the Motors [degrees/s�]
 	public final static int ySpeed = 500; 			// Speed for the motors [degrees/s]
 	public final static int yAcceleration = 500; 	// maximum acceleration for the Motors [degrees/s�]
 	public final static int minYAngle = 22;			//TODO: validate this
-	public final static int minXAngle = 25;			//TODO: validate this
-	public final static int startDir = -1;			//due mechanical construction we should start in this direction
+	public final static int minXAngle = 5;			//TODO: validate this
+	public final static int startYDir = -1;			//due mechanical construction we should start in this direction
+	public final static int startXDir = -1;			//due mechanical construction we should start in this direction
 	public final static int sensorSamples = 5;		//specify samples for median filter
 	public final static double rgbThreshold = 0.12;	//Threshold for the average of the rgb sensor result to seperate between black and white
 	
@@ -36,7 +37,7 @@ public class Scanner implements IScanner {
 
 	public Scanner() {
 		pixel = 0;
-		dir = startDir; 
+		dir = startYDir; 
 		// instantiate Sensors and Motors
 		XMotor = Motor.A;
 		YMotor = Motor.B;
@@ -81,7 +82,7 @@ public class Scanner implements IScanner {
 		int yAnglePerPixel = minYAngle * resolution;
 		int xAnglePerPixel = minXAngle * resolution;
 		int yMovements = yMax / yAnglePerPixel;
-		int xMovements = yMovements - 1;
+		int xMovements = yMovements;
 		pixel = yMovements + 1;
 		Logger.log("Scanner: Read " + pixel + " Pixels");
 
@@ -113,6 +114,7 @@ public class Scanner implements IScanner {
 				if(yIndex < yMovements)
 				{
 					turnYMotor(yAnglePerPixel);
+					Logger.log("Scanner: Move Y" + yIndex + " von " + yMovements);
 				}
 				
 			}
@@ -120,6 +122,7 @@ public class Scanner implements IScanner {
 			if(xIndex < xMovements)
 			{
 				turnXMotor(xAnglePerPixel);
+				Logger.log("Scanner: Move X" + xIndex + " von " + xMovements);
 			}
 			
 			// invert direction for the Y-Axis
@@ -178,7 +181,7 @@ public class Scanner implements IScanner {
 	 * @param xAnglePerPixel: angle to rotate
 	 */
 	private void turnXMotor(int xAnglePerPixel) {
-		XMotor.rotate(xAnglePerPixel);
+		XMotor.rotate(startXDir * xAnglePerPixel);
 		Delay.msDelay(100);	//Delay is important for mechanical constraining and to ensure correct process of the sw
 		if (XMotor.isStalled()) {
 			Logger.log("Scanner: XMotor stalled");
@@ -205,8 +208,8 @@ public class Scanner implements IScanner {
 		if (dir > 0) {	//check if Y Movement is necessary or not
 			YMotor.rotate((pixel-1)*yAnglePerPixel);
 		}
-		XMotor.rotate(-1*(pixel-1)*xAnglePerPixel);
-		dir = startDir;
+		XMotor.rotate(-1*startXDir*(pixel-1)*xAnglePerPixel);
+		dir = startYDir;
 	}
 
 	/**
@@ -252,9 +255,10 @@ public class Scanner implements IScanner {
 	 * white: " "; black: "#"; unknown: "O"
 	 */
 	private void printImageOnLCD(int[][] image) {
-		for(int i = 0; i < image.length; i++) {
+		LCD.clear();
+		for(int i = 0; i < pixel; i++) {
 			String newLine = "";
-			for(int j = 0; j < image[j].length; j++) {
+			for(int j = 0; j < pixel; j++) {
 				if(image[i][j] == 0) {
 					newLine += " ";
 				}
@@ -266,7 +270,7 @@ public class Scanner implements IScanner {
 				}
 				
 			}
-			LCD.drawString(newLine, i, 0);
+			LCD.drawString(newLine, 0, i);
 		}
 	}
 	

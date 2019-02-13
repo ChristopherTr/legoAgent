@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['minxangle',['minXAngle',['../classle_im_ro_1_1_scanner.html#a82315802fcd2dcfc0e6f1f81a0362be8',1,'leImRo::Scanner']]],
-  ['minyangle',['minYAngle',['../classle_im_ro_1_1_scanner.html#a4e7f55bcc05a341e8e8f534fa0e794a1',1,'leImRo::Scanner']]]
+  ['kneighbours',['kNeighbours',['../classle_im_ro_1_1_nearest_neighbour.html#a67d37bdc40d63584a9facc460a8cd0d7',1,'leImRo::NearestNeighbour']]],
+  ['knn',['knn',['../classle_im_ro_1_1_recognition.html#a9726a56fbee0706780321c4c68ca947c',1,'leImRo::Recognition']]]
 ];

@@ -11,7 +11,7 @@ public class Recognition implements IRecognition {
 		this.scanner = new Scanner();
 		this.dataset = Dataset.load();
 		this.svm = new SVM(this.dataset);
-		this.knn = new NearestNeighbour(this.dataset, 10);
+		this.knn = new NearestNeighbour(this.dataset);
 	}
 
 	/**

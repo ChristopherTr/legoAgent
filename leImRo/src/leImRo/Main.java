@@ -1,35 +1,23 @@
 /**
- * Demo Project to test the hardware of the roboter
+ * Startpunkt fuer die Roboter-Anwendung
  */
 package leImRo;
 
 /**
- * @author trdrc
+ * @author Christopher Traub
+ * @author Jens Eisele
+ * @author Daniel Koelbel
+ * @author Benjamin Baechle
+ * @author Wolf-Michael Dieter
  *
  */
 public class Main {
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		boolean debugDataset= false;
-
+		//Die Klasse Recognition kappselt alle benötigten Funktionen
 		Recognition recognition = new Recognition();
 		
-		if ( debugDataset ) {
-			Dataset dataset = Dataset.load();
-			dataset.clearAll();
-			//Circles
-			int testR[] = {8,12,22,11,3,33,15,57,23,22};
-			for(int count=0; count <10; count++) {
-				dataset.addNewData(new DataPoint((int)(Math.pow((2*Math.PI*testR[count]),2)), (int)(Math.PI*Math.pow(testR[count], 2)),Figure.circle));
-				dataset.addNewData(new DataPoint((int)(Math.pow(4*testR[count],2)),(int) (Math.pow(testR[count], 2)),Figure.rectangle));
-			}	
-			NearestNeighbour nb = new NearestNeighbour(dataset);
-			nb.SetKNeighbours(5);
-			nb.classify(new DataPoint((int)(2*Math.PI*14), (int)(Math.PI*Math.pow(14, 2))));
-		}
-		
+		// Das Menue wird dauerhaft angezeigt und kann über die Referenz auf die Recognition Instanz alle Programmteile starten.
+		// Nach Abschluss eines Programmteils wird erneut das Menue angezeigt.
 		while(true) {
 			GUI.processMenu(recognition);
 		}

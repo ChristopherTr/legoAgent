@@ -1,5 +1,5 @@
 <map id="scanNewDataPoint" name="scanNewDataPoint">
-<area shape="rect" id="node2" href="$classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0" title="calculate the characteristics perimeter and area of a given image " alt="" coords="185,49,347,76"/>
+<area shape="rect" id="node2" href="$classle_im_ro_1_1_scanner.html#aacecdc750ec106db9c8a88c4675f7ff0" title="calculate the characteristics perimeter (sqared) and area of a given image " alt="" coords="185,49,347,76"/>
 <area shape="rect" id="node4" href="$classle_im_ro_1_1_scanner.html#ab84faeebf80b871fbe138f89d92fc319" title="scan the whole picture. " alt="" coords="225,201,307,228"/>
 <area shape="rect" id="node3" href="$classle_im_ro_1_1_logger.html#aff72b169284273c434409662a4cf88ac" title="leImRo.Logger.log" alt="" coords="567,125,693,152"/>
 <area shape="rect" id="node5" href="$classle_im_ro_1_1_scanner.html#a13db6b682f46a55108c9ad4dcbdc2d08" title="print Image as String as Debug String " alt="" coords="411,74,503,101"/>

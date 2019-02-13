@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['resolution',['resolution',['../classle_im_ro_1_1_scanner.html#abb80be0b2d3c902b225e999d738c28a0',1,'leImRo::Scanner']]],
-  ['rgbfilter',['RgbFilter',['../classle_im_ro_1_1_scanner.html#a72cc63e4a672f3503bfd0a5252fd7e7d',1,'leImRo::Scanner']]],
-  ['rgbsample',['RgbSample',['../classle_im_ro_1_1_scanner.html#ac37c28cd6835ec9c6d5d888d9c0e2524',1,'leImRo::Scanner']]],
-  ['rgbthreshold',['rgbThreshold',['../classle_im_ro_1_1_scanner.html#a5fbbfccf0de555ec72d218eb272b66b0',1,'leImRo::Scanner']]]
+  ['perimeter',['perimeter',['../classle_im_ro_1_1_data_point.html#aa39c090c071d7e141e1875275d812131',1,'leImRo::DataPoint']]],
+  ['pixel',['pixel',['../classle_im_ro_1_1_scanner.html#a10343bbbd2178606a4a93244b593e35a',1,'leImRo::Scanner']]],
+  ['pointonseparator',['PointOnSeparator',['../classle_im_ro_1_1_s_v_m.html#a4ef9a7ddbd7eff007b98ae8343edc813',1,'leImRo::SVM']]]
 ];
